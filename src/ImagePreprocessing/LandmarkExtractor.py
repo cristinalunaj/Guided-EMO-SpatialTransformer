@@ -27,7 +27,7 @@ def extract_landmarks_img_MTCNN(image_path, in_dataroot, predictor, face_detecto
     #if no face detected, save black image
     if(len(detected_faces)<=0):
         #Black images when no landmarks detected
-        background = np.zeros(image.shape)
+        background = 255*np.ones(image.shape)
         picture_name = image_path.split("/")[-1]
         if picture_name.split(".")[1] == 'tif':
             picture_name = picture_name.split(".")[0] + '.jpg'
