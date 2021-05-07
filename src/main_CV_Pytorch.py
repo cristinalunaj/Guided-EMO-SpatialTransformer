@@ -4,7 +4,8 @@ import argparse
 import pandas as pd
 import sys,os
 sys.path.append("../..")
-sys.path.append("Z:\PythonProjects\pytorch")
+sys.path.append("/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer")
+sys.path.append("/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/src")
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -366,7 +367,7 @@ if __name__ == '__main__':
     parser.add_argument('-lr', '--learning_rate', type=float, help='value of learning rate', default=0.001)
     parser.add_argument('-bs', '--batch_size', type=int, help='training/validation batch size', default=32)
     parser.add_argument('-s', '--seed', type=int, help='Seed to feed random generators', default=2020)
-    parser.add_argument('-logs', '--logs_folder', type=str, help='Path to save logs of training', default=2020)
+    parser.add_argument('-logs', '--logs_folder', type=str, help='Path to save logs of training', default='./')
     parser.add_argument('-m','--modality', type=str, help='Choose the architecture of the model (baseline, original, landmarks or saliency)', default="original")
     parser.add_argument('-t', '--train', type=bool, help='Train the complete model after cross-validation', default=False)
 
@@ -402,6 +403,6 @@ if __name__ == '__main__':
     #Train nw
     Train(args.epochs, args.kfolds,train_dataset, test_dataset, device, class_weigths=class_weigths,
           batch_size=args.batch_size, img_size=args.img_size, lr=args.learning_rate, num_workers=6,
-          modality=args.modality, num_epochs_stop=15 , train_complete_model_flag=args.train, preTrainedWeigths=None,
+          modality=args.modality, num_epochs_stop=30 , train_complete_model_flag=args.train, preTrainedWeigths=None,
           save_path=os.path.join(args.logs_folder, current_time))
 
