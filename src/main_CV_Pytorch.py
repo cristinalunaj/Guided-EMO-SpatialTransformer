@@ -4,8 +4,8 @@ import argparse
 import pandas as pd
 import sys,os
 sys.path.append("../..")
-sys.path.append("/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer")
-sys.path.append("/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/src")
+sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer")
+sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer/src")
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

@@ -2,7 +2,7 @@
 Repository to IMDB publication
 
     <FER2013-dir>
-    <AffectNet-dir>
+    <AffectNet-dir> -> Directory with the images of AffectNet (Manually_Annotated_Images folder)
 
 ## Installation
 Download and install the following GitHub repository: 
@@ -21,7 +21,10 @@ To install the other packages, create a new virtual environment and run:
 
 ## Prepare data
 
-...
+First, we need to prepare the Datasets. 
+For Affectnet, we apply a change in the format of some images (.bom, .tiff...) since the saliency extractor do not accept these formats. To do so, run: 
+
+    python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>
 
 ### Extract landmarks: 
 To extract landmarks, run:  
@@ -73,4 +76,7 @@ strategy and replicate our way to train the algorithms, run the following code:
             -r ../RAVDESS/AV_VIDEOS_FRAMES/frames -imgSize 48 -e 50
             -lr 0.001 -bs 32 -s 2020 -logs ../RAVDESS_DS/data/RAVDES_logs
       
-      
+
+
+### Porblems with images:
+    103/29a31ebf1567693f4644c8ba3476ca9a72ee07fe67a5860d98707a0a.jpg -> Not included

@@ -24,7 +24,7 @@ def remove_expression(df, expression_number=5):
     print("to do")
     df.drop(list(df.loc[df["expression"]==expression_number].index))
 
-def create_folds(in_df, folds = 5, seed=2020):
+def create_folds(in_df, folds = 5, seed=2020): 
     kfold = StratifiedKFold(n_splits=folds, shuffle=True, random_state=seed)
     in_df["fold"] = -1
     y = in_df["emotion"]
@@ -44,6 +44,17 @@ def check_imgs_exist(df_file, path_images):
 
 def convertExtension(df_file, new_extension=".png"):
     df_file["path"] = df_file["path"].replace("\.[^.]*$", new_extension, regex=True)
+    return df_file
+
+
+def remove_problematic_imgs(df_file, problematic_imgs = []):
+    index2rm = []
+    for path_problematic_img in problematic_imgs:
+        data = df_file.loc[df_file["subDirectory_filePath"]==path_problematic_img]
+        index2rm.append(data.index[0])
+    df_file = df_file.drop(index2rm)
+    df_file = df_file.reset_index()
+    df_file = df_file.drop(columns=["index"])
     return df_file
 
 
@@ -73,6 +84,14 @@ if __name__ == '__main__':
     df_train = pd.read_csv(train_csv)
     df_val = pd.read_csv(validation_csv)
     df_total = pd.concat([df_train, df_val])
+    #Replace some extensions to jpg:
+    df_total["subDirectory_filePath"] = df_total["subDirectory_filePath"].replace(regex=[r'\b(?:.bmp|.BMP|.tif|.TIF|.tiff|.TIFF)\b'], value='.jpg')
+    df_total = df_total.reset_index()
+    df_total = df_total.drop(columns=["index"])
+    #Remove problematic images
+
+    problematic_imgs = ["103/29a31ebf1567693f4644c8ba3476ca9a72ee07fe67a5860d98707a0a.jpg"]
+    df_total = remove_problematic_imgs(df_total, problematic_imgs=problematic_imgs)
 
     #Images per class/emotion:
     #Number of samples per emotion:
@@ -93,6 +112,9 @@ if __name__ == '__main__':
     #polarity_df = polarity_df.drop_duplicates(subset="path")
     #df_polarity_folds_png = convertExtension(polarity_df, new_extension=".png")
     #check_imgs_exist(polarity_df_folds, "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_compressed/Manually_Annotated_Images")
+    #Remove problematic images:
+
+
 
 
 
