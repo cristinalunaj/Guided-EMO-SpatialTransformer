@@ -15,6 +15,7 @@ from torchvision import transforms
 
 from data_loaders.data_loaders import Plain_Dataset
 from data_loaders.data_loader_land import Plain_Dataset_land
+from data_loaders.data_loader_saliency import Plain_Dataset_saliency
 
 from architectures.deep_emotion_saliency import Deep_Emotion_Saliency as Deep_Emotion_saliency_48x48
 from architectures.deep_emotion_original import Deep_Emotion_Original as Deep_Emotion_Original_48x48
@@ -390,11 +391,17 @@ if __name__ == '__main__':
     transformation= transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
     # Create DS generator
     train_dataset = None
-    if args.modality == "saliency" or args.modality == "landmarks":
-        train_dataset= Plain_Dataset_land(csv_path=args.data, dataroot=args.data_root,
+    if args.modality == "saliency":
+        train_dataset= Plain_Dataset_saliency(csv_path=args.data, dataroot=args.data_root,
                                               dataroot_land=args.landmark_root, transform = transformation)
+        test_dataset = Plain_Dataset_saliency(csv_path=args.data, dataroot=args.data_root,
+                                              dataroot_land=args.landmark_root, transform = transformation)
+    elif args.modality == "landmarks":
+        train_dataset = Plain_Dataset_land(csv_path=args.data, dataroot=args.data_root,
+                                           dataroot_land=args.landmark_root, transform=transformation)
         test_dataset = Plain_Dataset_land(csv_path=args.data, dataroot=args.data_root,
-                                              dataroot_land=args.landmark_root, transform = transformation)
+                                          dataroot_land=args.landmark_root, transform=transformation)
+
     else:# args.modality == "original" or args.modality == "baseline":
         train_dataset = Plain_Dataset(csv_path=args.data, dataroot=args.data_root, transform=transformation)
         test_dataset = Plain_Dataset(csv_path=args.data, dataroot=args.data_root, transform=transformation)

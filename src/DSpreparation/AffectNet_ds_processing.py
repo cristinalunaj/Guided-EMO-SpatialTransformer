@@ -42,6 +42,11 @@ def check_imgs_exist(df_file, path_images):
         if(not os.path.isfile(os.path.join(path_images, row["path"]))):
             print("IMAGE DOES NOT EXIST:", str(row["path"]))
 
+def convertExtension(df_file, new_extension=".png"):
+    df_file["path"] = df_file["path"].replace("\.[^.]*$", new_extension, regex=True)
+    return df_file
+
+
 
 if __name__ == '__main__':
     dict_AffectNet_expressions = {0:"Neutral",
@@ -85,9 +90,9 @@ if __name__ == '__main__':
     print(polarity_df_folds.groupby(['fold', 'emotion']).count())
     
     #Remove duplicated images if exist:
-    polarity_df = polarity_df.drop_duplicates(subset="path")
-
-    check_imgs_exist(polarity_df_folds, "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_compressed/Manually_Annotated_Images")
+    #polarity_df = polarity_df.drop_duplicates(subset="path")
+    #df_polarity_folds_png = convertExtension(polarity_df, new_extension=".png")
+    #check_imgs_exist(polarity_df_folds, "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_compressed/Manually_Annotated_Images")
 
 
 
