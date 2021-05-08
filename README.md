@@ -24,7 +24,7 @@ To install the other packages, create a new virtual environment and run:
 First, we need to prepare the Datasets. 
 For Affectnet, we apply a change in the format of some images (.bom, .tiff...) since the saliency extractor do not accept these formats. To do so, run: 
 
-    python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>
+    python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir> -o <output-dir-with-grayscaled-48x48-imgs>
 
 ### Extract landmarks: 
 To extract landmarks, run:  
