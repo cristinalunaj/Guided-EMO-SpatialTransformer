@@ -67,6 +67,12 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
         print("N_imgs_training: ", str(len(train_ids)))
         print("N_imgs_test: ", str(len(test_ids)))
 
+        if(class_weigths):
+            # Obtain classes for training with unbalanced DS
+            class_weigths_values = check_balance_in_data(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold])
+        else:
+            class_weigths_values = None
+
         # Print
         # CREATE WRITER PER FOLD:
         writer = SummaryWriter(log_dir=os.path.join(save_path, "logs", "fold_" + str(fold)))
@@ -90,7 +96,7 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
             net.load_state_dict(torch.load(preTrainedWeigths))
 
         net.to(device)
-        criterion = nn.CrossEntropyLoss(weight=class_weigths)
+        criterion = nn.CrossEntropyLoss(weight=class_weigths_values)
         optmizer = optim.Adam(net.parameters(), lr=lr)
         # Create output directory of nws:
         os.makedirs(os.path.join(save_path, "trained_models"), exist_ok=True)
@@ -325,8 +331,8 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
     print("===================================Training Finished===================================")
 
 
-def check_balance_in_data(traincsv_file):
-    df_data = pd.read_csv(traincsv_file, header=0)
+def check_balance_in_data(df_data):
+    #df_data = pd.read_csv(traincsv_file, header=0)
     #PLOT LABELS TO SEE DISTRIBUTION OF DATA
     labels_complete = df_data["emotion"]
     classes = labels_complete.unique()
@@ -371,7 +377,6 @@ if __name__ == '__main__':
     parser.add_argument('-logs', '--logs_folder', type=str, help='Path to save logs of training', default='./')
     parser.add_argument('-m','--modality', type=str, help='Choose the architecture of the model (baseline, original, landmarks or saliency)', default="original")
     parser.add_argument('-t', '--train', type=bool, help='Train the complete model after cross-validation', default=False)
-
     args = parser.parse_args()
 
     #Prepare environment:
@@ -384,8 +389,6 @@ if __name__ == '__main__':
     now = datetime.now()
     current_time = now.strftime("%Y%m%d_%H%M%S")
 
-    #Obtain classes for training with unbalanced DS
-    class_weigths = check_balance_in_data(args.data)
 
     #Convert input images to expected nw size (48x48) or (100x100) and normalize values
     transformation= transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5,),(0.5,))])
@@ -408,7 +411,7 @@ if __name__ == '__main__':
 
 
     #Train nw
-    Train(args.epochs, args.kfolds,train_dataset, test_dataset, device, class_weigths=class_weigths,
+    Train(args.epochs, args.kfolds,train_dataset, test_dataset, device, class_weigths=True,
           batch_size=args.batch_size, img_size=args.img_size, lr=args.learning_rate, num_workers=6,
           modality=args.modality, num_epochs_stop=30 , train_complete_model_flag=args.train, preTrainedWeigths=None,
           save_path=os.path.join(args.logs_folder, current_time))
