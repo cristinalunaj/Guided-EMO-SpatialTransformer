@@ -7,7 +7,7 @@ from torch.utils.data import Dataset
 
 
 class Plain_Dataset_land(Dataset):
-    def __init__(self, csv_path, dataroot,dataroot_land, transform, sep=","):
+    def __init__(self, csv_path, dataroot,dataroot_land, transform, sep=";"):
         '''
         Pytorch Dataset class
         params:-
@@ -32,7 +32,7 @@ class Plain_Dataset_land(Dataset):
     def __getitem__(self,idx):
         if torch.is_tensor(idx):
             idx = idx.tolist()
-        img = Image.open(os.path.join(self.dataroot, self.img_dir[idx])).convert('L')
+        img = Image.open(os.path.join(self.dataroot, self.img_dir[idx].split('.')[0] + '.png')).convert('L')
         land = Image.open(os.path.join(self.dataroot_land, self.img_dir[idx].split('.')[0] + '.png')).convert('L')
         labels = np.array(self.labels[idx])
         labels = torch.from_numpy(labels).long()

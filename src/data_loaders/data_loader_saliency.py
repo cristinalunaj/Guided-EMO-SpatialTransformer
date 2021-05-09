@@ -32,8 +32,8 @@ class Plain_Dataset_saliency(Dataset):
     def __getitem__(self,idx):
         if torch.is_tensor(idx):
             idx = idx.tolist()
-        img = Image.open(os.path.join(self.dataroot, self.img_dir[idx])).convert('L')
-        land = Image.open(os.path.join(self.dataroot_land, self.img_dir[idx].split('.')[0] + '.jpeg')).convert('L')
+        img = Image.open(os.path.join(self.dataroot, self.img_dir[idx].split('.')[0] + '.png')).convert('L')
+        land = Image.open(os.path.join(self.dataroot_land, self.img_dir[idx].split('.')[0] + '.png')).convert('L')
         labels = np.array(self.labels[idx])
         labels = torch.from_numpy(labels).long()
 

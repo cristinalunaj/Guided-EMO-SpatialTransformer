@@ -39,8 +39,8 @@ def process_imgs_parallel(list_folders, in_path_imgs, in_path_imgs2, out_path_im
     pool = multiprocessing.Pool()  # processes = 7
 
     landmarks_extractor = partial(convert2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
-                            in_path_imgs=in_path_imgs,
-                            in_path_imgs2=in_path_imgs2,
+                            in_path_landmarks=in_path_imgs,
+                            in_path_img_original=in_path_imgs2,
                             out_path_imgs=out_path_imgs,
                             newSize = newSize,
                             L2=L2)
