@@ -9,7 +9,7 @@ from torchvision import transforms
 from matplotlib import pyplot as plt
 
 class Plain_Dataset(Dataset):
-    def __init__(self, csv_path, dataroot, transform, sep=","):
+    def __init__(self, csv_path, dataroot, transform, sep=";"):
         '''
         Pytorch Dataset class
         params:-

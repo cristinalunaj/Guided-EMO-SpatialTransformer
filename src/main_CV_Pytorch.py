@@ -29,6 +29,15 @@ from datetime import datetime
 
 
 
+def str2bool(v):
+    if isinstance(v, bool):
+       return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
 
 def seed_torch(seed=2020):
     random.seed(seed)
@@ -53,7 +62,6 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
     '''
 
     print("SAVING DATA IN: ", (save_path))
-     #kfold = KFold(n_splits=k_folds, shuffle=True)
     results = {}
     epochs2converge={}
     print("===================================Start Training===================================")
@@ -200,13 +208,18 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
         sum += value
         epochs2stop+=epochs2converge[key]
     print(f'Average: {sum / len(results.items())} %')
-    print(f'Average convergence epochs: {epochs2stop / len(results.items())} %')
+    print(f'Average convergence epochs: {epochs2stop / len(results.items())} ')
 
     # RUN & SAVE LAST MODEL TRAINING
     if (train_complete_model_flag):
         print("TRAINING LAST MODEL ...")
+        if (class_weigths):
+            # Obtain classes for training with unbalanced DS
+            class_weigths_values = check_balance_in_data(train_dataset.df_file)
+        else:
+            class_weigths_values = None
         writer = SummaryWriter(log_dir=os.path.join(save_path, "logs", "COMPLETE"))
-        train_complete_model(max(epochs2converge.values())+10, train_dataset, device, writer, img_size=img_size, class_weigths=class_weigths,
+        train_complete_model(max(epochs2converge.values()) + 10, train_dataset, device, writer, img_size=img_size, class_weigths=class_weigths_values,
                              batch_size=batch_size, lr=lr, save_path=save_path, modality=modality, num_workers=num_workers)
         writer.flush()
         writer.close()
@@ -376,7 +389,11 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--seed', type=int, help='Seed to feed random generators', default=2020)
     parser.add_argument('-logs', '--logs_folder', type=str, help='Path to save logs of training', default='./')
     parser.add_argument('-m','--modality', type=str, help='Choose the architecture of the model (baseline, original, landmarks or saliency)', default="original")
-    parser.add_argument('-t', '--train', type=bool, help='Train the complete model after cross-validation', default=False)
+    parser.add_argument("--train",
+                        type=str2bool, nargs='?',
+                        const=True, default=False,
+                        help="Train the complete model after cross-validation. ")
+
     args = parser.parse_args()
 
     #Prepare environment:
@@ -415,4 +432,5 @@ if __name__ == '__main__':
           batch_size=args.batch_size, img_size=args.img_size, lr=args.learning_rate, num_workers=6,
           modality=args.modality, num_epochs_stop=30 , train_complete_model_flag=args.train, preTrainedWeigths=None,
           save_path=os.path.join(args.logs_folder, current_time))
+
 

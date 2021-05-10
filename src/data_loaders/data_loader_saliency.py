@@ -7,7 +7,7 @@ from torch.utils.data import Dataset
 
 
 class Plain_Dataset_saliency(Dataset):
-    def __init__(self, csv_path, dataroot,dataroot_land, transform, sep=","):
+    def __init__(self, csv_path, dataroot,dataroot_land, transform, sep=";"):
         '''
         Pytorch Dataset class
         params:-
