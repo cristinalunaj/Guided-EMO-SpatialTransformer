@@ -41,25 +41,36 @@ def refactor_images_AffectNet(list_imgs, input_path, extensions2change=["bmp", "
             os.remove(path_img)
 
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Configuration of setup and training process")
     parser.add_argument('-r', '--data_root', type=str, required=True,
                         help='Root path with the images')
     parser.add_argument('-o', '--out_dir', type=str, required=True,
                         help='Root path to save resized and grayscale images')
+    parser.add_argument('-ds', '--dataset_name', type=str, help='Name of the dataset to process ["AffectNet","FER"]',
+                        default='AffectNet')
 
     args = parser.parse_args()
-    folders_AffectNet = os.listdir(args.data_root)
+    folders_orImages = os.listdir(args.data_root)
     #Change extensions of weird formats not recognized by saliency model: ("bmp", "BMP","tif", "TIF", "tiff", "TIFF")
     print("Checking images ...")
-    for folder in folders_AffectNet:
-        in_folder_path = os.path.join(args.data_root, folder)
-        refactor_images_AffectNet(os.listdir(in_folder_path), in_folder_path)
+    if (args.dataset_name == "AffectNet"):
+        for folder in folders_orImages:
+            in_folder_path = os.path.join(args.data_root, folder)
+            refactor_images_AffectNet(os.listdir(in_folder_path), in_folder_path)
+            # Extract grayscale images and resize to 48x48
+            print("Start image conversion to 48x48 & grayscale ...")
+            os.makedirs(args.out_dir, exist_ok=True)
+            convert_imgs_parallel(folders_orImages, args.data_root, args.out_dir, newSize=(48, 48))
+    else:
+        refactor_images_AffectNet(folders_orImages, args.data_root)
+        print("Start image conversion to 48x48 & grayscale ...")
+        os.makedirs(args.out_dir, exist_ok=True)
+        image_utils.convert2grayAndResize(img_subfolder=args.data_root.split("/")[-1],
+                                          in_path_imgs = args.data_root.rsplit("/",1)[0], out_path_imgs = args.out_dir,newSize = (48,48))
 
-    #Extract grayscale images and resize to 48x48
-    print("Start image conversion to 48x48 & grayscale ...")
-    os.makedirs(args.out_dir, exist_ok=True)
-    convert_imgs_parallel(folders_AffectNet, args.data_root, args.out_dir, newSize=(48, 48))
+
 
 
 

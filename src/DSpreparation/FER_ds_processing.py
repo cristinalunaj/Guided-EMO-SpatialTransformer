@@ -94,11 +94,14 @@ def create_subset_FER(df_FER_DS, out_path, kfold=5, seed=2020):
 
 
 if __name__ == '__main__':
-    path_lost_landmarks = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/lost_imgs_landmarks_extractor.csv"
-    initial_FER_DS = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/labels_FER2013.csv"
-    out_FER_DS_withouth_lost_landmarks = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/labels_FER2013_31129imgs.csv"
-    out_FER_DS_withouth_lost_landmarks_kfold = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/labels_FER2013_27557KFOLDimgs.csv"
-    out_FER_DS_complete_polarity_kfold = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/labels_FER2013_31885KFOLDimgs.csv"
+    out_root_path = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013"
+    in_root_path = "/mnt/ESITUR2/DATASETS/FER2013/fer2013"
+
+    path_lost_landmarks = out_root_path+"/lost_imgs_landmarks_extractor.csv"
+    initial_FER_DS = in_root_path+"/labels_FER2013.csv"
+    out_FER_DS_withouth_lost_landmarks = out_root_path+"/labels_FER2013_31129imgs.csv"
+    out_FER_DS_withouth_lost_landmarks_kfold = out_root_path+"/labels_FER2013_27557KFOLDimgs.csv"
+    out_FER_DS_complete_polarity_kfold =out_root_path+"/labels_FER2013_31885KFOLDimgs.csv"
     seed = 2020
     kfolds = 5
 
@@ -111,7 +114,7 @@ if __name__ == '__main__':
                                    out_FER_DS_withouth_lost_landmarks_kfold, kfold=kfolds, seed=seed)
 
     #Create reduced version of FER DS & convert to valence/polarity & divide in folds
-    create_subset_FER(df_FER_DS, out_FER_DS_complete_polarity_kfold, kfold=kfolds, seed=seed)
+    #create_subset_FER(df_FER_DS, out_FER_DS_complete_polarity_kfold, kfold=kfolds, seed=seed)
 
 
 

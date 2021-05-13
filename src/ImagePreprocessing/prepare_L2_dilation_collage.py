@@ -6,7 +6,7 @@ import numpy as np
 from src.utils import image_utils
 import argparse
 
-def convert2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original,out_path_imgs, newSize, L2):
+def strategy2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original,out_path_imgs, newSize, L2):
     in_path_subf = os.path.join(in_path_landmarks, img_subfolder)
     for img_name in os.listdir(in_path_subf):
         if (os.path.exists(os.path.join(out_path_imgs, img_subfolder, img_name))): return
@@ -36,9 +36,9 @@ def process_imgs_parallel(list_folders, in_path_imgs, in_path_imgs2, out_path_im
     Extract frames in a parallel way using ffmpeg or opencv funcions
     """
     start_time = time.time()
-    pool = multiprocessing.Pool()  # processes = 7
+    pool = multiprocessing.Pool(processes=2)  # processes = 7
 
-    landmarks_extractor = partial(convert2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
+    landmarks_extractor = partial(strategy2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
                             in_path_landmarks=in_path_imgs,
                             in_path_img_original=in_path_imgs2,
                             out_path_imgs=out_path_imgs,
@@ -63,10 +63,12 @@ if __name__ == '__main__':
                         help='Output size of images',
                         default=48)
     parser.add_argument('-m', '--modality', type=str,
-                        help='Choose the architecture of the model (collage, dilation, soften)',
+                        help='Choose the processing to apply (collage, dilation, soften)',
                         default="soften")
     parser.add_argument('-o', '--out_dir', type=str, required=True,
                         help='Root path to save generated images')
+    parser.add_argument('-ds', '--dataset_name', type=str, help='Name of the dataset to process ["AffectNet","FER"]',
+                        default='AffectNet')
 
     args = parser.parse_args()
 
@@ -76,9 +78,13 @@ if __name__ == '__main__':
     # out_path_imgs = '../AFFECTNET/COLLAGE' # Output dir
 
     os.makedirs(args.out_dir, exist_ok=True)
-    # for img_subfolder in os.listdir(in_path_imgs_landm):
-    #     convert2grayAndResize(img_subfolder, in_path_imgs_landm,in_path_imgs_original, out_path_imgs, newSize, L2)
+
     #Parallel:
-    list_folders = os.listdir(args.landmark_root)
-    process_imgs_parallel(list_folders, args.landmark_root,args.in_path_imgs_original, args.out_dir,
-                          (args.imgSize, args.imgSize), args.modality)
+    if (args.dataset_name == "AffectNet"):
+        list_folders = os.listdir(args.landmark_root)
+        process_imgs_parallel(list_folders, args.landmark_root,args.in_path_imgs_original, args.out_dir,
+                              (args.img_size, args.img_size), args.modality)
+    else:
+        strategy2grayAndResize(args.in_path_imgs_original.split("/")[-1],args.landmark_root.rsplit("/",1)[0],
+                              args.in_path_imgs_original.rsplit("/",1)[0], args.out_dir, (args.img_size, args.img_size), args.modality)
+

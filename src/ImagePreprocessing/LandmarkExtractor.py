@@ -104,7 +104,7 @@ if __name__ == '__main__':
     parser.add_argument('-trainCSVSep', '--train_csv_sep', type=str, required=True,
                         help='Separator for the csv [default: ","]', default=",")
 
-    parser.add_argument('-ds', '--dataset_name', type=str, help='Name of the dataset to process ["AffectNet","FER2013"]', default='AffectNet')
+    parser.add_argument('-ds', '--dataset_name', type=str, help='Name of the dataset to process ["AffectNet","FER"]', default='AffectNet')
     parser.add_argument('-logs', '--logs', type=str,
                         help='Folder to save logs or extra information generated (as the list of images with no detected landmarks)', default='AffectNet')
 

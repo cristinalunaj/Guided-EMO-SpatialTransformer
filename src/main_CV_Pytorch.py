@@ -65,150 +65,150 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
     results = {}
     epochs2converge={}
     print("===================================Start Training===================================")
-    for fold in range(0, k_folds):
-        train_ids = np.array(list(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold].index))
-        test_ids = np.array(list(test_dataset.df_file.loc[test_dataset.df_file["fold"] == fold].index))
-        print(f'FOLD {fold}')
-        print('--------------------------------')
-        train_subsampler = torch.utils.data.SubsetRandomSampler(train_ids)
-        test_subsampler = torch.utils.data.SubsetRandomSampler(test_ids)
-        print("N_imgs_training: ", str(len(train_ids)))
-        print("N_imgs_test: ", str(len(test_ids)))
-
-        if(class_weigths):
-            # Obtain classes for training with unbalanced DS
-            class_weigths_values = check_balance_in_data(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold])
-        else:
-            class_weigths_values = None
-
-        # Print
-        # CREATE WRITER PER FOLD:
-        writer = SummaryWriter(log_dir=os.path.join(save_path, "logs", "fold_" + str(fold)))
-
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=train_subsampler,
-                                  num_workers=num_workers, pin_memory=True)
-        testloader = DataLoader(test_dataset, batch_size=batch_size, sampler=test_subsampler, num_workers=num_workers,
-                                pin_memory=True)
-
-
-        if (modality == "saliency" or modality == "landmarks"):
-            net = Deep_Emotion_saliency_48x48()
-        elif (modality == "original"):
-            net = Deep_Emotion_Original_48x48()
-        elif (modality == "baseline"):
-            net = Deep_Emotion_Baseline_48x48()
-
-        # START LEARNING WITH PRE-TRAINED WEIGHTS FROM OTHER DS (OR NOT) - TRANSFER LEARNING
-        if (preTrainedWeigths != None):
-            print("Transfer learning of the model...")
-            net.load_state_dict(torch.load(preTrainedWeigths))
-
-        net.to(device)
-        criterion = nn.CrossEntropyLoss(weight=class_weigths_values)
-        optmizer = optim.Adam(net.parameters(), lr=lr)
-        # Create output directory of nws:
-        os.makedirs(os.path.join(save_path, "trained_models"), exist_ok=True)
-        # Early Stopping parameters:
-        epochs_no_improve = 0
-        min_val_acc = 0
-        last_top_acc = 0
-        last_top_acc_epoch = 0
-
-        print("------------------ START TRAINING of fold ---------------------")
-        for e in range(epochs):
-            print('\nEpoch {} / {} \nFold number {} / {}'.format(e + 1, epochs, fold + 1, k_folds))
-            # Train the model  #
-            net.train()
-
-            if modality == "saliency" or modality == "landmarks":
-                train_loss, train_correct = train_model_saliency(net, train_loader, optmizer, criterion, device)
-            else:# modality == "original" or modality == "baseline":
-                train_loss, train_correct = train_model_original(net, train_loader, optmizer, criterion, device)
-
-            print(">>>>>>>>>>>> ON EPOCH: ", str(e))
-            print(">> training : ")
-            train_loss = (train_loss / len(train_ids))
-            writer.add_scalar("Loss/train", train_loss, e)
-            train_acc = train_correct.double() / len(train_ids) * 100
-            writer.add_scalar("Accuracy/train", train_acc, e)
-
-            print('TRAINING: Fold: {}. Iteration: {}. Loss: {}. Accuracy: {}'.format(fold, e, train_loss,train_acc))
-
-            #evaluate the fold#
-            print(">> eval : ")
-            net.eval()
-            if modality == "saliency" or modality == "landmarks":
-                validation_loss, val_correct = eval_model_saliencyORlandmarks(net, testloader, criterion, device)
-            else: #modality == "original" or modality == "baseline":
-                validation_loss, val_correct = eval_model_original(net, testloader, criterion, device)
-
-            validation_loss = validation_loss / len(test_ids)
-            results[fold] = 100.0 * (val_correct / len(test_ids))
-            epochs2converge[fold] = e
-            # Print accuracy
-            print('VALIDATION: Fold: {}. Iteration: {}. Loss: {}. Accuracy: {}'.format(fold, e, validation_loss, results[fold]))
-            print('--------------------------------')
-
-            writer.add_scalar("Loss/val", validation_loss, e)
-            writer.add_scalar("Accuracy/val", results[fold], e)
-            # Send data at the end of the epoch
-            writer.flush()
-
-            # EARLY STOPPING:
-            if results[fold] > min_val_acc:
-                # Save the model
-                # Save BEST weigths to recover them posteriorly
-                torch.save(net.state_dict(),
-                           os.path.join(save_path, "trained_models",
-                                        'TMP-deep_emotion-{}-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size, lr,
-                                                                                                fold,
-                                                                                                img_size, e, modality)))
-                epochs_no_improve = 0
-                min_val_acc = results[fold]
-                last_top_acc = 100.0 * (val_correct / len(test_ids))
-                last_top_acc_epoch = e
-                epochs2converge[fold] = e
-
-            else:
-                epochs_no_improve += 1
-
-            if e > (num_epochs_stop - 1) and epochs_no_improve == num_epochs_stop:
-                print('Early stopping IN EPOCH: !', str(e), " - Best weigths saved in TMP-deep_emotion....")
-                # EARLY STOPPING
-                results[fold] = last_top_acc
-                epochs2converge[fold] = last_top_acc_epoch
-                break
-
-        # save LAST MODEL
-        torch.save(net.state_dict(),
-                   os.path.join(save_path, "trained_models",
-                                'deep_emotion-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size, lr,
-                                                                                         fold, img_size,modality)))
-        print("===================================Training Finished===================================")
-        # Close tensorboard writer
-        writer.flush()
-        writer.close()
-
-        # RECOVER BEST MODEL BASED ON VALIDATION:
-        top_model_weights = os.path.join(save_path, "trained_models",
-                                         'TMP-deep_emotion-{}-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size,
-                                                                                                 lr, fold,
-                                                                                                 img_size,
-                                                                                                 last_top_acc_epoch,
-                                                                                           modality))
-        print(">>> Loading TOP nw for test eval: ", top_model_weights)
-
-    # Print fold results
-    print(f'K-FOLD CROSS VALIDATION RESULTS FOR {k_folds} FOLDS')
-    print('--------------------------------')
-    sum = 0.0
-    epochs2stop = 0.0
-    for key, value in results.items():
-        print(f'Fold {key}: {value} %')
-        sum += value
-        epochs2stop+=epochs2converge[key]
-    print(f'Average: {sum / len(results.items())} %')
-    print(f'Average convergence epochs: {epochs2stop / len(results.items())} ')
+    # for fold in range(0, k_folds):
+    #     train_ids = np.array(list(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold].index))
+    #     test_ids = np.array(list(test_dataset.df_file.loc[test_dataset.df_file["fold"] == fold].index))
+    #     print(f'FOLD {fold}')
+    #     print('--------------------------------')
+    #     train_subsampler = torch.utils.data.SubsetRandomSampler(train_ids)
+    #     test_subsampler = torch.utils.data.SubsetRandomSampler(test_ids)
+    #     print("N_imgs_training: ", str(len(train_ids)))
+    #     print("N_imgs_test: ", str(len(test_ids)))
+    #
+    #     if(class_weigths):
+    #         # Obtain classes for training with unbalanced DS
+    #         class_weigths_values = check_balance_in_data(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold])
+    #     else:
+    #         class_weigths_values = None
+    #
+    #     # Print
+    #     # CREATE WRITER PER FOLD:
+    #     writer = SummaryWriter(log_dir=os.path.join(save_path, "logs", "fold_" + str(fold)))
+    #
+    #     train_loader = DataLoader(train_dataset, batch_size=batch_size, sampler=train_subsampler,
+    #                               num_workers=num_workers, pin_memory=True)
+    #     testloader = DataLoader(test_dataset, batch_size=batch_size, sampler=test_subsampler, num_workers=num_workers,
+    #                             pin_memory=True)
+    #
+    #
+    #     if (modality == "saliency" or modality == "landmarks"):
+    #         net = Deep_Emotion_saliency_48x48()
+    #     elif (modality == "original"):
+    #         net = Deep_Emotion_Original_48x48()
+    #     elif (modality == "baseline"):
+    #         net = Deep_Emotion_Baseline_48x48()
+    #
+    #     # START LEARNING WITH PRE-TRAINED WEIGHTS FROM OTHER DS (OR NOT) - TRANSFER LEARNING
+    #     if (preTrainedWeigths != None):
+    #         print("Transfer learning of the model...")
+    #         net.load_state_dict(torch.load(preTrainedWeigths))
+    #
+    #     net.to(device)
+    #     criterion = nn.CrossEntropyLoss(weight=class_weigths_values)
+    #     optmizer = optim.Adam(net.parameters(), lr=lr)
+    #     # Create output directory of nws:
+    #     os.makedirs(os.path.join(save_path, "trained_models"), exist_ok=True)
+    #     # Early Stopping parameters:
+    #     epochs_no_improve = 0
+    #     min_val_acc = 0
+    #     last_top_acc = 0
+    #     last_top_acc_epoch = 0
+    #
+    #     print("------------------ START TRAINING of fold ---------------------")
+    #     for e in range(epochs):
+    #         print('\nEpoch {} / {} \nFold number {} / {}'.format(e + 1, epochs, fold + 1, k_folds))
+    #         # Train the model  #
+    #         net.train()
+    #
+    #         if modality == "saliency" or modality == "landmarks":
+    #             train_loss, train_correct = train_model_saliency(net, train_loader, optmizer, criterion, device)
+    #         else:# modality == "original" or modality == "baseline":
+    #             train_loss, train_correct = train_model_original(net, train_loader, optmizer, criterion, device)
+    #
+    #         print(">>>>>>>>>>>> ON EPOCH: ", str(e))
+    #         print(">> training : ")
+    #         train_loss = (train_loss / len(train_ids))
+    #         writer.add_scalar("Loss/train", train_loss, e)
+    #         train_acc = train_correct.double() / len(train_ids) * 100
+    #         writer.add_scalar("Accuracy/train", train_acc, e)
+    #
+    #         print('TRAINING: Fold: {}. Iteration: {}. Loss: {}. Accuracy: {}'.format(fold, e, train_loss,train_acc))
+    #
+    #         #evaluate the fold#
+    #         print(">> eval : ")
+    #         net.eval()
+    #         if modality == "saliency" or modality == "landmarks":
+    #             validation_loss, val_correct = eval_model_saliencyORlandmarks(net, testloader, criterion, device)
+    #         else: #modality == "original" or modality == "baseline":
+    #             validation_loss, val_correct = eval_model_original(net, testloader, criterion, device)
+    #
+    #         validation_loss = validation_loss / len(test_ids)
+    #         results[fold] = 100.0 * (val_correct / len(test_ids))
+    #         epochs2converge[fold] = e
+    #         # Print accuracy
+    #         print('VALIDATION: Fold: {}. Iteration: {}. Loss: {}. Accuracy: {}'.format(fold, e, validation_loss, results[fold]))
+    #         print('--------------------------------')
+    #
+    #         writer.add_scalar("Loss/val", validation_loss, e)
+    #         writer.add_scalar("Accuracy/val", results[fold], e)
+    #         # Send data at the end of the epoch
+    #         writer.flush()
+    #
+    #         # EARLY STOPPING:
+    #         if results[fold] > min_val_acc:
+    #             # Save the model
+    #             # Save BEST weigths to recover them posteriorly
+    #             torch.save(net.state_dict(),
+    #                        os.path.join(save_path, "trained_models",
+    #                                     'TMP-deep_emotion-{}-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size, lr,
+    #                                                                                             fold,
+    #                                                                                             img_size, e, modality)))
+    #             epochs_no_improve = 0
+    #             min_val_acc = results[fold]
+    #             last_top_acc = 100.0 * (val_correct / len(test_ids))
+    #             last_top_acc_epoch = e
+    #             epochs2converge[fold] = e
+    #
+    #         else:
+    #             epochs_no_improve += 1
+    #
+    #         if e > (num_epochs_stop - 1) and epochs_no_improve == num_epochs_stop:
+    #             print('Early stopping IN EPOCH: !', str(e), " - Best weigths saved in TMP-deep_emotion....")
+    #             # EARLY STOPPING
+    #             results[fold] = last_top_acc
+    #             epochs2converge[fold] = last_top_acc_epoch
+    #             break
+    #
+    #     # save LAST MODEL
+    #     torch.save(net.state_dict(),
+    #                os.path.join(save_path, "trained_models",
+    #                             'deep_emotion-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size, lr,
+    #                                                                                      fold, img_size,modality)))
+    #     print("===================================Training Finished===================================")
+    #     # Close tensorboard writer
+    #     writer.flush()
+    #     writer.close()
+    #
+    #     # RECOVER BEST MODEL BASED ON VALIDATION:
+    #     top_model_weights = os.path.join(save_path, "trained_models",
+    #                                      'TMP-deep_emotion-{}-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size,
+    #                                                                                              lr, fold,
+    #                                                                                              img_size,
+    #                                                                                              last_top_acc_epoch,
+    #                                                                                        modality))
+    #     print(">>> Loading TOP nw for test eval: ", top_model_weights)
+    #
+    # # Print fold results
+    # print(f'K-FOLD CROSS VALIDATION RESULTS FOR {k_folds} FOLDS')
+    # print('--------------------------------')
+    # sum = 0.0
+    # epochs2stop = 0.0
+    # for key, value in results.items():
+    #     print(f'Fold {key}: {value} %')
+    #     sum += value
+    #     epochs2stop+=epochs2converge[key]
+    # print(f'Average: {sum / len(results.items())} %')
+    # print(f'Average convergence epochs: {epochs2stop / len(results.items())} ')
 
     # RUN & SAVE LAST MODEL TRAINING
     if (train_complete_model_flag):
@@ -219,8 +219,9 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
         else:
             class_weigths_values = None
         writer = SummaryWriter(log_dir=os.path.join(save_path, "logs", "COMPLETE"))
-        train_complete_model(max(epochs2converge.values()) + 10, train_dataset, device, writer, img_size=img_size, class_weigths=class_weigths_values,
-                             batch_size=batch_size, lr=lr, save_path=save_path, modality=modality, num_workers=num_workers)
+        train_complete_model(epochs, train_dataset, device, writer, img_size=img_size, class_weigths=class_weigths_values,
+                             batch_size=batch_size, lr=lr, save_path=save_path, modality=modality, num_workers=num_workers,
+                             num_epochs_stop=num_epochs_stop)
         writer.flush()
         writer.close()
 
@@ -298,7 +299,7 @@ def eval_model_original(net, testloader, criterion, device):
 
 
 def train_complete_model(epochs,train_dataset,device, writer,img_size, class_weigths, batch_size, lr,
-          save_path, modality, num_workers):
+          save_path, modality, num_workers, num_epochs_stop):
 
     train_loader= DataLoader(train_dataset,batch_size=batch_size,shuffle = True,num_workers=num_workers, pin_memory=True)
 
@@ -312,6 +313,13 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
     net.to(device)
     criterion = nn.CrossEntropyLoss(weight=class_weigths)
     optmizer = optim.Adam(net.parameters(), lr=lr)
+
+    epochs_no_improve = 0
+    min_val_acc = 0
+    last_top_acc = 0
+    last_top_acc_epoch = 0
+    epochs2converge = 0
+    results = 0
     print("------------------ START TRAINING of fold ---------------------")
     for e in range(epochs):
         print('\nEpoch {} / {} - FINAL MODEL'.format(e + 1, epochs))
@@ -334,8 +342,32 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
         train_acc = 100*(train_correct.double() / len(train_dataset))
         print("Train Accuracy: ", str(train_acc))
         writer.add_scalar("Accuracy/train", train_acc, e)
+        # EARLY STOPPING:
+        if results > min_val_acc:
+            # Save the model
+            # Save BEST weigths to recover them posteriorly
+            torch.save(net.state_dict(),
+                       os.path.join(save_path, "trained_models",
+                                    'TMP-deep_emotion-{}-{}-{}-{}-{}-{}-{}.pt'.format(epochs, batch_size, lr,
+                                                                                      "COMPLETE",
+                                                                                      img_size, e, modality)))
+            epochs_no_improve = 0
+            min_val_acc = results
+            last_top_acc = 100.0 *(train_correct.double() / len(train_dataset))
+            last_top_acc_epoch = e
+            epochs2converge = e
 
+        else:
+            epochs_no_improve += 1
 
+        if e > (num_epochs_stop - 1) and epochs_no_improve == num_epochs_stop:
+            print('Early stopping IN EPOCH: !', str(e), " - Best weigths saved in TMP-deep_emotion....")
+            # EARLY STOPPING
+            results = last_top_acc
+            epochs2converge = last_top_acc_epoch
+            break
+
+    print("EPOCHS TO CONVERGE: ", str(epochs2converge), ", ACC: ", str(results))
     # save final model
     torch.save(net.state_dict(),
                os.path.join(save_path, "trained_models",
@@ -393,8 +425,13 @@ if __name__ == '__main__':
                         type=str2bool, nargs='?',
                         const=True, default=False,
                         help="Train the complete model after cross-validation. ")
+    parser.add_argument('-tl', '--tl_preTrained_weights', type=str, required=False, default=None,
+                        help='Path to the pre-trained weigths (.pt file)')
 
     args = parser.parse_args()
+
+    print("PROCESSING MODALITY: ", args.modality)
+    print("WEIGHTS: ", args.tl_preTrained_weights)
 
     #Prepare environment:
     os.environ["PYTHONWARNINGS"] = "ignore"
@@ -430,7 +467,7 @@ if __name__ == '__main__':
     #Train nw
     Train(args.epochs, args.kfolds,train_dataset, test_dataset, device, class_weigths=True,
           batch_size=args.batch_size, img_size=args.img_size, lr=args.learning_rate, num_workers=6,
-          modality=args.modality, num_epochs_stop=30 , train_complete_model_flag=args.train, preTrainedWeigths=None,
+          modality=args.modality, num_epochs_stop=30 , train_complete_model_flag=args.train, preTrainedWeigths=args.tl_preTrained_weights,
           save_path=os.path.join(args.logs_folder, current_time))
 
 
