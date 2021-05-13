@@ -344,7 +344,7 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
         print("Train Accuracy: ", str(train_acc))
         writer.add_scalar("Accuracy/train", train_acc, e)
         # EARLY STOPPING:
-        if results > min_val_acc:
+        if train_acc > min_val_acc:
             # Save the model
             # Save BEST weigths to recover them posteriorly
             torch.save(net.state_dict(),
@@ -353,7 +353,7 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
                                                                                       "COMPLETE",
                                                                                       img_size, e, modality)))
             epochs_no_improve = 0
-            min_val_acc = results
+            min_val_acc = train_acc
             last_top_acc = 100.0 *(train_correct.double() / len(train_dataset))
             last_top_acc_epoch = e
             epochs2converge = e
