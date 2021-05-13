@@ -64,6 +64,7 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
     print("SAVING DATA IN: ", (save_path))
     results = {}
     epochs2converge={}
+    os.makedirs(os.path.join(save_path, "trained_models"), exist_ok=True)
     print("===================================Start Training===================================")
     # for fold in range(0, k_folds):
     #     train_ids = np.array(list(train_dataset.df_file.loc[test_dataset.df_file["fold"] != fold].index))
