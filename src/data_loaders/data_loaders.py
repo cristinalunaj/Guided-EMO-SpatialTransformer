@@ -40,6 +40,6 @@ class Plain_Dataset(Dataset):
         if self.transform :
             img = self.transform(img)
 
-        return img, labels
+        return img, labels, idx
 
 

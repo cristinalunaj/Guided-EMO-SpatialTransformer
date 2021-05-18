@@ -42,4 +42,4 @@ class Plain_Dataset_land(Dataset):
             land = self.transform(land)
 
 
-        return img, labels, land
+        return img, labels, land, idx

@@ -42,4 +42,4 @@ class Plain_Dataset_saliency(Dataset):
             land = self.transform(land)
 
 
-        return img, labels, land
+        return img, labels, land, idx
