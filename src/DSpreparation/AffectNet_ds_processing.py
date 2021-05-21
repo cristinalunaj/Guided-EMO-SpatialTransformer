@@ -1,5 +1,5 @@
 import os.path
-
+import argparse
 import pandas as pd
 from sklearn.model_selection import StratifiedKFold
 
@@ -72,17 +72,32 @@ if __name__ == '__main__':
                                   9:"Uncertain",
                                   10:"NonFace"}
     #### Input parameters:
-    train_csv = '/mnt/RESOURCES/AFFECTNET/Manually_Annotated_file_lists_ORIGINAL/training.csv'
-    validation_csv = '/mnt/RESOURCES/AFFECTNET/Manually_Annotated_file_lists_ORIGINAL/validation.csv'
-    kfolds = 5
+    parser = argparse.ArgumentParser(description="Configuration of setup and training process")
+    parser.add_argument('-rt', '--root_train_csv', type=str, required=True,
+                        help='Root path to the training csv downloaded from AffectNet DS(Manually_Annotated_file_lists_ORIGINAL/training.csv)')
+    parser.add_argument('-rv', '--root_val_csv', type=str, required=True,
+                        help='Root path to the validation csv downloaded from AffectNet DS(Manually_Annotated_file_lists_ORIGINAL/validation.csv)')
+    parser.add_argument('-kf', '--k_folds', type=int, default=5,
+                        help='Number of folds [default: 5]')
+    parser.add_argument('-s', '--seed', type=int, default=2020,
+                        help='Random seed [default: 2020]')
+    parser.add_argument('-o', '--out_dir', type=str,
+                        help='Output folder to save generated csvs (complete and with 5cv)')
+    args = parser.parse_args()
+
+
     ### Out parameters:
-    out_polarity_complete_csv = '../../data/datasets_distribution/AffectNet/polarity_complete.csv'
-    out_polarity_complete_csv_5folds = '../../data/datasets_distribution/AffectNet/polarity_complete_5folds.csv'
+    #out_polarity_complete_csv = '../../data/datasets_distribution/AffectNet/polarity_complete.csv'
+    #out_polarity_complete_csv_5folds = '../../data/datasets_distribution/AffectNet/polarity_complete_5folds.csv'
+    os.makedirs(args.out_dir, exist_ok=True)
+    out_polarity_complete_csv = os.path.join(args.out_dir,'polarity_complete.csv')
+    out_polarity_complete_csv_5folds = os.path.join(args.out_dir,'polarity_complete_5folds.csv')
+
 
 
     ### CODE
-    df_train = pd.read_csv(train_csv)
-    df_val = pd.read_csv(validation_csv)
+    df_train = pd.read_csv(args.root_train_csv)
+    df_val = pd.read_csv(args.root_val_csv)
     df_total = pd.concat([df_train, df_val])
     #Replace some extensions to jpg:
     df_total["subDirectory_filePath"] = df_total["subDirectory_filePath"].replace(regex=[r'\b(?:.bmp|.BMP|.tif|.TIF|.tiff|.TIFF)\b'], value='.jpg')
@@ -102,7 +117,7 @@ if __name__ == '__main__':
     polarity_df.to_csv(out_polarity_complete_csv, sep=";", index=False, header=True)
 
     # Distribute emotions in folds:
-    polarity_df_folds = create_folds(polarity_df, folds=kfolds, seed=2020)
+    polarity_df_folds = create_folds(polarity_df, folds=args.k_folds, seed=args.seed)
     # save polarity df complete - folds:
     polarity_df_folds.to_csv(out_polarity_complete_csv_5folds, sep=";", index=False, header=True)
     print("Distribution of images per fold:")

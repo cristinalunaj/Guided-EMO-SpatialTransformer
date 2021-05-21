@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import argparse
 from sklearn.model_selection import StratifiedKFold
 
 
@@ -94,27 +95,35 @@ def create_subset_FER(df_FER_DS, out_path, kfold=5, seed=2020):
 
 
 if __name__ == '__main__':
-    out_root_path = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013"
-    in_root_path = "/mnt/ESITUR2/DATASETS/FER2013/fer2013"
+    parser = argparse.ArgumentParser(description="Configuration of setup and training process")
+    parser.add_argument('-r', '--root_csv', type=str, required=True,
+                        help='Root path to the processed DS (/data/datasets_distribution/FER2013/labels_FER2013.csv)')
+    parser.add_argument('-kf', '--k_folds', type=int, default=5,
+                        help='Number of folds [default: 5]')
+    parser.add_argument('-s', '--seed', type=int, default=2020,
+                        help='Random seed [default: 2020]')
+    parser.add_argument('-o', '--out_dir', type=str,
+                        help='Output folder to save generated csv ( with 5cv)')
+    args = parser.parse_args()
 
-    path_lost_landmarks = out_root_path+"/lost_imgs_landmarks_extractor.csv"
-    initial_FER_DS = in_root_path+"/labels_FER2013.csv"
-    out_FER_DS_withouth_lost_landmarks = out_root_path+"/labels_FER2013_31129imgs.csv"
-    out_FER_DS_withouth_lost_landmarks_kfold = out_root_path+"/labels_FER2013_27557KFOLDimgs.csv"
+    os.makedirs(args.out_dir, exist_ok=True)
+    out_root_path = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013"
     out_FER_DS_complete_polarity_kfold =out_root_path+"/labels_FER2013_31885KFOLDimgs.csv"
     seed = 2020
     kfolds = 5
 
-    df_lost_imgs = pd.read_csv(path_lost_landmarks, header=None)
-    df_FER_DS = pd.read_csv(initial_FER_DS, sep=";", header=0)
+
+
+    #df_lost_imgs = pd.read_csv(path_lost_landmarks, header=None)
+    df_FER_DS = pd.read_csv(args.root_csv, sep=";", header=0)
     plot_histograms(df_FER_DS, title="FER complete")
     #Create reduced version of FER DS without including images whose faces were not detected
     # & convert to valence/polarity & divide in folds
-    create_subset_FER_no_landmarks(df_FER_DS, df_lost_imgs, out_FER_DS_withouth_lost_landmarks,
-                                   out_FER_DS_withouth_lost_landmarks_kfold, kfold=kfolds, seed=seed)
+    # create_subset_FER_no_landmarks(df_FER_DS, df_lost_imgs, out_FER_DS_withouth_lost_landmarks,
+    #                                out_FER_DS_withouth_lost_landmarks_kfold, kfold=kfolds, seed=seed)
 
     #Create reduced version of FER DS & convert to valence/polarity & divide in folds
-    #create_subset_FER(df_FER_DS, out_FER_DS_complete_polarity_kfold, kfold=kfolds, seed=seed)
+    create_subset_FER(df_FER_DS, out_FER_DS_complete_polarity_kfold, kfold=kfolds, seed=seed)
 
 
 

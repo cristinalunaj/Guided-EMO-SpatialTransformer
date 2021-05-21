@@ -48,6 +48,9 @@ if __name__ == '__main__':
                         help='Root path with the images')
     parser.add_argument('-o', '--out_dir', type=str, required=True,
                         help='Root path to save resized and grayscale images')
+    parser.add_argument('-imgSize', '--img_size', type=int,
+                        help='Output size of images',
+                        default=48)
     parser.add_argument('-ds', '--dataset_name', type=str, help='Name of the dataset to process ["AffectNet","FER"]',
                         default='AffectNet')
 
@@ -62,13 +65,13 @@ if __name__ == '__main__':
             # Extract grayscale images and resize to 48x48
             print("Start image conversion to 48x48 & grayscale ...")
             os.makedirs(args.out_dir, exist_ok=True)
-            convert_imgs_parallel(folders_orImages, args.data_root, args.out_dir, newSize=(48, 48))
+            convert_imgs_parallel(folders_orImages, args.data_root, args.out_dir, newSize=(args.img_size, args.img_size))
     else:
         refactor_images_AffectNet(folders_orImages, args.data_root)
         print("Start image conversion to 48x48 & grayscale ...")
         os.makedirs(args.out_dir, exist_ok=True)
         image_utils.convert2grayAndResize(img_subfolder=args.data_root.split("/")[-1],
-                                          in_path_imgs = args.data_root.rsplit("/",1)[0], out_path_imgs = args.out_dir,newSize = (48,48))
+                                          in_path_imgs = args.data_root.rsplit("/",1)[0], out_path_imgs = args.out_dir,newSize = (args.img_size, args.img_size))
 
 
 

@@ -7,23 +7,28 @@ from src.utils import image_utils
 import argparse
 
 def strategy2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original,out_path_imgs, newSize, L2):
-    in_path_subf = os.path.join(in_path_landmarks, img_subfolder)
+    in_path_subf = os.path.join(in_path_img_original, img_subfolder)
     for img_name in os.listdir(in_path_subf):
-        if (os.path.exists(os.path.join(out_path_imgs, img_subfolder, img_name))): return
-        if L2 == "dilation":
-            img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
-            imgPil = Image.fromarray(image_utils.create_dilation(img_landm))
-        elif L2 == "soften":
-            img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
-            img2 = image_utils.soften_img(img_landm, threshold=int(0.15*255))
-            imgPil = Image.fromarray((img2).astype(np.uint8))
-        elif L2== "collage":
-            img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)))/255
-            img_original = np.array(Image.open(os.path.join(in_path_img_original, img_subfolder, img_name)))/255
-            img3 = (img_landm * img_original)
-            imgPil = Image.fromarray((img3*255).astype(np.uint8))
+        try:
+            if (os.path.exists(os.path.join(out_path_imgs, img_subfolder, img_name))): return
+            if L2 == "dilation":
+                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
+                imgPil = Image.fromarray(image_utils.create_dilation(img_landm))
+            elif L2 == "soften":
+                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
+                img2 = image_utils.soften_img(img_landm, threshold=int(0.15*255))
+                imgPil = Image.fromarray((img2).astype(np.uint8))
+            elif L2== "collage":
+                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)))/255
+                img_original = np.array(Image.open(os.path.join(in_path_img_original, img_subfolder, img_name)))/255
+                img3 = (img_landm * img_original)
+                imgPil = Image.fromarray((img3*255).astype(np.uint8))
+        except FileNotFoundError:
+            print("FileNotFound Error in img: ", img_name)
+
 
         grayScale = image_utils.convert2grayscale(imgPil)
+        #imgResized = grayScale
         imgResized = image_utils.resize(grayScale, new_size=newSize)
         os.makedirs(os.path.join(out_path_imgs, img_subfolder), exist_ok=True)
         imgResized.save(os.path.join(out_path_imgs, img_subfolder, img_name.rsplit(".")[0] + ".png"))
