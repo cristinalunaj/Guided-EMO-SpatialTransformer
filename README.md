@@ -50,10 +50,21 @@ FER-2013 dataset, we should run:
     -o ~/Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013 -kf 5 -s 2020
 
 
-## Prepare images
-The architecture used in this repo appears in the following image: 
+## Arquitecture
+
+The architecture used in this repo is an Spatial Transformer with a CNN, similar to the implemented in :https://github.com/omarsayed7/Deep-Emotion, but with some variations including Early stopping, cross-validation ... 
+
+An image of the architecute appears below: 
 
 ![Architecture](data/resources/imgs/Arquitecture.png)
+
+## Prepare images
+In the following picture you can see an example of each generated image: 
+
+![OriginalImg](data/resources/imgs/complete_imgs.png)
+
+and below you have the code for generating them:
+
 
 ### Orginal images
 First, we need to prepare the Datasets. 
@@ -128,9 +139,7 @@ AffectNet:
     python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>/SALIENCY -o <AffectNet-dir>/SALIENCY_48x48_grayscale -imgSize 48
 
 
-In the following picture you can see an example of each generated image: 
 
-![OriginalImg](data/resources/imgs/complete_imgs.png)
 
 ## Train models (without Transfer Learning):
 In this section, we summarize the parameters introduced to train the models in their different versions. 
@@ -247,12 +256,15 @@ To train the ST-Saliency models with a 5-folds cross-validation, run:
     -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/FER2013_logs -m saliency
     --tl ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS/6saliency_20210511_104116/trained_models/TMP-deep_emotion-500-128-0.001-COMPLETE-48-148-saliency.pt
 
+## Results:
+...
 
 ### Problems with images:
-    103/29a31ebf1567693f4644c8ba3476ca9a72ee07fe67a5860d98707a0a.jpg -> Not included in AffectNet collection
 
 
-##FAQ
+
+## FAQ
+
 ### How do I cite this work?
 If you use the code of this work or the generated models, please cite the following paper:
 
@@ -260,9 +272,12 @@ If you use the code of this work or the generated models, please cite the follow
 
 
 ### LICENSE:
-
+...
 
 ### CONTACT:
 If you have any question or you find a bug in the code, please contact us in: 
 
 <cristina.lunaj@upm.es>
+
+### OTHER:
+* 103/29a31ebf1567693f4644c8ba3476ca9a72ee07fe67a5860d98707a0a.jpg -> Not included 
