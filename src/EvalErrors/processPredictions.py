@@ -1,12 +1,15 @@
-import os
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 
 import pandas as pd
 from sklearn.metrics import confusion_matrix
 from src.utils.plotcm import plot_confusion_matrix
-import matplotlib.pyplot as plt
 
-import cv2
 import numpy as np
+import cv2
 
 
 
@@ -54,13 +57,13 @@ def analyse_errors(df_erros):
     arousal_mean_matrix[1, 2] = mean_arousal
     arousal_std_matrix[1, 2] = std_arousal
     print("-----> Prediction is Positive, but label is Negative:")
-    df_erros_PosNeg = df_erros.loc[((df_erros["preds"] == 1.0) & (df_erros["labels"] == 2.0))]
-    n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_PosNeg)
+    df_erros_NegPos = df_erros.loc[((df_erros["preds"] == 1.0) & (df_erros["labels"] == 2.0))]
+    n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_NegPos)
     valence_mean_matrix[2, 1] = mean_val
     valence_std_matrix[2, 1] = std_val
     arousal_mean_matrix[2, 1] = mean_arousal
     arousal_std_matrix[2, 1] = std_arousal
-    return valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix
+    return valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix, df_erros_PosNeg, df_erros_NegPos
 
 
 def analyse_correct(df_correct, valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix):
@@ -112,17 +115,42 @@ def get_accuracy_per_class(cm, classes):
     return acc_classes
 
 
+def save_imgs(df_error, out_dir, root_path_imgs, error_type="PositiveLabelNegativePred", modality=""):
+    out_dir_new = os.path.join(out_dir, error_type)
+    if (os.path.isdir(out_dir_new)): return
+    os.makedirs(out_dir_new, exist_ok=True)
+
+    for i, row in df_error.iterrows():
+        out_dir_img = os.path.join(out_dir_new, row["path"].replace("/", "_"))
+        if(modality=="saliency" or modality=="landmarks"):
+            in_dir_img = os.path.join(root_path_imgs, row["path"].split(".")[0]+".jpeg")
+        else:
+            in_dir_img = os.path.join(root_path_imgs, row["path"])
+        im = cv2.imread(in_dir_img)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(im, 'V:'+str(np.round(row["valence"], 2))+"A:"+str(np.round(row["arousal"],2)), (10, 50), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
+        cv2.putText(im, "Em:" + str(row["expression"]), (10, 70), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
+        cv2.imwrite(out_dir_img, im)
+
+
 if __name__ == '__main__':
+    modality = "saliency"
     complete_df_path = "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_file_lists_ORIGINAL/complete_trainAndVal_NOEXT.csv"
+
+    #IMGS paths
     imgs_path = "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_compressed/Manually_Annotated_Images" #"/mnt/RESOURCES/AFFECTNET/Manually_Annotated_Images_48x48_grayscale"
-    landm_path = "/mnt/RESOURCES/AFFECTNET/LANDMARKS_dlib_MTCNN_PRUEBA"
+    landm_path = "/mnt/RESOURCES/AFFECTNET/SALIENCY/results"
+
+    out_path = os.path.join("/mnt/RESOURCES/AFFECTNET/ZZEVAL_ERROR_MODELS", modality)
+    root_path_log_errors = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET/6saliency_20210511_104116"
     classes = ('Neutral', 'Positive', 'Negative')
     labels_default_dataset = ""
+    paint_imgs = True
 
     complete_df = pd.read_csv(complete_df_path, sep=",", header=0)
 
     for fold in range(0, 5):
-        root_path_preds = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET/1baseline_20210510_225930/fold"+str(fold)+"/baseline"
+        root_path_preds = os.path.join(root_path_log_errors, "fold"+str(fold)) #modality
         path_preds = os.path.join(root_path_preds, "df_predictions.csv")
 
         df_preds = pd.read_csv(path_preds, sep=";", header=0)
@@ -135,15 +163,28 @@ if __name__ == '__main__':
 
         df_preds["valence"] = compl_df_pred["valence"]
         df_preds["arousal"] = compl_df_pred["arousal"]
-
-        get_metrics(df_preds)
+        df_preds["expression"] = compl_df_pred["expression"]
 
         #Analyse results
         error_df = df_preds.loc[df_preds["preds"] != df_preds["labels"]]
-        valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix = analyse_errors(error_df)
+        valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix, df_erros_PosNeg, df_erros_NegPos = analyse_errors(error_df)
+        #Save imgs of errors
+        if(paint_imgs):
+            os.makedirs(os.path.join(out_path, "fold" + str(fold), "original"), exist_ok=True)
+            save_imgs(df_erros_PosNeg, os.path.join(out_path, "fold" + str(fold), "original"),imgs_path,error_type="PositiveLabel_NegativePred")
+            save_imgs(df_erros_NegPos, imgs_path, os.path.join(out_path, "fold" + str(fold), "original"),error_type="NegativeLabel_PositivePred")
+            if(modality=="saliency" or modality=="landmarks"):
+                os.makedirs(os.path.join(out_path, "fold" + str(fold), "landmarksORsaliency"), exist_ok=True)
+                save_imgs(df_erros_PosNeg, os.path.join(out_path, "fold" + str(fold), "landmarksORsaliency"),landm_path,
+                          error_type="PositiveLabel_NegativePred",modality=modality)
+                save_imgs(df_erros_NegPos, os.path.join(out_path, "fold" + str(fold), "landmarksORsaliency"),landm_path,
+                          error_type="NegativeLabel_PositivePred",modality=modality)
+
+
         correct_df = df_preds.loc[df_preds["preds"] == df_preds["labels"]]
         valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix = \
             analyse_correct(correct_df, valence_mean_matrix, valence_std_matrix, arousal_mean_matrix, arousal_std_matrix)
+
 
         print("--->>>>>> ACCURACY PER CLASS::")
         cm = confusion_matrix(df_preds["labels"], df_preds["preds"])

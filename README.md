@@ -107,15 +107,15 @@ AffectNet:
 
 ### Extract Dilation:
 
-    python3 src/ImagePreprocessing/prepare_L2_dilation_collage.py -r <AffectNet-dir>/Manually_Annotated_compressed/Manually_Annotated_Images -l <AffectNet-dir>/LANDMARKS_dlib_MTCNN
+
+    python3 src/ImageProcessing/Landmarks-rmPartOfFace.py -r <AffectNet-dir>/Manually_Annotated_Images 
+    -l <AffectNet-dir>/LANDMARKS_dlib_MTCNN_npy_PRUEBA -frm 'jaw' -o <AffectNet-dir>/LANDMARKS_NO_JAW
+
+    python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>/LANDMARKS_NO_JAW 
+    -o <AffectNet-dir>/LANDMARKS_NO_JAW_48x48_grayscale -imgSize 48
+
+    python3 src/ImagePreprocessing/prepare_L2_dilation_collage.py -r <AffectNet-dir>/Manually_Annotated_compressed/Manually_Annotated_Images -l <AffectNet-dir>/LANDMARKS_NO_JAW_48x48_grayscale
     -o <AffectNet-dir>/Dilation -imgSize 48 -m dilation -ds AffectNet
-
-Convert to correct format: 
-
-AffectNet:
-
-    python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>/Dilation -o <AffectNet-dir>/Dilation_48x48_grayscale -imgSize 48
-
 
 
 ### Extract saliency:
@@ -197,9 +197,13 @@ To train the ST-Landmarks models with a 5-folds cross-validation, run:
 ### ST-Dilation: Original img and Dilation image to Spatial Transformer Network
 To train the ST-Landmarks models with a 5-folds cross-validation, run:
 
+
+
     python3 src/main_CV_Pytorch.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv 
     -r <AffectNet-dir>/Manually_Annotated_Images_48x48_grayscale -l <AffectNet-dir>/Dilation_48x48_grayscale -imgSize 48 -e 500 
     -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS -m landmarks 
+
+
 
 
 ### ST-Saliency models: Original img and Saliency image to Spatial Transformer Network
@@ -275,9 +279,13 @@ If you use the code of this work or the generated models, please cite the follow
 ...
 
 ### CONTACT:
-If you have any question or you find a bug in the code, please contact us in: 
+If you have any question or you find a bug in the code, please contact us at: 
 
 <cristina.lunaj@upm.es>
 
 ### OTHER:
 * 103/29a31ebf1567693f4644c8ba3476ca9a72ee07fe67a5860d98707a0a.jpg -> Not included 
+
+
+### Eval errors:
+

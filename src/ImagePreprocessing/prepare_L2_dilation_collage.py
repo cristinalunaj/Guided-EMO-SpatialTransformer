@@ -1,4 +1,8 @@
-import os
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 from PIL import Image
 import time, multiprocessing
 from functools import partial
@@ -12,7 +16,7 @@ def strategy2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original
         try:
             if (os.path.exists(os.path.join(out_path_imgs, img_subfolder, img_name))): return
             if L2 == "dilation":
-                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
+                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name.split(".")[0]+".png")).convert("L"))
                 imgPil = Image.fromarray(image_utils.create_dilation(img_landm))
             elif L2 == "soften":
                 img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
@@ -23,15 +27,16 @@ def strategy2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original
                 img_original = np.array(Image.open(os.path.join(in_path_img_original, img_subfolder, img_name)))/255
                 img3 = (img_landm * img_original)
                 imgPil = Image.fromarray((img3*255).astype(np.uint8))
+
+
+            grayScale = image_utils.convert2grayscale(imgPil)
+            #imgResized = grayScale
+            imgResized = image_utils.resize(grayScale, new_size=newSize)
+            os.makedirs(os.path.join(out_path_imgs, img_subfolder), exist_ok=True)
+            imgResized.save(os.path.join(out_path_imgs, img_subfolder, img_name.rsplit(".")[0] + ".png"))
         except FileNotFoundError:
             print("FileNotFound Error in img: ", img_name)
 
-
-        grayScale = image_utils.convert2grayscale(imgPil)
-        #imgResized = grayScale
-        imgResized = image_utils.resize(grayScale, new_size=newSize)
-        os.makedirs(os.path.join(out_path_imgs, img_subfolder), exist_ok=True)
-        imgResized.save(os.path.join(out_path_imgs, img_subfolder, img_name.rsplit(".")[0] + ".png"))
 
 
 
@@ -41,7 +46,7 @@ def process_imgs_parallel(list_folders, in_path_imgs, in_path_imgs2, out_path_im
     Extract frames in a parallel way using ffmpeg or opencv funcions
     """
     start_time = time.time()
-    pool = multiprocessing.Pool(processes=2)  # processes = 7
+    pool = multiprocessing.Pool()  # processes = 7
 
     landmarks_extractor = partial(strategy2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
                             in_path_landmarks=in_path_imgs,

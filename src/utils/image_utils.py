@@ -11,7 +11,7 @@ def convert2grayscale(img):
     return img.convert('LA')
 
 
-def create_dilation(img, kernel_size=7, iterations=5):
+def create_dilation(img, kernel_size=2, iterations=2):
     kernel = np.ones((kernel_size, kernel_size), np.uint8) *0.5
     dilation = cv2.dilate(img, kernel, iterations=iterations)
     return dilation

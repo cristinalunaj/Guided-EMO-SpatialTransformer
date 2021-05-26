@@ -1,7 +1,11 @@
-import os
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 from PIL import Image
 import argparse
-import time, multiprocessing, sys
+import time, multiprocessing
 from functools import partial
 from src.utils import image_utils
 

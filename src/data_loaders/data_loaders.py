@@ -3,10 +3,8 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import torch
-import torchvision
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
-from matplotlib import pyplot as plt
+from torch.utils.data import Dataset
+
 
 class Plain_Dataset(Dataset):
     def __init__(self, csv_path, dataroot, transform, sep=";"):

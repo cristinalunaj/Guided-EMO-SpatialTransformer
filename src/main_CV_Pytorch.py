@@ -1,11 +1,11 @@
 from __future__ import print_function
 import argparse
 
-import pandas as pd
-import sys,os
-sys.path.append("../..")
-sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer")
-sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer/src")
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

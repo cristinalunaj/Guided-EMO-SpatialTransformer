@@ -1,15 +1,14 @@
 from __future__ import print_function
 import argparse
-import os
-import sys
+
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
+
 
 import pandas as pd
-
-sys.path.append("../..")
-sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer")
-sys.path.append("~/PycharmProjects/Guided-EMO-SpatialTransformer/src")
-
-
 import numpy as np
 import torch
 from sklearn.metrics import confusion_matrix
@@ -69,7 +68,7 @@ def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
         print("Loaded weight: ", weigths_path)
         #Eval model:
         fold_logs_path = os.path.join(logs_path, "fold"+str(fold))
-        os.makedirs(fold_logs_path)
+        os.makedirs(fold_logs_path, exist_ok=True)
         eval_nw(modality, os.path.join(root_path_weights,weigths_path), testloader, test_dataset, fold_logs_path)
 
     #EVAL COMPLETE MODEL
