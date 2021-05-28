@@ -81,7 +81,7 @@ AffectNet:
 
     python3 src/ImagePreprocessing/LandmarkExtractor.py -o <AffectNet-dir>/LANDMARKS_dlib_MTCNN -olandm <AffectNet-dir>/AFFECTNET/LANDMARKS_dlib_MTCNN_npy
     -d <AffectNet-dir>/Manually_Annotated_compressed/Manually_Annotated_Images -trainCSV ~/Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv
-    -trainCSVSep , -ds AffectNet -logs <AffectNet-dir>/AFFECTNET
+    -trainCSVSep ; -ds AffectNet -logs <AffectNet-dir>/AFFECTNET
 
 FER-2013:
 
@@ -102,7 +102,7 @@ AffectNet:
     -o <AffectNet-dir>/Soft_L2_48x48_grayscale -imgSize 48 -m soften -ds AffectNet
 
     python3 src/ImagePreprocessing/prepare_L2_dilation_collage.py -r <FER2013-dir>/IMAGES -l <FER2013-dir>/LANDMARKS_dlib_MTCNN
-    -o <FER2013-dir>/Soft_L2_48x48_grayscale -imgSize 48 -m soften -ds AffectNet
+    -o <FER2013-dir>/Soft_L2_48x48_grayscale -imgSize 48 -m soften -ds FER
 
 
 ### Extract Dilation:
@@ -288,4 +288,7 @@ If you have any question or you find a bug in the code, please contact us at:
 
 
 ### Eval errors:
-
+    python3 evaluate.py -d /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv 
+    -r /mnt/RESOURCES/AFFECTNET/Manually_Annotated_Images_48x48_grayscale -l /mnt/RESOURCES/AFFECTNET/Dilation_2iter -bs 128 
+    -logs /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET/5dilation_2x2_2iterat_noJaw 
+    -m landmarks -tl /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/models_logs/AFFECTNET_LOGS/5dilation_2x2_2iterat_noJaw/trained_models

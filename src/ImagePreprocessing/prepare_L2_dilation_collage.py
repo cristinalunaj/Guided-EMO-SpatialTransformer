@@ -19,7 +19,10 @@ def strategy2grayAndResize(img_subfolder, in_path_landmarks,in_path_img_original
                 img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name.split(".")[0]+".png")).convert("L"))
                 imgPil = Image.fromarray(image_utils.create_dilation(img_landm))
             elif L2 == "soften":
-                img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
+                try:
+                    img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name)).convert("L"))
+                except FileNotFoundError:
+                    img_landm = np.array(Image.open(os.path.join(in_path_landmarks, img_subfolder, img_name.split(".")[0]+".png")).convert("L"))
                 img2 = image_utils.soften_img(img_landm, threshold=int(0.15*255))
                 imgPil = Image.fromarray((img2).astype(np.uint8))
             elif L2== "collage":

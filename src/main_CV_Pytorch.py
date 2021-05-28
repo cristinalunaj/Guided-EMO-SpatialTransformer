@@ -248,7 +248,7 @@ def train_model_original(net, train_loader, optmizer, criterion, device):
 def train_model_saliency(net, train_loader, optmizer, criterion, device):
     train_loss = 0
     train_correct = 0
-    for data, labels, saliency in train_loader:
+    for data, labels, saliency, _ in train_loader:
         data, labels, saliency = data.to(device, non_blocking=True), labels.to(device, non_blocking=True), saliency.to(device, non_blocking=True)
         optmizer.zero_grad()
         outputs = net(data,saliency)
