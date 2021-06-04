@@ -20,43 +20,43 @@ def analyse_errors(df_erros):
     arousal_std_matrix = np.zeros([3, 3])
 
     # Confussion between Neutral & Positive:
-    print("-----> Prediction is Neutral, but label is Postive:")
+    #print("-----> Prediction is Neutral, but label is Postive:")
     df_erros_NeuPos = df_erros.loc[((df_erros["preds"] == 0.0) & (df_erros["labels"] == 1.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal = get_metrics(df_erros_NeuPos)
     valence_mean_matrix[1,0] = mean_val
     valence_std_matrix[1, 0] = std_val
     arousal_mean_matrix[1, 0] = mean_arousal
     arousal_std_matrix[1, 0] = std_arousal
-    print("-----> Prediction is Positive, but label is Neutral:")
+    #print("-----> Prediction is Positive, but label is Neutral:")
     df_erros_PosNeu = df_erros.loc[((df_erros["preds"] == 1.0) & (df_erros["labels"] == 0.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_PosNeu)
     valence_mean_matrix[0, 1] = mean_val
     valence_std_matrix[0, 1] = std_val
     arousal_mean_matrix[0, 1] = mean_arousal
     arousal_std_matrix[0, 1] = std_arousal
-    print("-----> Prediction is Neutral, but label is Negative:")
+    #print("-----> Prediction is Neutral, but label is Negative:")
     df_erros_NeuNeg = df_erros.loc[((df_erros["preds"] == 0.0) & (df_erros["labels"] == 2.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_NeuNeg)
     valence_mean_matrix[2, 0] = mean_val
     valence_std_matrix[2, 0] = std_val
     arousal_mean_matrix[2, 0] = mean_arousal
     arousal_std_matrix[2, 0] = std_arousal
-    print("-----> Prediction is Negative, but label is Neutral:")
+    #print("-----> Prediction is Negative, but label is Neutral:")
     df_erros_NegNeu = df_erros.loc[((df_erros["preds"] == 2.0) & (df_erros["labels"] == 0.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_NegNeu)
     valence_mean_matrix[0, 2] = mean_val
     valence_std_matrix[0, 2] = std_val
     arousal_mean_matrix[0, 2] = mean_arousal
     arousal_std_matrix[0, 2] = std_arousal
-    print("--------------------------------------------------------------------------")
-    print("-----> Prediction is Negative, but label is Positive:")
+    #print("--------------------------------------------------------------------------")
+    #print("-----> Prediction is Negative, but label is Positive:")
     df_erros_PosNeg = df_erros.loc[((df_erros["preds"] == 2.0) & (df_erros["labels"] == 1.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_PosNeg)
     valence_mean_matrix[1, 2] = mean_val
     valence_std_matrix[1, 2] = std_val
     arousal_mean_matrix[1, 2] = mean_arousal
     arousal_std_matrix[1, 2] = std_arousal
-    print("-----> Prediction is Positive, but label is Negative:")
+    #print("-----> Prediction is Positive, but label is Negative:")
     df_erros_NegPos = df_erros.loc[((df_erros["preds"] == 1.0) & (df_erros["labels"] == 2.0))]
     n_errors, mean_val, std_val, mean_arousal, std_arousal =get_metrics(df_erros_NegPos)
     valence_mean_matrix[2, 1] = mean_val

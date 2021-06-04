@@ -2,10 +2,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class Deep_Emotion_Baseline(nn.Module):
-    def __init__(self):
+    def __init__(self, training=True):
         '''
         Deep_Emotion class contains the network architecture.
         '''
+        self.training=training
         super(Deep_Emotion_Baseline,self).__init__()
         self.conv1 = nn.Conv2d(1,10,3)
         self.conv2 = nn.Conv2d(10,10,3)
@@ -19,6 +20,10 @@ class Deep_Emotion_Baseline(nn.Module):
 
         self.fc1 = nn.Linear(810,50)
         self.fc2 = nn.Linear(50,3)
+        # define dropout layer in __init__
+        #self.drop_layer = nn.Dropout(p=0.5)
+
+
 
     def forward(self,input1):
 
@@ -30,7 +35,7 @@ class Deep_Emotion_Baseline(nn.Module):
         out = self.norm(self.conv4(out))
         out = F.relu(self.pool4(out))
 
-        out = F.dropout(out)
+        out = F.dropout(out, self.training)
         out = out.view(-1, 810)
         out = F.relu(self.fc1(out))
         out = self.fc2(out)

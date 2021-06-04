@@ -58,6 +58,7 @@ def get_weigths(root_path_weights, fold=-1):
 
 
 def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
+    avg_acc = 0
     for fold in range(0, k_folds):
         #Select data to test
         test_ids = np.array(list(test_dataset.df_file.loc[test_dataset.df_file["fold"] == fold].index))
@@ -69,7 +70,10 @@ def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
         #Eval model:
         fold_logs_path = os.path.join(logs_path, "fold"+str(fold))
         os.makedirs(fold_logs_path, exist_ok=True)
-        eval_nw(modality, os.path.join(root_path_weights,weigths_path), testloader, test_dataset, fold_logs_path)
+        accuracy = eval_nw(modality, os.path.join(root_path_weights,weigths_path), testloader, test_dataset, fold_logs_path)
+        avg_acc+=accuracy
+    print("FINAL ACCURACY:", avg_acc/5)
+
 
     #EVAL COMPLETE MODEL
 
@@ -79,11 +83,11 @@ def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
 def eval_nw(modality, weights, test_loader, test_dataset, logs_path):
     #Load model:
     if (modality == "saliency" or modality == "landmarks"):
-        net = Deep_Emotion_saliency_48x48()
+        net = Deep_Emotion_saliency_48x48(training=False)
     elif (modality == "original"):
-        net = Deep_Emotion_Original_48x48()
+        net = Deep_Emotion_Original_48x48(training=False)
     elif (modality == "baseline"):
-        net = Deep_Emotion_Baseline_48x48()
+        net = Deep_Emotion_Baseline_48x48(training=False)
     print("Deep Emotion:-", net)
     net.load_state_dict(torch.load(weights))
     net.to(device)
@@ -103,6 +107,7 @@ def eval_nw(modality, weights, test_loader, test_dataset, logs_path):
 
     #Extract metrics: accuracy, confussion matrix...
     correct = torch.where(preds == labels, torch.tensor([1.]).cuda(), torch.tensor([0.]).cuda()).sum()
+    accuracy = 100.0 * (correct / len(all_labels)).cpu().detach().numpy()
     print("Accuracy: ", str(100.0 * (correct / len(all_labels))))
 
     cm = confusion_matrix(all_labels, all_preds)
@@ -119,6 +124,7 @@ def eval_nw(modality, weights, test_loader, test_dataset, logs_path):
     #save logs:
     os.makedirs(logs_path, exist_ok=True)
     df_labels.to_csv(os.path.join(logs_path, "df_predictions.csv"), sep=";", header=True, index=False)
+    return accuracy
 
 
 
