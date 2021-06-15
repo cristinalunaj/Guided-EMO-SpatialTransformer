@@ -1,0 +1,5472 @@
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/bin/python3 /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/src/main_CV_Pytorch_correctDropOut.py -kf 5 -d /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013/labels_FER2013_31885KFOLDimgs.csv -r /mnt/ESITUR2/DATASETS/FER2013/fer2013/IMAGES -l /mnt/ESITUR2/DATASETS/FER2013/fer2013/LANDMARKS_dlib_MTCNN -imgSize 48 -e 500 -lr 0.001 -bs 128 -s 2020 -logs /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd -m landmarks --train
+PROCESSING MODALITY:  landmarks
+WEIGHTS:  None
+DEVICE:  cuda:0
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+SAVING DATA IN:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413
+===================================Start Training===================================
+FOLD 0
+--------------------------------
+N_imgs_training:  25508
+N_imgs_test:  6377
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 
+Fold number 1 / 5
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAINING: Fold: 0. Iteration: 0. Loss: 0.007711811180733131. Accuracy: 49.0551983691391
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 0. Loss: 0.00695532390236462. Accuracy: 54.9631488160577
+--------------------------------
+
+Epoch 2 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAINING: Fold: 0. Iteration: 1. Loss: 0.006822077627837779. Accuracy: 57.19774188489885
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 1. Loss: 0.0066011033873956595. Accuracy: 56.51560294809471
+--------------------------------
+
+Epoch 3 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAINING: Fold: 0. Iteration: 2. Loss: 0.0064530669077261125. Accuracy: 59.17751293711777
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 2. Loss: 0.006201622692492196. Accuracy: 57.676023208405205
+--------------------------------
+
+Epoch 4 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAINING: Fold: 0. Iteration: 3. Loss: 0.006193291284325019. Accuracy: 61.267053473420106
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 3. Loss: 0.006145583783195033. Accuracy: 62.67837541163557
+--------------------------------
+
+Epoch 5 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAINING: Fold: 0. Iteration: 4. Loss: 0.006028412676668847. Accuracy: 62.21577544299828
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 4. Loss: 0.005849025560543233. Accuracy: 65.50101928806649
+--------------------------------
+
+Epoch 6 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAINING: Fold: 0. Iteration: 5. Loss: 0.0059377042565279215. Accuracy: 63.38011604202604
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 5. Loss: 0.005747394397637492. Accuracy: 65.83032774031676
+--------------------------------
+
+Epoch 7 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAINING: Fold: 0. Iteration: 6. Loss: 0.005770271379072427. Accuracy: 64.09753802728557
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 6. Loss: 0.0057109874469164264. Accuracy: 65.90873451466207
+--------------------------------
+
+Epoch 8 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAINING: Fold: 0. Iteration: 7. Loss: 0.005669296916439295. Accuracy: 65.43437352987299
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 7. Loss: 0.00565151834966472. Accuracy: 68.73137839109299
+--------------------------------
+
+Epoch 9 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAINING: Fold: 0. Iteration: 8. Loss: 0.005577235673220531. Accuracy: 66.602634467618
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 8. Loss: 0.0056393203250064885. Accuracy: 69.21750039203387
+--------------------------------
+
+Epoch 10 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAINING: Fold: 0. Iteration: 9. Loss: 0.005477258050836178. Accuracy: 67.08091579112435
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 9. Loss: 0.005456111396351672. Accuracy: 67.4141445820919
+--------------------------------
+
+Epoch 11 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAINING: Fold: 0. Iteration: 10. Loss: 0.0054404425367734. Accuracy: 67.4807903402854
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 10. Loss: 0.005309933337070584. Accuracy: 68.91955464952171
+--------------------------------
+
+Epoch 12 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAINING: Fold: 0. Iteration: 11. Loss: 0.0053322349799283155. Accuracy: 68.24525639015211
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 11. Loss: 0.005472990390516774. Accuracy: 70.4406460718206
+--------------------------------
+
+Epoch 13 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAINING: Fold: 0. Iteration: 12. Loss: 0.005277053007740053. Accuracy: 68.35110553551827
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 12. Loss: 0.0053559988480068885. Accuracy: 69.45272071506979
+--------------------------------
+
+Epoch 14 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAINING: Fold: 0. Iteration: 13. Loss: 0.005222845806799956. Accuracy: 68.4608750196017
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 13. Loss: 0.005333284197396501. Accuracy: 71.3972087188333
+--------------------------------
+
+Epoch 15 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAINING: Fold: 0. Iteration: 14. Loss: 0.005216311831047715. Accuracy: 69.17045632742669
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 14. Loss: 0.0052525504958541745. Accuracy: 72.88693743139407
+--------------------------------
+
+Epoch 16 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAINING: Fold: 0. Iteration: 15. Loss: 0.005157544988112444. Accuracy: 69.49976477967697
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 15. Loss: 0.005169626891435417. Accuracy: 69.87611729653442
+--------------------------------
+
+Epoch 17 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAINING: Fold: 0. Iteration: 16. Loss: 0.005130995270019604. Accuracy: 69.7310647639956
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 16. Loss: 0.005256921627761915. Accuracy: 69.82907323192724
+--------------------------------
+
+Epoch 18 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAINING: Fold: 0. Iteration: 17. Loss: 0.0050781360762104715. Accuracy: 69.98196644190058
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 17. Loss: 0.005583163486933548. Accuracy: 70.91108671789243
+--------------------------------
+
+Epoch 19 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAINING: Fold: 0. Iteration: 18. Loss: 0.005038610893356141. Accuracy: 69.98196644190058
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 18. Loss: 0.005260207248515464. Accuracy: 65.67351419162615
+--------------------------------
+
+Epoch 20 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAINING: Fold: 0. Iteration: 19. Loss: 0.00499169213029309. Accuracy: 70.58569860435941
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 19. Loss: 0.0051381695190155716. Accuracy: 68.91955464952171
+--------------------------------
+
+Epoch 21 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAINING: Fold: 0. Iteration: 20. Loss: 0.004942799275321835. Accuracy: 70.96597145993414
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 20. Loss: 0.005110255884342813. Accuracy: 70.61314097538028
+--------------------------------
+
+Epoch 22 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAINING: Fold: 0. Iteration: 21. Loss: 0.004928410409600529. Accuracy: 71.13062568605928
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 21. Loss: 0.0051275406471516845. Accuracy: 67.36710051748472
+--------------------------------
+
+Epoch 23 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAINING: Fold: 0. Iteration: 22. Loss: 0.004873384771086083. Accuracy: 71.06005958914851
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 22. Loss: 0.005114679124749004. Accuracy: 72.36945272071506
+--------------------------------
+
+Epoch 24 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAINING: Fold: 0. Iteration: 23. Loss: 0.004869906887498529. Accuracy: 71.44817312215775
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 23. Loss: 0.0051982968096937225. Accuracy: 70.09565626470126
+--------------------------------
+
+Epoch 25 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAINING: Fold: 0. Iteration: 24. Loss: 0.00486124927545764. Accuracy: 71.44033244472323
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 24. Loss: 0.0051122552009703354. Accuracy: 73.10647639956093
+--------------------------------
+
+Epoch 26 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAINING: Fold: 0. Iteration: 25. Loss: 0.0047657303436153525. Accuracy: 71.85196801003607
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 25. Loss: 0.005080975203075173. Accuracy: 69.53112748941508
+--------------------------------
+
+Epoch 27 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAINING: Fold: 0. Iteration: 26. Loss: 0.0047431563964659505. Accuracy: 71.89901207464325
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 26. Loss: 0.004908761116186055. Accuracy: 72.87125607652501
+--------------------------------
+
+Epoch 28 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAINING: Fold: 0. Iteration: 27. Loss: 0.004757773023059567. Accuracy: 72.31848831739063
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 27. Loss: 0.0050260136825492135. Accuracy: 69.07636819821232
+--------------------------------
+
+Epoch 29 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAINING: Fold: 0. Iteration: 28. Loss: 0.004687187127957098. Accuracy: 72.64779676964089
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 28. Loss: 0.0054046444446479375. Accuracy: 64.65422612513721
+--------------------------------
+
+Epoch 30 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAINING: Fold: 0. Iteration: 29. Loss: 0.0046811543202931105. Accuracy: 72.545867962992
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 29. Loss: 0.004994905352947648. Accuracy: 71.7578798808217
+--------------------------------
+
+Epoch 31 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAINING: Fold: 0. Iteration: 30. Loss: 0.004649092465924192. Accuracy: 73.063352673671
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 30. Loss: 0.004942748003363404. Accuracy: 72.58899168888192
+--------------------------------
+
+Epoch 32 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAINING: Fold: 0. Iteration: 31. Loss: 0.004673370575949711. Accuracy: 72.49882389838483
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 31. Loss: 0.004963291790561279. Accuracy: 71.2403951701427
+--------------------------------
+
+Epoch 33 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAINING: Fold: 0. Iteration: 32. Loss: 0.004624164637697515. Accuracy: 72.94574251215306
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 32. Loss: 0.0050668624364527785. Accuracy: 74.01599498196644
+--------------------------------
+
+Epoch 34 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAINING: Fold: 0. Iteration: 33. Loss: 0.004610198069295484. Accuracy: 73.30641367414145
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 33. Loss: 0.004916598482043724. Accuracy: 71.77356123569076
+--------------------------------
+
+Epoch 35 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAINING: Fold: 0. Iteration: 34. Loss: 0.004608592786384411. Accuracy: 73.28681198055513
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 34. Loss: 0.0050906844277058124. Accuracy: 74.8314254351576
+--------------------------------
+
+Epoch 36 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAINING: Fold: 0. Iteration: 35. Loss: 0.004559241075191974. Accuracy: 73.55731535204642
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 35. Loss: 0.004994253959329745. Accuracy: 70.40928336208249
+--------------------------------
+
+Epoch 37 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAINING: Fold: 0. Iteration: 36. Loss: 0.004520300881502227. Accuracy: 73.65532381997805
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 36. Loss: 0.00492562199622201. Accuracy: 71.82060530029794
+--------------------------------
+
+Epoch 38 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAINING: Fold: 0. Iteration: 37. Loss: 0.004500666271935478. Accuracy: 74.00423396581465
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 37. Loss: 0.005019909099517841. Accuracy: 72.82421201191784
+--------------------------------
+
+Epoch 39 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAINING: Fold: 0. Iteration: 38. Loss: 0.0044881392557157024. Accuracy: 73.95718990120747
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 38. Loss: 0.0049792658914419785. Accuracy: 72.25968323663164
+--------------------------------
+
+Epoch 40 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAINING: Fold: 0. Iteration: 39. Loss: 0.004465463756580272. Accuracy: 74.22377293398151
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 39. Loss: 0.004911706050174707. Accuracy: 72.57331033401286
+--------------------------------
+
+Epoch 41 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAINING: Fold: 0. Iteration: 40. Loss: 0.004505788212531372. Accuracy: 73.72588991688882
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 40. Loss: 0.004958612522174895. Accuracy: 73.10647639956093
+--------------------------------
+
+Epoch 42 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAINING: Fold: 0. Iteration: 41. Loss: 0.004450855951044128. Accuracy: 74.19633056296064
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 41. Loss: 0.004933982335120996. Accuracy: 72.88693743139407
+--------------------------------
+
+Epoch 43 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAINING: Fold: 0. Iteration: 42. Loss: 0.004397933881204667. Accuracy: 74.57268307981809
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 42. Loss: 0.004943534453797157. Accuracy: 72.80853065704876
+--------------------------------
+
+Epoch 44 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAINING: Fold: 0. Iteration: 43. Loss: 0.004395112426832063. Accuracy: 74.85102712874392
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 43. Loss: 0.004940097115528477. Accuracy: 68.90387329465267
+--------------------------------
+
+Epoch 45 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAINING: Fold: 0. Iteration: 44. Loss: 0.004376927166078949. Accuracy: 74.57660341853536
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 44. Loss: 0.004924655801845752. Accuracy: 73.45146620668027
+--------------------------------
+
+Epoch 46 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAINING: Fold: 0. Iteration: 45. Loss: 0.004324881458368461. Accuracy: 75.02352203230359
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 45. Loss: 0.0049463345355069315. Accuracy: 73.65532381997805
+--------------------------------
+
+Epoch 47 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAINING: Fold: 0. Iteration: 46. Loss: 0.004299211207884166. Accuracy: 75.20385761329779
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 46. Loss: 0.004955152938484454. Accuracy: 70.66018503998745
+--------------------------------
+
+Epoch 48 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAINING: Fold: 0. Iteration: 47. Loss: 0.00431595638368652. Accuracy: 74.70597459620511
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 47. Loss: 0.0049765289988808635. Accuracy: 72.94966285087031
+--------------------------------
+
+Epoch 49 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAINING: Fold: 0. Iteration: 48. Loss: 0.004348014495824036. Accuracy: 74.80790340285401
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 48. Loss: 0.0049812394622651985. Accuracy: 72.87125607652501
+--------------------------------
+
+Epoch 50 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAINING: Fold: 0. Iteration: 49. Loss: 0.004300232472531152. Accuracy: 75.25090167790496
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 49. Loss: 0.00491015171208351. Accuracy: 72.10286968794104
+--------------------------------
+
+Epoch 51 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAINING: Fold: 0. Iteration: 50. Loss: 0.004358167994474756. Accuracy: 74.72949662850871
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 50. Loss: 0.004948863886695157. Accuracy: 71.20903246040457
+--------------------------------
+
+Epoch 52 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAINING: Fold: 0. Iteration: 51. Loss: 0.004397131564550982. Accuracy: 74.5609220636663
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 51. Loss: 0.0050038904049786465. Accuracy: 72.1185510428101
+--------------------------------
+
+Epoch 53 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAINING: Fold: 0. Iteration: 52. Loss: 0.004346516305224096. Accuracy: 74.63148816057708
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 52. Loss: 0.0049930853690027316. Accuracy: 70.1270189744394
+--------------------------------
+
+Epoch 54 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAINING: Fold: 0. Iteration: 53. Loss: 0.004323018075989129. Accuracy: 74.96863729026188
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 53. Loss: 0.0049281822152696326. Accuracy: 73.7494119491924
+--------------------------------
+
+Epoch 55 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAINING: Fold: 0. Iteration: 54. Loss: 0.0042297836099277385. Accuracy: 75.84679316292929
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 54. Loss: 0.004917908914974907. Accuracy: 71.19335110553551
+--------------------------------
+
+Epoch 56 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAINING: Fold: 0. Iteration: 55. Loss: 0.004279068453999472. Accuracy: 75.42731692018191
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 55. Loss: 0.004934307211746855. Accuracy: 70.33087658773718
+--------------------------------
+
+Epoch 57 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAINING: Fold: 0. Iteration: 56. Loss: 0.004206791740937238. Accuracy: 75.48220166222362
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 56. Loss: 0.004914692301762895. Accuracy: 72.74580523757253
+--------------------------------
+
+Epoch 58 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAINING: Fold: 0. Iteration: 57. Loss: 0.00424019366114869. Accuracy: 75.68605927552142
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 57. Loss: 0.004954574945411545. Accuracy: 71.25607652501176
+--------------------------------
+
+Epoch 59 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAINING: Fold: 0. Iteration: 58. Loss: 0.004168121591946427. Accuracy: 75.75270503371492
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 58. Loss: 0.005004446185343651. Accuracy: 74.53347969264544
+--------------------------------
+
+Epoch 60 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAINING: Fold: 0. Iteration: 59. Loss: 0.004219909336885839. Accuracy: 75.72918300141133
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 59. Loss: 0.00488975821233794. Accuracy: 73.59259840050181
+--------------------------------
+
+Epoch 61 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAINING: Fold: 0. Iteration: 60. Loss: 0.004219961807573404. Accuracy: 75.61549317861063
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 60. Loss: 0.005100048937093918. Accuracy: 73.90622549788301
+--------------------------------
+
+Epoch 62 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  61
+>> training : 
+TRAINING: Fold: 0. Iteration: 61. Loss: 0.004109036676867247. Accuracy: 76.32115414771836
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 61. Loss: 0.0049507108595708855. Accuracy: 72.74580523757253
+--------------------------------
+
+Epoch 63 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  62
+>> training : 
+TRAINING: Fold: 0. Iteration: 62. Loss: 0.004170810541183911. Accuracy: 75.8546338403638
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 62. Loss: 0.0049114765764983895. Accuracy: 71.28743923474988
+--------------------------------
+
+Epoch 64 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  63
+>> training : 
+TRAINING: Fold: 0. Iteration: 63. Loss: 0.004201614890134838. Accuracy: 75.76054571114945
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 63. Loss: 0.004909655255958805. Accuracy: 71.17766975066647
+--------------------------------
+
+Epoch 65 / 500 
+Fold number 1 / 5
+>>>>>>>>>>>> ON EPOCH:  64
+>> training : 
+TRAINING: Fold: 0. Iteration: 64. Loss: 0.004129923368362082. Accuracy: 76.17610161517955
+>> eval : 
+VALIDATION: Fold: 0. Iteration: 64. Loss: 0.004937626551138639. Accuracy: 72.8398933667869
+--------------------------------
+Early stopping IN EPOCH: ! 64  - Best weigths saved in TMP-deep_emotion....
+===================================Training Finished===================================
+>>> Loading TOP nw for test eval:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413/trained_models/TMP-deep_emotion-500-128-0.001-0-48-34-landmarks.pt
+FOLD 1
+--------------------------------
+N_imgs_training:  25508
+N_imgs_test:  6377
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 
+Fold number 2 / 5
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAINING: Fold: 1. Iteration: 0. Loss: 0.007639962595066569. Accuracy: 48.604359416653594
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 0. Loss: 0.006845437641033132. Accuracy: 58.49145366159636
+--------------------------------
+
+Epoch 2 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAINING: Fold: 1. Iteration: 1. Loss: 0.006643413329023505. Accuracy: 56.54304531911557
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 1. Loss: 0.00635803152405582. Accuracy: 62.69405676650462
+--------------------------------
+
+Epoch 3 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAINING: Fold: 1. Iteration: 2. Loss: 0.00620516292284663. Accuracy: 60.185039987454914
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 2. Loss: 0.006121764937145537. Accuracy: 66.64575819350792
+--------------------------------
+
+Epoch 4 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAINING: Fold: 1. Iteration: 3. Loss: 0.005987320534016844. Accuracy: 62.28242120119178
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 3. Loss: 0.005893880116709613. Accuracy: 63.80743296220793
+--------------------------------
+
+Epoch 5 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAINING: Fold: 1. Iteration: 4. Loss: 0.005811951557950987. Accuracy: 63.43500078406774
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 4. Loss: 0.00579323348195945. Accuracy: 63.791751607338874
+--------------------------------
+
+Epoch 6 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAINING: Fold: 1. Iteration: 5. Loss: 0.005652966363052038. Accuracy: 64.90512780304218
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 5. Loss: 0.005841519441166436. Accuracy: 63.39971773561236
+--------------------------------
+
+Epoch 7 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAINING: Fold: 1. Iteration: 6. Loss: 0.005509531743776579. Accuracy: 65.64999215932257
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 6. Loss: 0.005715078819278492. Accuracy: 66.66143954837698
+--------------------------------
+
+Epoch 8 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAINING: Fold: 1. Iteration: 7. Loss: 0.0054302060138624025. Accuracy: 66.46150227379646
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 7. Loss: 0.005544497457551829. Accuracy: 68.73137839109299
+--------------------------------
+
+Epoch 9 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAINING: Fold: 1. Iteration: 8. Loss: 0.005332405388738475. Accuracy: 66.79473106476401
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 8. Loss: 0.00559671289292327. Accuracy: 67.38278187235377
+--------------------------------
+
+Epoch 10 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAINING: Fold: 1. Iteration: 9. Loss: 0.005259062686515337. Accuracy: 68.24133605143484
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 9. Loss: 0.005687093779605927. Accuracy: 63.901521091422296
+--------------------------------
+
+Epoch 11 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAINING: Fold: 1. Iteration: 10. Loss: 0.005172581189765216. Accuracy: 68.80586482672103
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 10. Loss: 0.005456346085551242. Accuracy: 68.41775129371179
+--------------------------------
+
+Epoch 12 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAINING: Fold: 1. Iteration: 11. Loss: 0.0051296848814857965. Accuracy: 68.98620040771523
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 11. Loss: 0.005398131050584233. Accuracy: 65.8146463854477
+--------------------------------
+
+Epoch 13 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAINING: Fold: 1. Iteration: 12. Loss: 0.005082266734407971. Accuracy: 69.44488003763524
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 12. Loss: 0.005373117690813921. Accuracy: 68.30798180962834
+--------------------------------
+
+Epoch 14 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAINING: Fold: 1. Iteration: 13. Loss: 0.005005844167562344. Accuracy: 69.66833934451937
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 13. Loss: 0.00545828308228398. Accuracy: 67.88458522816371
+--------------------------------
+
+Epoch 15 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAINING: Fold: 1. Iteration: 14. Loss: 0.004903028497870521. Accuracy: 70.41320370079976
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 14. Loss: 0.005388836474072434. Accuracy: 69.97020542574879
+--------------------------------
+
+Epoch 16 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAINING: Fold: 1. Iteration: 15. Loss: 0.0048642117183691136. Accuracy: 70.6445036851184
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 15. Loss: 0.005335291033537387. Accuracy: 66.67712090324605
+--------------------------------
+
+Epoch 17 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAINING: Fold: 1. Iteration: 16. Loss: 0.004776800145675943. Accuracy: 71.318801944488
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 16. Loss: 0.0053502254320084534. Accuracy: 68.6059275521405
+--------------------------------
+
+Epoch 18 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAINING: Fold: 1. Iteration: 17. Loss: 0.004776346155640771. Accuracy: 71.55010192880665
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 17. Loss: 0.00545926340437242. Accuracy: 69.06068684334326
+--------------------------------
+
+Epoch 19 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAINING: Fold: 1. Iteration: 18. Loss: 0.004694467718013873. Accuracy: 71.85196801003607
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 18. Loss: 0.005371539368793212. Accuracy: 64.88944644817313
+--------------------------------
+
+Epoch 20 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAINING: Fold: 1. Iteration: 19. Loss: 0.004662351545792903. Accuracy: 71.67163242904186
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 19. Loss: 0.00530571990464013. Accuracy: 70.29951387799905
+--------------------------------
+
+Epoch 21 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAINING: Fold: 1. Iteration: 20. Loss: 0.004593194406132013. Accuracy: 72.24008154304532
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 20. Loss: 0.005362164017098702. Accuracy: 68.40206993884271
+--------------------------------
+
+Epoch 22 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAINING: Fold: 1. Iteration: 21. Loss: 0.0045847984348342434. Accuracy: 72.6595577857927
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 21. Loss: 0.0053933447331157396. Accuracy: 70.67586639485651
+--------------------------------
+
+Epoch 23 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAINING: Fold: 1. Iteration: 22. Loss: 0.00454185472885157. Accuracy: 72.81245099576603
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 22. Loss: 0.005487778604787701. Accuracy: 69.67225968323663
+--------------------------------
+
+Epoch 24 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAINING: Fold: 1. Iteration: 23. Loss: 0.004478868714540903. Accuracy: 73.05551199623648
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 23. Loss: 0.005385231341765333. Accuracy: 68.76274110083112
+--------------------------------
+
+Epoch 25 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAINING: Fold: 1. Iteration: 24. Loss: 0.004449022992550439. Accuracy: 73.1888035126235
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 24. Loss: 0.005397473932041613. Accuracy: 68.63729026187862
+--------------------------------
+
+Epoch 26 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAINING: Fold: 1. Iteration: 25. Loss: 0.004423013974903556. Accuracy: 73.74157127175788
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 25. Loss: 0.00541993171345838. Accuracy: 66.47326328994825
+--------------------------------
+
+Epoch 27 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAINING: Fold: 1. Iteration: 26. Loss: 0.0043403813613980885. Accuracy: 74.09440175631174
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 26. Loss: 0.0053830780690602795. Accuracy: 66.8496158068057
+--------------------------------
+
+Epoch 28 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAINING: Fold: 1. Iteration: 27. Loss: 0.004389402757286184. Accuracy: 73.46322722283205
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 27. Loss: 0.0054451249433532115. Accuracy: 69.02932413360514
+--------------------------------
+
+Epoch 29 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAINING: Fold: 1. Iteration: 28. Loss: 0.004305445792272358. Accuracy: 73.92190685275209
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 28. Loss: 0.005450331914269739. Accuracy: 71.06790026658302
+--------------------------------
+
+Epoch 30 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAINING: Fold: 1. Iteration: 29. Loss: 0.004267220920915979. Accuracy: 74.42763054727929
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 29. Loss: 0.005473210508030411. Accuracy: 70.58177826564214
+--------------------------------
+
+Epoch 31 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAINING: Fold: 1. Iteration: 30. Loss: 0.004226438253673992. Accuracy: 74.61972714442527
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 30. Loss: 0.005339998781671714. Accuracy: 69.248863101772
+--------------------------------
+
+Epoch 32 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAINING: Fold: 1. Iteration: 31. Loss: 0.0041853669217075135. Accuracy: 74.98039830641368
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 31. Loss: 0.005568466357383232. Accuracy: 72.0401442684648
+--------------------------------
+
+Epoch 33 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAINING: Fold: 1. Iteration: 32. Loss: 0.004140116574623301. Accuracy: 75.15681354869061
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 32. Loss: 0.00539700832975608. Accuracy: 70.2054257487847
+--------------------------------
+
+Epoch 34 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAINING: Fold: 1. Iteration: 33. Loss: 0.004126080484604861. Accuracy: 74.98039830641368
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 33. Loss: 0.005467014559873952. Accuracy: 69.17045632742669
+--------------------------------
+
+Epoch 35 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAINING: Fold: 1. Iteration: 34. Loss: 0.0040760501314895696. Accuracy: 75.6978202916732
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 34. Loss: 0.005516104046147278. Accuracy: 68.79410381056923
+--------------------------------
+
+Epoch 36 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAINING: Fold: 1. Iteration: 35. Loss: 0.004119820278257679. Accuracy: 75.18817625842873
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 35. Loss: 0.005437165400591954. Accuracy: 69.06068684334326
+--------------------------------
+
+Epoch 37 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAINING: Fold: 1. Iteration: 36. Loss: 0.004039450826803045. Accuracy: 75.53708640426532
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 36. Loss: 0.005463408829370636. Accuracy: 70.14270032930845
+--------------------------------
+
+Epoch 38 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAINING: Fold: 1. Iteration: 37. Loss: 0.004018907470727053. Accuracy: 75.79190842088757
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 37. Loss: 0.005641280380333968. Accuracy: 67.4141445820919
+--------------------------------
+
+Epoch 39 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAINING: Fold: 1. Iteration: 38. Loss: 0.00400582318215679. Accuracy: 76.20746432491768
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 38. Loss: 0.005472330710946607. Accuracy: 70.2054257487847
+--------------------------------
+
+Epoch 40 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAINING: Fold: 1. Iteration: 39. Loss: 0.003951535482933402. Accuracy: 76.1486592441587
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 39. Loss: 0.005414720499087449. Accuracy: 69.95452407087971
+--------------------------------
+
+Epoch 41 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAINING: Fold: 1. Iteration: 40. Loss: 0.003981000439012538. Accuracy: 76.12905755057237
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 40. Loss: 0.005677747917115473. Accuracy: 68.21389368041399
+--------------------------------
+
+Epoch 42 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAINING: Fold: 1. Iteration: 41. Loss: 0.003976818478479456. Accuracy: 76.02712874392348
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 41. Loss: 0.005524039866689868. Accuracy: 68.1668496158068
+--------------------------------
+
+Epoch 43 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAINING: Fold: 1. Iteration: 42. Loss: 0.0038567915201299296. Accuracy: 76.83863885839737
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 42. Loss: 0.005539882205507309. Accuracy: 66.83393445193666
+--------------------------------
+
+Epoch 44 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAINING: Fold: 1. Iteration: 43. Loss: 0.0038717504364673633. Accuracy: 76.69358632585855
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 43. Loss: 0.005506984339213509. Accuracy: 70.18974439391563
+--------------------------------
+
+Epoch 45 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAINING: Fold: 1. Iteration: 44. Loss: 0.0038444935301076622. Accuracy: 77.11306256860593
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 44. Loss: 0.005502076690728264. Accuracy: 70.78563587893994
+--------------------------------
+
+Epoch 46 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAINING: Fold: 1. Iteration: 45. Loss: 0.0038191319663957945. Accuracy: 77.262035439862
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 45. Loss: 0.00553611431709554. Accuracy: 71.11494433119022
+--------------------------------
+
+Epoch 47 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAINING: Fold: 1. Iteration: 46. Loss: 0.00378948950259985. Accuracy: 76.98369139093619
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 46. Loss: 0.005605078064126057. Accuracy: 67.90026658303277
+--------------------------------
+
+Epoch 48 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAINING: Fold: 1. Iteration: 47. Loss: 0.003843078758670971. Accuracy: 76.93272698761173
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 47. Loss: 0.005753588962465203. Accuracy: 72.35377136584601
+--------------------------------
+
+Epoch 49 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAINING: Fold: 1. Iteration: 48. Loss: 0.0037714883028498185. Accuracy: 77.2071506978203
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 48. Loss: 0.0056308262378458734. Accuracy: 68.30798180962834
+--------------------------------
+
+Epoch 50 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAINING: Fold: 1. Iteration: 49. Loss: 0.00373160044017286. Accuracy: 77.75207777952016
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 49. Loss: 0.005602680507714946. Accuracy: 69.8447545867963
+--------------------------------
+
+Epoch 51 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAINING: Fold: 1. Iteration: 50. Loss: 0.0037367997572155458. Accuracy: 77.6344676180022
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 50. Loss: 0.0056840980223060045. Accuracy: 68.22957503528305
+--------------------------------
+
+Epoch 52 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAINING: Fold: 1. Iteration: 51. Loss: 0.003733201298534973. Accuracy: 77.49725576289791
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 51. Loss: 0.005564598887995229. Accuracy: 72.07150697820292
+--------------------------------
+
+Epoch 53 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAINING: Fold: 1. Iteration: 52. Loss: 0.0036740379356302324. Accuracy: 77.80696252156186
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 52. Loss: 0.005530775420546475. Accuracy: 69.35863258585542
+--------------------------------
+
+Epoch 54 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAINING: Fold: 1. Iteration: 53. Loss: 0.003742236614236642. Accuracy: 77.6579896503058
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 53. Loss: 0.005449364649683064. Accuracy: 69.42135800533165
+--------------------------------
+
+Epoch 55 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAINING: Fold: 1. Iteration: 54. Loss: 0.0038089712671918034. Accuracy: 77.50901677904972
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 54. Loss: 0.0056415495686308985. Accuracy: 69.42135800533165
+--------------------------------
+
+Epoch 56 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAINING: Fold: 1. Iteration: 55. Loss: 0.003697433262264278. Accuracy: 77.85400658616905
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 55. Loss: 0.005503373963342708. Accuracy: 69.18613768229575
+--------------------------------
+
+Epoch 57 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAINING: Fold: 1. Iteration: 56. Loss: 0.0036547282330664944. Accuracy: 77.82656421514818
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 56. Loss: 0.0055617637463791425. Accuracy: 70.75427316920182
+--------------------------------
+
+Epoch 58 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAINING: Fold: 1. Iteration: 57. Loss: 0.0035675068376990384. Accuracy: 78.51654382938686
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 57. Loss: 0.00577243315270651. Accuracy: 68.11980555119962
+--------------------------------
+
+Epoch 59 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAINING: Fold: 1. Iteration: 58. Loss: 0.003609605540119968. Accuracy: 78.34012858710993
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 58. Loss: 0.005798509927758308. Accuracy: 69.4056766504626
+--------------------------------
+
+Epoch 60 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAINING: Fold: 1. Iteration: 59. Loss: 0.0035345111476303885. Accuracy: 78.85761329778893
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 59. Loss: 0.005675823800294998. Accuracy: 70.50337149129685
+--------------------------------
+
+Epoch 61 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAINING: Fold: 1. Iteration: 60. Loss: 0.003546729049460911. Accuracy: 78.58318958758036
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 60. Loss: 0.0058089673416319544. Accuracy: 66.12827348282892
+--------------------------------
+
+Epoch 62 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  61
+>> training : 
+TRAINING: Fold: 1. Iteration: 61. Loss: 0.0035013807699451143. Accuracy: 78.83409126548534
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 61. Loss: 0.005814272178384004. Accuracy: 70.45632742668967
+--------------------------------
+
+Epoch 63 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  62
+>> training : 
+TRAINING: Fold: 1. Iteration: 62. Loss: 0.0035374299864774964. Accuracy: 78.84585228163714
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 62. Loss: 0.005659050453189624. Accuracy: 71.28743923474988
+--------------------------------
+
+Epoch 64 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  63
+>> training : 
+TRAINING: Fold: 1. Iteration: 63. Loss: 0.0035243577494579402. Accuracy: 78.97130312058962
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 63. Loss: 0.005914202375024655. Accuracy: 71.7578798808217
+--------------------------------
+
+Epoch 65 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  64
+>> training : 
+TRAINING: Fold: 1. Iteration: 64. Loss: 0.0034694528916664625. Accuracy: 79.37117766975067
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 64. Loss: 0.0058497542850422. Accuracy: 69.92316136114161
+--------------------------------
+
+Epoch 66 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  65
+>> training : 
+TRAINING: Fold: 1. Iteration: 65. Loss: 0.003431493625271483. Accuracy: 79.44174376666145
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 65. Loss: 0.005971808287348515. Accuracy: 67.75913438921123
+--------------------------------
+
+Epoch 67 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  66
+>> training : 
+TRAINING: Fold: 1. Iteration: 66. Loss: 0.003452603162381835. Accuracy: 79.43782342794418
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 66. Loss: 0.0058292275417630565. Accuracy: 67.44550729183001
+--------------------------------
+
+Epoch 68 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  67
+>> training : 
+TRAINING: Fold: 1. Iteration: 67. Loss: 0.0034363833302069706. Accuracy: 79.3006115728399
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 67. Loss: 0.005912489496242744. Accuracy: 67.69640896973499
+--------------------------------
+
+Epoch 69 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  68
+>> training : 
+TRAINING: Fold: 1. Iteration: 68. Loss: 0.003425482836368971. Accuracy: 79.52407087972401
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 68. Loss: 0.006271556662376611. Accuracy: 69.67225968323663
+--------------------------------
+
+Epoch 70 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  69
+>> training : 
+TRAINING: Fold: 1. Iteration: 69. Loss: 0.0034604902918555247. Accuracy: 79.32413360514349
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 69. Loss: 0.005799293041378797. Accuracy: 70.23678845852281
+--------------------------------
+
+Epoch 71 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  70
+>> training : 
+TRAINING: Fold: 1. Iteration: 70. Loss: 0.0034392405922311553. Accuracy: 79.61815900893838
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 70. Loss: 0.0057919290309904215. Accuracy: 67.82185980868746
+--------------------------------
+
+Epoch 72 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  71
+>> training : 
+TRAINING: Fold: 1. Iteration: 71. Loss: 0.0035008232090116874. Accuracy: 79.04970989493492
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 71. Loss: 0.005644321852910288. Accuracy: 68.35502587423554
+--------------------------------
+
+Epoch 73 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  72
+>> training : 
+TRAINING: Fold: 1. Iteration: 72. Loss: 0.0033948183963996817. Accuracy: 79.6142386702211
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 72. Loss: 0.0057497652174818194. Accuracy: 68.93523600439077
+--------------------------------
+
+Epoch 74 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  73
+>> training : 
+TRAINING: Fold: 1. Iteration: 73. Loss: 0.0033545074968366426. Accuracy: 80.14740473576917
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 73. Loss: 0.005676501477159115. Accuracy: 72.07150697820292
+--------------------------------
+
+Epoch 75 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  74
+>> training : 
+TRAINING: Fold: 1. Iteration: 74. Loss: 0.003465834507911168. Accuracy: 79.34765563744708
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 74. Loss: 0.00574647365215338. Accuracy: 71.3658460090952
+--------------------------------
+
+Epoch 76 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  75
+>> training : 
+TRAINING: Fold: 1. Iteration: 75. Loss: 0.00337777549763991. Accuracy: 79.75929120275993
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 75. Loss: 0.00581800080549573. Accuracy: 72.05582562333386
+--------------------------------
+
+Epoch 77 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  76
+>> training : 
+TRAINING: Fold: 1. Iteration: 76. Loss: 0.003370899749723781. Accuracy: 79.86122000940881
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 76. Loss: 0.005789611380508145. Accuracy: 70.91108671789243
+--------------------------------
+
+Epoch 78 / 500 
+Fold number 2 / 5
+>>>>>>>>>>>> ON EPOCH:  77
+>> training : 
+TRAINING: Fold: 1. Iteration: 77. Loss: 0.003293205187558866. Accuracy: 80.22581151011448
+>> eval : 
+VALIDATION: Fold: 1. Iteration: 77. Loss: 0.005945481597134102. Accuracy: 70.39360200721342
+--------------------------------
+Early stopping IN EPOCH: ! 77  - Best weigths saved in TMP-deep_emotion....
+===================================Training Finished===================================
+>>> Loading TOP nw for test eval:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413/trained_models/TMP-deep_emotion-500-128-0.001-1-48-47-landmarks.pt
+FOLD 2
+--------------------------------
+N_imgs_training:  25508
+N_imgs_test:  6377
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 
+Fold number 3 / 5
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAINING: Fold: 2. Iteration: 0. Loss: 0.007816426006159066. Accuracy: 47.20479849458993
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 0. Loss: 0.007044788483300702. Accuracy: 49.772620354398626
+--------------------------------
+
+Epoch 2 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAINING: Fold: 2. Iteration: 1. Loss: 0.007025700278074292. Accuracy: 54.02618786263134
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 1. Loss: 0.0065996990002713946. Accuracy: 61.298416183158224
+--------------------------------
+
+Epoch 3 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAINING: Fold: 2. Iteration: 2. Loss: 0.00670728130420585. Accuracy: 56.586169045005484
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 2. Loss: 0.006458170477155423. Accuracy: 57.174219852595265
+--------------------------------
+
+Epoch 4 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAINING: Fold: 2. Iteration: 3. Loss: 0.006459389589358894. Accuracy: 58.79331974282578
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 3. Loss: 0.006211536878774546. Accuracy: 66.70848361298415
+--------------------------------
+
+Epoch 5 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAINING: Fold: 2. Iteration: 4. Loss: 0.006307498896422946. Accuracy: 59.91453661596362
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 4. Loss: 0.006187216426504804. Accuracy: 63.164497412576445
+--------------------------------
+
+Epoch 6 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAINING: Fold: 2. Iteration: 5. Loss: 0.006126690587598141. Accuracy: 62.066802571742194
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 5. Loss: 0.005857327682799599. Accuracy: 67.00642935549631
+--------------------------------
+
+Epoch 7 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAINING: Fold: 2. Iteration: 6. Loss: 0.0060101976299502735. Accuracy: 62.631331347028386
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 6. Loss: 0.005797207579822848. Accuracy: 63.87015838168417
+--------------------------------
+
+Epoch 8 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAINING: Fold: 2. Iteration: 7. Loss: 0.0059439501049975835. Accuracy: 63.215461815900895
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 7. Loss: 0.005791069703433363. Accuracy: 61.267053473420106
+--------------------------------
+
+Epoch 9 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAINING: Fold: 2. Iteration: 8. Loss: 0.0058453609941707466. Accuracy: 64.36804139877685
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 8. Loss: 0.0056682320734316866. Accuracy: 65.8616904500549
+--------------------------------
+
+Epoch 10 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAINING: Fold: 2. Iteration: 9. Loss: 0.005724608398108193. Accuracy: 65.30108201348597
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 9. Loss: 0.005612467427752469. Accuracy: 64.73263289948251
+--------------------------------
+
+Epoch 11 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAINING: Fold: 2. Iteration: 10. Loss: 0.005703740208635365. Accuracy: 65.72839893366786
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 10. Loss: 0.0055386774570231195. Accuracy: 62.6626940567665
+--------------------------------
+
+Epoch 12 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAINING: Fold: 2. Iteration: 11. Loss: 0.005647051130153177. Accuracy: 65.94009722440019
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 11. Loss: 0.0055295512820927725. Accuracy: 67.42982593696095
+--------------------------------
+
+Epoch 13 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAINING: Fold: 2. Iteration: 12. Loss: 0.005538169364112662. Accuracy: 66.66143954837698
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 12. Loss: 0.005459988502306831. Accuracy: 69.46840206993883
+--------------------------------
+
+Epoch 14 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAINING: Fold: 2. Iteration: 13. Loss: 0.005495282086025721. Accuracy: 66.98682766190998
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 13. Loss: 0.0054454205177113316. Accuracy: 70.18974439391563
+--------------------------------
+
+Epoch 15 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAINING: Fold: 2. Iteration: 14. Loss: 0.005408550044371264. Accuracy: 67.75521405049396
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 14. Loss: 0.005362212994413838. Accuracy: 67.50823271130626
+--------------------------------
+
+Epoch 16 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAINING: Fold: 2. Iteration: 15. Loss: 0.0053603002807087186. Accuracy: 68.03355809941979
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 15. Loss: 0.0052847426682033. Accuracy: 69.46840206993883
+--------------------------------
+
+Epoch 17 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAINING: Fold: 2. Iteration: 16. Loss: 0.005336150111067121. Accuracy: 68.00611572839892
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 16. Loss: 0.0053722252661818825. Accuracy: 67.90026658303277
+--------------------------------
+
+Epoch 18 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAINING: Fold: 2. Iteration: 17. Loss: 0.005319705956479833. Accuracy: 68.36286655167007
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 17. Loss: 0.005234914615233901. Accuracy: 68.51183942292614
+--------------------------------
+
+Epoch 19 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAINING: Fold: 2. Iteration: 18. Loss: 0.005256982713877005. Accuracy: 68.86859024619727
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 18. Loss: 0.005193630533381392. Accuracy: 72.54194762427474
+--------------------------------
+
+Epoch 20 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAINING: Fold: 2. Iteration: 19. Loss: 0.005210500049875208. Accuracy: 69.2253410694684
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 19. Loss: 0.0052543542911140115. Accuracy: 65.5794260624118
+--------------------------------
+
+Epoch 21 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAINING: Fold: 2. Iteration: 20. Loss: 0.005251749190993307. Accuracy: 68.76666143954839
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 20. Loss: 0.005202937494424213. Accuracy: 68.84114787517642
+--------------------------------
+
+Epoch 22 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAINING: Fold: 2. Iteration: 21. Loss: 0.0051228346643972045. Accuracy: 69.58209189273953
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 21. Loss: 0.0051928740301456725. Accuracy: 68.24525639015211
+--------------------------------
+
+Epoch 23 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAINING: Fold: 2. Iteration: 22. Loss: 0.00510979144807256. Accuracy: 69.69186137682296
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 22. Loss: 0.005151397590822648. Accuracy: 69.87611729653442
+--------------------------------
+
+Epoch 24 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAINING: Fold: 2. Iteration: 23. Loss: 0.0050629143344210065. Accuracy: 70.08389524854948
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 23. Loss: 0.005144753911492592. Accuracy: 70.86404265328524
+--------------------------------
+
+Epoch 25 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAINING: Fold: 2. Iteration: 24. Loss: 0.005038563280676121. Accuracy: 70.10741728085307
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 24. Loss: 0.00514883663804998. Accuracy: 70.6445036851184
+--------------------------------
+
+Epoch 26 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAINING: Fold: 2. Iteration: 25. Loss: 0.004991106774265982. Accuracy: 70.17406303904657
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 25. Loss: 0.00518574176470987. Accuracy: 72.24400188176259
+--------------------------------
+
+Epoch 27 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAINING: Fold: 2. Iteration: 26. Loss: 0.005017945196807282. Accuracy: 70.51121216873138
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 26. Loss: 0.005053846808423513. Accuracy: 69.65657832836757
+--------------------------------
+
+Epoch 28 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAINING: Fold: 2. Iteration: 27. Loss: 0.004970356031039562. Accuracy: 70.57785792692489
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 27. Loss: 0.005142387064045007. Accuracy: 69.92316136114161
+--------------------------------
+
+Epoch 29 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAINING: Fold: 2. Iteration: 28. Loss: 0.0049928847022129115. Accuracy: 70.49945115257958
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 28. Loss: 0.005096961973564779. Accuracy: 69.17045632742669
+--------------------------------
+
+Epoch 30 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAINING: Fold: 2. Iteration: 29. Loss: 0.00485152057439944. Accuracy: 71.3305629606398
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 29. Loss: 0.005160120693665604. Accuracy: 68.91955464952171
+--------------------------------
+
+Epoch 31 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAINING: Fold: 2. Iteration: 30. Loss: 0.0048812925406659085. Accuracy: 71.4991375254822
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 30. Loss: 0.005115925854456655. Accuracy: 74.50211698290732
+--------------------------------
+
+Epoch 32 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAINING: Fold: 2. Iteration: 31. Loss: 0.004865263250342577. Accuracy: 71.38152736396425
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 31. Loss: 0.005096937424152907. Accuracy: 70.34655794260624
+--------------------------------
+
+Epoch 33 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAINING: Fold: 2. Iteration: 32. Loss: 0.004840881558903635. Accuracy: 71.34624431550886
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 32. Loss: 0.005151868259082379. Accuracy: 70.6445036851184
+--------------------------------
+
+Epoch 34 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAINING: Fold: 2. Iteration: 33. Loss: 0.0048209204311764915. Accuracy: 71.73827818723538
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 33. Loss: 0.005293408456371368. Accuracy: 65.97145993413831
+--------------------------------
+
+Epoch 35 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAINING: Fold: 2. Iteration: 34. Loss: 0.004823853034378313. Accuracy: 71.2639172024463
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 34. Loss: 0.00506126546029744. Accuracy: 71.836286655167
+--------------------------------
+
+Epoch 36 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAINING: Fold: 2. Iteration: 35. Loss: 0.004779589893312426. Accuracy: 71.80884428414616
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 35. Loss: 0.005044414226175457. Accuracy: 67.5709581307825
+--------------------------------
+
+Epoch 37 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAINING: Fold: 2. Iteration: 36. Loss: 0.0047843490477656615. Accuracy: 71.80884428414616
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 36. Loss: 0.005050689902671251. Accuracy: 69.95452407087971
+--------------------------------
+
+Epoch 38 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAINING: Fold: 2. Iteration: 37. Loss: 0.004730298344068661. Accuracy: 72.08326799435471
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 37. Loss: 0.005060822080066627. Accuracy: 70.53473420103496
+--------------------------------
+
+Epoch 39 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAINING: Fold: 2. Iteration: 38. Loss: 0.0046922432120567546. Accuracy: 72.4792222047985
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 38. Loss: 0.0050336669208077365. Accuracy: 70.47200878155873
+--------------------------------
+
+Epoch 40 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAINING: Fold: 2. Iteration: 39. Loss: 0.004715526858261429. Accuracy: 72.00878155872668
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 39. Loss: 0.005021330021159373. Accuracy: 70.62882233024933
+--------------------------------
+
+Epoch 41 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAINING: Fold: 2. Iteration: 40. Loss: 0.004667943545937145. Accuracy: 72.60467304375098
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 40. Loss: 0.004992771563680265. Accuracy: 70.29951387799905
+--------------------------------
+
+Epoch 42 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAINING: Fold: 2. Iteration: 41. Loss: 0.00464278417020938. Accuracy: 72.69092049553082
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 41. Loss: 0.00498957417219508. Accuracy: 71.5540222675239
+--------------------------------
+
+Epoch 43 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAINING: Fold: 2. Iteration: 42. Loss: 0.004613235373191929. Accuracy: 72.96926454445665
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 42. Loss: 0.004951930899445831. Accuracy: 72.76148659244159
+--------------------------------
+
+Epoch 44 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAINING: Fold: 2. Iteration: 43. Loss: 0.004630493192635716. Accuracy: 72.93790183471852
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 43. Loss: 0.0049897947897633655. Accuracy: 72.41649678532225
+--------------------------------
+
+Epoch 45 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAINING: Fold: 2. Iteration: 44. Loss: 0.004592781605177657. Accuracy: 72.94574251215306
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 44. Loss: 0.005031669202485727. Accuracy: 71.02085620197585
+--------------------------------
+
+Epoch 46 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAINING: Fold: 2. Iteration: 45. Loss: 0.00459403164132142. Accuracy: 72.88301709267681
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 45. Loss: 0.0050647628705516885. Accuracy: 67.58663948565156
+--------------------------------
+
+Epoch 47 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAINING: Fold: 2. Iteration: 46. Loss: 0.0045817175794492715. Accuracy: 73.15352046416811
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 46. Loss: 0.005022852318365783. Accuracy: 71.5540222675239
+--------------------------------
+
+Epoch 48 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAINING: Fold: 2. Iteration: 47. Loss: 0.004577374121126606. Accuracy: 73.00062725419477
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 47. Loss: 0.004960069569259746. Accuracy: 69.70362239297475
+--------------------------------
+
+Epoch 49 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAINING: Fold: 2. Iteration: 48. Loss: 0.004526260701049472. Accuracy: 72.93398149600125
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 48. Loss: 0.004930604157523337. Accuracy: 71.41289007370237
+--------------------------------
+
+Epoch 50 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAINING: Fold: 2. Iteration: 49. Loss: 0.004479895147977063. Accuracy: 73.5259526423083
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 49. Loss: 0.004991311067620359. Accuracy: 72.08718833307198
+--------------------------------
+
+Epoch 51 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAINING: Fold: 2. Iteration: 50. Loss: 0.004509414413729786. Accuracy: 73.91014583660028
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 50. Loss: 0.005009807369375147. Accuracy: 68.55888348753332
+--------------------------------
+
+Epoch 52 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAINING: Fold: 2. Iteration: 51. Loss: 0.004459100818211557. Accuracy: 73.66708483612983
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 51. Loss: 0.004976649909290902. Accuracy: 69.86043594166536
+--------------------------------
+
+Epoch 53 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAINING: Fold: 2. Iteration: 52. Loss: 0.00452142042090793. Accuracy: 73.27113062568607
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 52. Loss: 0.004996453040779357. Accuracy: 70.81699858867806
+--------------------------------
+
+Epoch 54 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAINING: Fold: 2. Iteration: 53. Loss: 0.004471655390012857. Accuracy: 73.75333228790967
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 53. Loss: 0.004985382429050842. Accuracy: 72.66739846322722
+--------------------------------
+
+Epoch 55 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAINING: Fold: 2. Iteration: 54. Loss: 0.00449531896558884. Accuracy: 73.63572212639173
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 54. Loss: 0.004969224172530549. Accuracy: 70.22110710365375
+--------------------------------
+
+Epoch 56 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAINING: Fold: 2. Iteration: 55. Loss: 0.0044284992811446915. Accuracy: 73.74157127175788
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 55. Loss: 0.005116442990411463. Accuracy: 69.82907323192724
+--------------------------------
+
+Epoch 57 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAINING: Fold: 2. Iteration: 56. Loss: 0.004479012273454135. Accuracy: 73.38482044848675
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 56. Loss: 0.004977819443646318. Accuracy: 69.49976477967697
+--------------------------------
+
+Epoch 58 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAINING: Fold: 2. Iteration: 57. Loss: 0.0044408132799258326. Accuracy: 73.9297475301866
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 57. Loss: 0.005046003656886823. Accuracy: 69.34295123098636
+--------------------------------
+
+Epoch 59 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAINING: Fold: 2. Iteration: 58. Loss: 0.004445353234021739. Accuracy: 74.20809157911243
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 58. Loss: 0.005096512125337387. Accuracy: 68.0100360671162
+--------------------------------
+
+Epoch 60 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAINING: Fold: 2. Iteration: 59. Loss: 0.0044230138907822136. Accuracy: 74.10616277246355
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 59. Loss: 0.004994225769333094. Accuracy: 71.66379175160735
+--------------------------------
+
+Epoch 61 / 500 
+Fold number 3 / 5
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAINING: Fold: 2. Iteration: 60. Loss: 0.00438081343308201. Accuracy: 74.58052375725262
+>> eval : 
+VALIDATION: Fold: 2. Iteration: 60. Loss: 0.005025464412241459. Accuracy: 72.1185510428101
+--------------------------------
+Early stopping IN EPOCH: ! 60  - Best weigths saved in TMP-deep_emotion....
+===================================Training Finished===================================
+>>> Loading TOP nw for test eval:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413/trained_models/TMP-deep_emotion-500-128-0.001-2-48-30-landmarks.pt
+FOLD 3
+--------------------------------
+N_imgs_training:  25508
+N_imgs_test:  6377
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 
+Fold number 4 / 5
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAINING: Fold: 3. Iteration: 0. Loss: 0.007851376575755908. Accuracy: 47.259683236631645
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 0. Loss: 0.006901716155955012. Accuracy: 52.908891328210764
+--------------------------------
+
+Epoch 2 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAINING: Fold: 3. Iteration: 1. Loss: 0.006812976095787462. Accuracy: 55.786419946683395
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 1. Loss: 0.006294156730371301. Accuracy: 58.899168888191944
+--------------------------------
+
+Epoch 3 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAINING: Fold: 3. Iteration: 2. Loss: 0.006390468879742029. Accuracy: 58.51889603261722
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 2. Loss: 0.005924686978785655. Accuracy: 59.76164340599027
+--------------------------------
+
+Epoch 4 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAINING: Fold: 3. Iteration: 3. Loss: 0.00617371013737667. Accuracy: 60.36145522973185
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 3. Loss: 0.0058377521229104334. Accuracy: 65.893053159793
+--------------------------------
+
+Epoch 5 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAINING: Fold: 3. Iteration: 4. Loss: 0.005999066441508134. Accuracy: 61.9883957973969
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 4. Loss: 0.006201843660566077. Accuracy: 53.175474360984786
+--------------------------------
+
+Epoch 6 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAINING: Fold: 3. Iteration: 5. Loss: 0.005848439821296675. Accuracy: 63.14881605770739
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 5. Loss: 0.005793962655105579. Accuracy: 68.07276148659244
+--------------------------------
+
+Epoch 7 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAINING: Fold: 3. Iteration: 6. Loss: 0.005786760036186755. Accuracy: 63.80351262349067
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 6. Loss: 0.005449156720417316. Accuracy: 65.0148972871256
+--------------------------------
+
+Epoch 8 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAINING: Fold: 3. Iteration: 7. Loss: 0.00566619810815775. Accuracy: 64.85024306100047
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 7. Loss: 0.0057583256203010014. Accuracy: 69.95452407087971
+--------------------------------
+
+Epoch 9 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAINING: Fold: 3. Iteration: 8. Loss: 0.005583253457046367. Accuracy: 65.90873451466207
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 8. Loss: 0.00536946121644727. Accuracy: 63.36835502587424
+--------------------------------
+
+Epoch 10 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAINING: Fold: 3. Iteration: 9. Loss: 0.0056262185146615335. Accuracy: 65.76368198212326
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 9. Loss: 0.0053311052302946315. Accuracy: 66.41053787047201
+--------------------------------
+
+Epoch 11 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAINING: Fold: 3. Iteration: 10. Loss: 0.005411220083831899. Accuracy: 67.47294966285087
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 10. Loss: 0.005241176869702111. Accuracy: 69.49976477967697
+--------------------------------
+
+Epoch 12 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAINING: Fold: 3. Iteration: 11. Loss: 0.00536204460685261. Accuracy: 67.75913438921123
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 11. Loss: 0.005284312060396369. Accuracy: 70.61314097538028
+--------------------------------
+
+Epoch 13 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAINING: Fold: 3. Iteration: 12. Loss: 0.0052825225283775435. Accuracy: 67.99827505096441
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 12. Loss: 0.005221280863577807. Accuracy: 68.59024619727144
+--------------------------------
+
+Epoch 14 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAINING: Fold: 3. Iteration: 13. Loss: 0.0052635412250208935. Accuracy: 68.19037164811039
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 13. Loss: 0.005453090309180753. Accuracy: 69.10773090795045
+--------------------------------
+
+Epoch 15 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAINING: Fold: 3. Iteration: 14. Loss: 0.005202616882283093. Accuracy: 68.91171397208718
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 14. Loss: 0.005138737758686125. Accuracy: 70.801317233809
+--------------------------------
+
+Epoch 16 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAINING: Fold: 3. Iteration: 15. Loss: 0.005142501298491813. Accuracy: 69.4056766504626
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 15. Loss: 0.005510504817409315. Accuracy: 72.30672730123882
+--------------------------------
+
+Epoch 17 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAINING: Fold: 3. Iteration: 16. Loss: 0.005125989123620414. Accuracy: 69.36255292457268
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 16. Loss: 0.005224987231247548. Accuracy: 65.35988709424494
+--------------------------------
+
+Epoch 18 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAINING: Fold: 3. Iteration: 17. Loss: 0.005025638473319918. Accuracy: 69.78594950603733
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 17. Loss: 0.005234505140577642. Accuracy: 71.0835816214521
+--------------------------------
+
+Epoch 19 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAINING: Fold: 3. Iteration: 18. Loss: 0.005010433181926377. Accuracy: 70.21718676493649
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 18. Loss: 0.005059356475971851. Accuracy: 71.64811039673828
+--------------------------------
+
+Epoch 20 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAINING: Fold: 3. Iteration: 19. Loss: 0.004971854639909513. Accuracy: 70.38968166849617
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 19. Loss: 0.0049957951557978355. Accuracy: 71.836286655167
+--------------------------------
+
+Epoch 21 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAINING: Fold: 3. Iteration: 20. Loss: 0.004921130297399715. Accuracy: 70.67586639485651
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 20. Loss: 0.005095361102350793. Accuracy: 68.43343264858083
+--------------------------------
+
+Epoch 22 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAINING: Fold: 3. Iteration: 21. Loss: 0.00494877160791882. Accuracy: 70.95029010506508
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 21. Loss: 0.005076023026359143. Accuracy: 73.29465265798964
+--------------------------------
+
+Epoch 23 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAINING: Fold: 3. Iteration: 22. Loss: 0.0048670101935949115. Accuracy: 70.95029010506508
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 22. Loss: 0.0051160854419907455. Accuracy: 72.32240865610788
+--------------------------------
+
+Epoch 24 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAINING: Fold: 3. Iteration: 23. Loss: 0.004848678316351424. Accuracy: 71.3305629606398
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 23. Loss: 0.005023123142355491. Accuracy: 69.82907323192724
+--------------------------------
+
+Epoch 25 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAINING: Fold: 3. Iteration: 24. Loss: 0.004831539033226446. Accuracy: 71.37760702524699
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 24. Loss: 0.005003607631084855. Accuracy: 73.7964560137996
+--------------------------------
+
+Epoch 26 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAINING: Fold: 3. Iteration: 25. Loss: 0.00473480146236324. Accuracy: 71.57362396111024
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 25. Loss: 0.005003057996251281. Accuracy: 71.00517484710679
+--------------------------------
+
+Epoch 27 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAINING: Fold: 3. Iteration: 26. Loss: 0.004717058378438395. Accuracy: 72.31848831739063
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 26. Loss: 0.005018251516498592. Accuracy: 70.91108671789243
+--------------------------------
+
+Epoch 28 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAINING: Fold: 3. Iteration: 27. Loss: 0.004774226262751877. Accuracy: 71.98917986514036
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 27. Loss: 0.005067494468141615. Accuracy: 71.5540222675239
+--------------------------------
+
+Epoch 29 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAINING: Fold: 3. Iteration: 28. Loss: 0.0047048592415090745. Accuracy: 72.17343578485182
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 28. Loss: 0.005072672777047291. Accuracy: 70.72291045946369
+--------------------------------
+
+Epoch 30 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAINING: Fold: 3. Iteration: 29. Loss: 0.00467686823973634. Accuracy: 72.56154931786106
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 29. Loss: 0.005020514754492305. Accuracy: 68.79410381056923
+--------------------------------
+
+Epoch 31 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAINING: Fold: 3. Iteration: 30. Loss: 0.004668553496941852. Accuracy: 72.69092049553082
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 30. Loss: 0.004942662662261142. Accuracy: 71.42857142857143
+--------------------------------
+
+Epoch 32 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAINING: Fold: 3. Iteration: 31. Loss: 0.0045722659063298105. Accuracy: 73.36521875490043
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 31. Loss: 0.004919363101934104. Accuracy: 70.45632742668967
+--------------------------------
+
+Epoch 33 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAINING: Fold: 3. Iteration: 32. Loss: 0.004571910441080679. Accuracy: 73.12999843186452
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 32. Loss: 0.004917845239791822. Accuracy: 71.06790026658302
+--------------------------------
+
+Epoch 34 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAINING: Fold: 3. Iteration: 33. Loss: 0.004567554546819504. Accuracy: 73.02806962521562
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 33. Loss: 0.004960823436693392. Accuracy: 69.98588678061785
+--------------------------------
+
+Epoch 35 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAINING: Fold: 3. Iteration: 34. Loss: 0.004511823318343711. Accuracy: 73.6043594166536
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 34. Loss: 0.004893928621374964. Accuracy: 73.89054414301395
+--------------------------------
+
+Epoch 36 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAINING: Fold: 3. Iteration: 35. Loss: 0.004539222161944092. Accuracy: 73.33777638387957
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 35. Loss: 0.005137145827701515. Accuracy: 73.13783910929904
+--------------------------------
+
+Epoch 37 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAINING: Fold: 3. Iteration: 36. Loss: 0.004542958045689985. Accuracy: 73.39658146463854
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 36. Loss: 0.004935249997022778. Accuracy: 70.92676807276148
+--------------------------------
+
+Epoch 38 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAINING: Fold: 3. Iteration: 37. Loss: 0.004445924366531803. Accuracy: 74.3021797083268
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 37. Loss: 0.005012470389377067. Accuracy: 73.32601536772778
+--------------------------------
+
+Epoch 39 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAINING: Fold: 3. Iteration: 38. Loss: 0.004472478512678659. Accuracy: 73.8748627881449
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 38. Loss: 0.004900710245686974. Accuracy: 70.01724949035597
+--------------------------------
+
+Epoch 40 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAINING: Fold: 3. Iteration: 39. Loss: 0.004472100898980982. Accuracy: 73.56907636819821
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 39. Loss: 0.004946021580744709. Accuracy: 71.41289007370237
+--------------------------------
+
+Epoch 41 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAINING: Fold: 3. Iteration: 40. Loss: 0.0044191883991126155. Accuracy: 73.83565940097225
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 40. Loss: 0.00492005699085034. Accuracy: 72.41649678532225
+--------------------------------
+
+Epoch 42 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAINING: Fold: 3. Iteration: 41. Loss: 0.004499874284681677. Accuracy: 73.9297475301866
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 41. Loss: 0.005155001825835425. Accuracy: 70.801317233809
+--------------------------------
+
+Epoch 43 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAINING: Fold: 3. Iteration: 42. Loss: 0.004374463518332852. Accuracy: 74.72949662850871
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 42. Loss: 0.005072221704387022. Accuracy: 72.76148659244159
+--------------------------------
+
+Epoch 44 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAINING: Fold: 3. Iteration: 43. Loss: 0.004428366189496876. Accuracy: 74.17280853065705
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 43. Loss: 0.005020792962466547. Accuracy: 69.75066645758193
+--------------------------------
+
+Epoch 45 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAINING: Fold: 3. Iteration: 44. Loss: 0.00435410639055287. Accuracy: 74.41194919241022
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 44. Loss: 0.004954904897358419. Accuracy: 70.1270189744394
+--------------------------------
+
+Epoch 46 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAINING: Fold: 3. Iteration: 45. Loss: 0.004353366689387021. Accuracy: 74.2472949662851
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 45. Loss: 0.004975537670916743. Accuracy: 73.16920181903717
+--------------------------------
+
+Epoch 47 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAINING: Fold: 3. Iteration: 46. Loss: 0.004321741919000077. Accuracy: 74.33746275678219
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 46. Loss: 0.004995373539627767. Accuracy: 72.46354084992943
+--------------------------------
+
+Epoch 48 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAINING: Fold: 3. Iteration: 47. Loss: 0.004276422225552254. Accuracy: 74.99215932256547
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 47. Loss: 0.004956717464604945. Accuracy: 72.38513407558413
+--------------------------------
+
+Epoch 49 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAINING: Fold: 3. Iteration: 48. Loss: 0.004285257675953564. Accuracy: 74.92159322565469
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 48. Loss: 0.005022492176203663. Accuracy: 73.46714756154931
+--------------------------------
+
+Epoch 50 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAINING: Fold: 3. Iteration: 49. Loss: 0.004245736278559658. Accuracy: 75.37635251685745
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 49. Loss: 0.0050277086014244386. Accuracy: 71.74219852595265
+--------------------------------
+
+Epoch 51 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAINING: Fold: 3. Iteration: 50. Loss: 0.004280909615492436. Accuracy: 74.78046103183316
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 50. Loss: 0.005037222426195999. Accuracy: 71.45993413830955
+--------------------------------
+
+Epoch 52 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAINING: Fold: 3. Iteration: 51. Loss: 0.004281879137335142. Accuracy: 74.9333542418065
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 51. Loss: 0.005119625899005463. Accuracy: 67.8061784538184
+--------------------------------
+
+Epoch 53 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAINING: Fold: 3. Iteration: 52. Loss: 0.004273137287116264. Accuracy: 75.12545083895249
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 52. Loss: 0.004972902270755705. Accuracy: 71.97741884898855
+--------------------------------
+
+Epoch 54 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAINING: Fold: 3. Iteration: 53. Loss: 0.004224645016811027. Accuracy: 75.32146777481574
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 53. Loss: 0.00498243399000624. Accuracy: 73.20056452877529
+--------------------------------
+
+Epoch 55 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAINING: Fold: 3. Iteration: 54. Loss: 0.004201964212189241. Accuracy: 75.39595421044379
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 54. Loss: 0.004923803788172109. Accuracy: 72.82421201191784
+--------------------------------
+
+Epoch 56 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAINING: Fold: 3. Iteration: 55. Loss: 0.004183086633953309. Accuracy: 76.00360671161988
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 55. Loss: 0.005111825200706435. Accuracy: 72.49490355966756
+--------------------------------
+
+Epoch 57 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAINING: Fold: 3. Iteration: 56. Loss: 0.004169903971314412. Accuracy: 75.7879880821703
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 56. Loss: 0.005007056601465879. Accuracy: 72.6360357534891
+--------------------------------
+
+Epoch 58 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAINING: Fold: 3. Iteration: 57. Loss: 0.004163109490457178. Accuracy: 75.58413046887252
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 57. Loss: 0.00498494354931187. Accuracy: 73.27897130312058
+--------------------------------
+
+Epoch 59 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAINING: Fold: 3. Iteration: 58. Loss: 0.004145462573584072. Accuracy: 75.91343892112279
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 58. Loss: 0.004949966624030989. Accuracy: 71.00517484710679
+--------------------------------
+
+Epoch 60 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAINING: Fold: 3. Iteration: 59. Loss: 0.004083471104878888. Accuracy: 76.23098635722127
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 59. Loss: 0.0050188900115106. Accuracy: 72.91830014113219
+--------------------------------
+
+Epoch 61 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAINING: Fold: 3. Iteration: 60. Loss: 0.004120197118506343. Accuracy: 76.05849145366159
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 60. Loss: 0.005055086934605754. Accuracy: 72.49490355966756
+--------------------------------
+
+Epoch 62 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  61
+>> training : 
+TRAINING: Fold: 3. Iteration: 61. Loss: 0.00414386787243691. Accuracy: 75.90559824368826
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 61. Loss: 0.005030889304169895. Accuracy: 73.15352046416811
+--------------------------------
+
+Epoch 63 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  62
+>> training : 
+TRAINING: Fold: 3. Iteration: 62. Loss: 0.004108923352566636. Accuracy: 76.12905755057237
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 62. Loss: 0.004901334173686455. Accuracy: 73.56123569076368
+--------------------------------
+
+Epoch 64 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  63
+>> training : 
+TRAINING: Fold: 3. Iteration: 63. Loss: 0.00408534363078084. Accuracy: 76.51325074486437
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 63. Loss: 0.004997776068544919. Accuracy: 74.80006272541948
+--------------------------------
+
+Epoch 65 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  64
+>> training : 
+TRAINING: Fold: 3. Iteration: 64. Loss: 0.004127184345895302. Accuracy: 76.15257958287596
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 64. Loss: 0.005076331218918682. Accuracy: 72.98102556060843
+--------------------------------
+
+Epoch 66 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  65
+>> training : 
+TRAINING: Fold: 3. Iteration: 65. Loss: 0.004014337089240448. Accuracy: 76.44660498667085
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 65. Loss: 0.004943896311099988. Accuracy: 72.07150697820292
+--------------------------------
+
+Epoch 67 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  66
+>> training : 
+TRAINING: Fold: 3. Iteration: 66. Loss: 0.004051878639424279. Accuracy: 76.53677277716795
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 66. Loss: 0.004955424828011171. Accuracy: 71.96173749411949
+--------------------------------
+
+Epoch 68 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  67
+>> training : 
+TRAINING: Fold: 3. Iteration: 67. Loss: 0.0040734609408178205. Accuracy: 76.18394229261408
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 67. Loss: 0.005125972653362507. Accuracy: 74.50211698290732
+--------------------------------
+
+Epoch 69 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  68
+>> training : 
+TRAINING: Fold: 3. Iteration: 68. Loss: 0.004001123032983762. Accuracy: 76.6661439548377
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 68. Loss: 0.0049790362401761585. Accuracy: 73.92190685275207
+--------------------------------
+
+Epoch 70 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  69
+>> training : 
+TRAINING: Fold: 3. Iteration: 69. Loss: 0.0041062273207794295. Accuracy: 76.19962364748314
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 69. Loss: 0.0048747864266034105. Accuracy: 72.22832052689353
+--------------------------------
+
+Epoch 71 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  70
+>> training : 
+TRAINING: Fold: 3. Iteration: 70. Loss: 0.004029120794841072. Accuracy: 76.66222361612043
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 70. Loss: 0.004981429539112643. Accuracy: 72.40081543045319
+--------------------------------
+
+Epoch 72 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  71
+>> training : 
+TRAINING: Fold: 3. Iteration: 71. Loss: 0.003957895360219922. Accuracy: 76.98369139093619
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 71. Loss: 0.005014915021026286. Accuracy: 72.88693743139407
+--------------------------------
+
+Epoch 73 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  72
+>> training : 
+TRAINING: Fold: 3. Iteration: 72. Loss: 0.004005538224613141. Accuracy: 76.56421514818881
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 72. Loss: 0.005266157314660352. Accuracy: 72.68307981809629
+--------------------------------
+
+Epoch 74 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  73
+>> training : 
+TRAINING: Fold: 3. Iteration: 73. Loss: 0.004009679015927392. Accuracy: 76.74847106790027
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 73. Loss: 0.005003860289537927. Accuracy: 72.32240865610788
+--------------------------------
+
+Epoch 75 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  74
+>> training : 
+TRAINING: Fold: 3. Iteration: 74. Loss: 0.004032413546046774. Accuracy: 76.48972871256076
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 74. Loss: 0.0050124846713117096. Accuracy: 72.66739846322722
+--------------------------------
+
+Epoch 76 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  75
+>> training : 
+TRAINING: Fold: 3. Iteration: 75. Loss: 0.003973335452974824. Accuracy: 77.01505410067429
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 75. Loss: 0.004990107048187806. Accuracy: 72.62035439862005
+--------------------------------
+
+Epoch 77 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  76
+>> training : 
+TRAINING: Fold: 3. Iteration: 76. Loss: 0.003934020199604836. Accuracy: 77.10914222988866
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 76. Loss: 0.004995127582841669. Accuracy: 71.80492394542888
+--------------------------------
+
+Epoch 78 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  77
+>> training : 
+TRAINING: Fold: 3. Iteration: 77. Loss: 0.0039038239907130414. Accuracy: 77.03465579426062
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 77. Loss: 0.005076181230564485. Accuracy: 71.7578798808217
+--------------------------------
+
+Epoch 79 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  78
+>> training : 
+TRAINING: Fold: 3. Iteration: 78. Loss: 0.0039293272439749685. Accuracy: 77.30515916575193
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 78. Loss: 0.005125660053779287. Accuracy: 74.45507291830013
+--------------------------------
+
+Epoch 80 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  79
+>> training : 
+TRAINING: Fold: 3. Iteration: 79. Loss: 0.003956736772154236. Accuracy: 76.89744393915635
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 79. Loss: 0.0050340871209352015. Accuracy: 72.6360357534891
+--------------------------------
+
+Epoch 81 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  80
+>> training : 
+TRAINING: Fold: 3. Iteration: 80. Loss: 0.003900244504900324. Accuracy: 77.28947781088286
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 80. Loss: 0.005036729470453835. Accuracy: 73.21624588364435
+--------------------------------
+
+Epoch 82 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  81
+>> training : 
+TRAINING: Fold: 3. Iteration: 81. Loss: 0.0038953537577948675. Accuracy: 77.454132037008
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 81. Loss: 0.005020293636869371. Accuracy: 72.38513407558413
+--------------------------------
+
+Epoch 83 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  82
+>> training : 
+TRAINING: Fold: 3. Iteration: 82. Loss: 0.004017624841068014. Accuracy: 76.72494903559668
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 82. Loss: 0.0051405726414555306. Accuracy: 72.65171710835816
+--------------------------------
+
+Epoch 84 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  83
+>> training : 
+TRAINING: Fold: 3. Iteration: 83. Loss: 0.0038853399391287975. Accuracy: 77.48549474674611
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 83. Loss: 0.005129955817637295. Accuracy: 72.6360357534891
+--------------------------------
+
+Epoch 85 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  84
+>> training : 
+TRAINING: Fold: 3. Iteration: 84. Loss: 0.0038593595928395823. Accuracy: 77.39924729496629
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 84. Loss: 0.005008101257687922. Accuracy: 73.24760859338247
+--------------------------------
+
+Epoch 86 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  85
+>> training : 
+TRAINING: Fold: 3. Iteration: 85. Loss: 0.0038719211712477256. Accuracy: 77.45805237572526
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 85. Loss: 0.005038127286766546. Accuracy: 71.94605613925043
+--------------------------------
+
+Epoch 87 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  86
+>> training : 
+TRAINING: Fold: 3. Iteration: 86. Loss: 0.0039144246655701655. Accuracy: 77.5325388113533
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 86. Loss: 0.005031981666540116. Accuracy: 71.7578798808217
+--------------------------------
+
+Epoch 88 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  87
+>> training : 
+TRAINING: Fold: 3. Iteration: 87. Loss: 0.003924057908766281. Accuracy: 77.55998118237416
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 87. Loss: 0.004942267548987461. Accuracy: 72.58899168888192
+--------------------------------
+
+Epoch 89 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  88
+>> training : 
+TRAINING: Fold: 3. Iteration: 88. Loss: 0.0039051066729479194. Accuracy: 77.39532695624902
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 88. Loss: 0.005038285551726192. Accuracy: 73.02806962521562
+--------------------------------
+
+Epoch 90 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  89
+>> training : 
+TRAINING: Fold: 3. Iteration: 89. Loss: 0.0038478271537707933. Accuracy: 77.51293711776698
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 89. Loss: 0.005103238729617804. Accuracy: 70.98949349223773
+--------------------------------
+
+Epoch 91 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  90
+>> training : 
+TRAINING: Fold: 3. Iteration: 90. Loss: 0.003831363164071886. Accuracy: 78.04218284459778
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 90. Loss: 0.005270261954827538. Accuracy: 73.43578485181119
+--------------------------------
+
+Epoch 92 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  91
+>> training : 
+TRAINING: Fold: 3. Iteration: 91. Loss: 0.003842213203797842. Accuracy: 77.75599811823741
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 91. Loss: 0.005136601300902813. Accuracy: 73.16920181903717
+--------------------------------
+
+Epoch 93 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  92
+>> training : 
+TRAINING: Fold: 3. Iteration: 92. Loss: 0.0038342963187358438. Accuracy: 77.6344676180022
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 92. Loss: 0.00519634035756376. Accuracy: 72.98102556060843
+--------------------------------
+
+Epoch 94 / 500 
+Fold number 4 / 5
+>>>>>>>>>>>> ON EPOCH:  93
+>> training : 
+TRAINING: Fold: 3. Iteration: 93. Loss: 0.0038721607231282508. Accuracy: 77.7011133761957
+>> eval : 
+VALIDATION: Fold: 3. Iteration: 93. Loss: 0.005080529958154596. Accuracy: 73.09079504469186
+--------------------------------
+Early stopping IN EPOCH: ! 93  - Best weigths saved in TMP-deep_emotion....
+===================================Training Finished===================================
+>>> Loading TOP nw for test eval:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413/trained_models/TMP-deep_emotion-500-128-0.001-3-48-63-landmarks.pt
+FOLD 4
+--------------------------------
+N_imgs_training:  25508
+N_imgs_test:  6377
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 
+Fold number 5 / 5
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAINING: Fold: 4. Iteration: 0. Loss: 0.007723767372887767. Accuracy: 49.04735769170456
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 0. Loss: 0.006758931878780672. Accuracy: 58.30327740316763
+--------------------------------
+
+Epoch 2 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAINING: Fold: 4. Iteration: 1. Loss: 0.00673650486474503. Accuracy: 56.65281480319899
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 1. Loss: 0.006328088429274371. Accuracy: 61.48659244158695
+--------------------------------
+
+Epoch 3 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAINING: Fold: 4. Iteration: 2. Loss: 0.0064593636496081625. Accuracy: 59.23631801787674
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 2. Loss: 0.006124736551620079. Accuracy: 56.672416496785324
+--------------------------------
+
+Epoch 4 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAINING: Fold: 4. Iteration: 3. Loss: 0.006245628422249143. Accuracy: 60.4908264074016
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 3. Loss: 0.006141430553605569. Accuracy: 61.01615179551513
+--------------------------------
+
+Epoch 5 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAINING: Fold: 4. Iteration: 4. Loss: 0.006085393695934488. Accuracy: 61.870785635878946
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 4. Loss: 0.005896658130587129. Accuracy: 60.73388740787205
+--------------------------------
+
+Epoch 6 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAINING: Fold: 4. Iteration: 5. Loss: 0.006001892392867521. Accuracy: 62.59996863729026
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 5. Loss: 0.006114408058377667. Accuracy: 64.41900580210131
+--------------------------------
+
+Epoch 7 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAINING: Fold: 4. Iteration: 6. Loss: 0.005933796408895379. Accuracy: 63.66238042966912
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 6. Loss: 0.005580565221671945. Accuracy: 66.70848361298415
+--------------------------------
+
+Epoch 8 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAINING: Fold: 4. Iteration: 7. Loss: 0.005841438313141425. Accuracy: 64.17594480163086
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 7. Loss: 0.005650917900866694. Accuracy: 66.06554806335268
+--------------------------------
+
+Epoch 9 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAINING: Fold: 4. Iteration: 8. Loss: 0.0057743534279856654. Accuracy: 64.69734985102713
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 8. Loss: 0.0055406001998616625. Accuracy: 64.38764309236318
+--------------------------------
+
+Epoch 10 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAINING: Fold: 4. Iteration: 9. Loss: 0.005636801521699967. Accuracy: 65.68919554649521
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 9. Loss: 0.005483644395968524. Accuracy: 69.10773090795045
+--------------------------------
+
+Epoch 11 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAINING: Fold: 4. Iteration: 10. Loss: 0.0056083507395396325. Accuracy: 65.76368198212326
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 10. Loss: 0.005588160462938021. Accuracy: 66.1753175474361
+--------------------------------
+
+Epoch 12 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAINING: Fold: 4. Iteration: 11. Loss: 0.005566728094986133. Accuracy: 66.25764466049867
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 11. Loss: 0.005408997518507425. Accuracy: 66.6143954837698
+--------------------------------
+
+Epoch 13 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAINING: Fold: 4. Iteration: 12. Loss: 0.00546305614830428. Accuracy: 66.82217343578485
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 12. Loss: 0.005416165096213568. Accuracy: 68.82546652030736
+--------------------------------
+
+Epoch 14 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAINING: Fold: 4. Iteration: 13. Loss: 0.005463107209959355. Accuracy: 67.5591971146307
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 13. Loss: 0.0053629477663026705. Accuracy: 69.81339187705817
+--------------------------------
+
+Epoch 15 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAINING: Fold: 4. Iteration: 14. Loss: 0.005416314804163289. Accuracy: 67.95907166379175
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 14. Loss: 0.005289657195945023. Accuracy: 65.8616904500549
+--------------------------------
+
+Epoch 16 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAINING: Fold: 4. Iteration: 15. Loss: 0.0053166046315681155. Accuracy: 68.65689195546494
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 15. Loss: 0.005410135128813252. Accuracy: 72.30672730123882
+--------------------------------
+
+Epoch 17 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAINING: Fold: 4. Iteration: 16. Loss: 0.005351358595566632. Accuracy: 68.4255919711463
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 16. Loss: 0.005395943344209529. Accuracy: 71.85196801003607
+--------------------------------
+
+Epoch 18 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAINING: Fold: 4. Iteration: 17. Loss: 0.005306953667977471. Accuracy: 68.11196487376509
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 17. Loss: 0.005269853302691075. Accuracy: 68.40206993884271
+--------------------------------
+
+Epoch 19 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAINING: Fold: 4. Iteration: 18. Loss: 0.005283662842249859. Accuracy: 68.58240551983693
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 18. Loss: 0.005231737997046978. Accuracy: 70.59745962051122
+--------------------------------
+
+Epoch 20 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAINING: Fold: 4. Iteration: 19. Loss: 0.005233944502205091. Accuracy: 69.06460718206053
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 19. Loss: 0.005158191090264215. Accuracy: 68.98228006899797
+--------------------------------
+
+Epoch 21 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAINING: Fold: 4. Iteration: 20. Loss: 0.005167502645267033. Accuracy: 69.09596989179865
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 20. Loss: 0.0051779957125698. Accuracy: 69.89179865140348
+--------------------------------
+
+Epoch 22 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAINING: Fold: 4. Iteration: 21. Loss: 0.0051645738064953015. Accuracy: 69.41351732789714
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 21. Loss: 0.00509377261566783. Accuracy: 72.13423239767916
+--------------------------------
+
+Epoch 23 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAINING: Fold: 4. Iteration: 22. Loss: 0.005071650493597375. Accuracy: 69.8329935706445
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 22. Loss: 0.005056517464773995. Accuracy: 69.95452407087971
+--------------------------------
+
+Epoch 24 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAINING: Fold: 4. Iteration: 23. Loss: 0.005102512001832376. Accuracy: 69.78986984475459
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 23. Loss: 0.005090594076710247. Accuracy: 70.18974439391563
+--------------------------------
+
+Epoch 25 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAINING: Fold: 4. Iteration: 24. Loss: 0.005039991125971504. Accuracy: 70.24070879724007
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 24. Loss: 0.005064773979242345. Accuracy: 71.05221891171396
+--------------------------------
+
+Epoch 26 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAINING: Fold: 4. Iteration: 25. Loss: 0.0050034349626819595. Accuracy: 70.57001724949036
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 25. Loss: 0.005152297203156087. Accuracy: 73.34169672259682
+--------------------------------
+
+Epoch 27 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAINING: Fold: 4. Iteration: 26. Loss: 0.005138435308576584. Accuracy: 69.73498510271287
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 26. Loss: 0.005158939508504211. Accuracy: 69.76634781245099
+--------------------------------
+
+Epoch 28 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAINING: Fold: 4. Iteration: 27. Loss: 0.004959949907817978. Accuracy: 71.01301552454132
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 27. Loss: 0.005075793987309763. Accuracy: 71.50697820291673
+--------------------------------
+
+Epoch 29 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAINING: Fold: 4. Iteration: 28. Loss: 0.004930375928141881. Accuracy: 70.8914850243061
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 28. Loss: 0.005102945791061758. Accuracy: 72.0401442684648
+--------------------------------
+
+Epoch 30 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAINING: Fold: 4. Iteration: 29. Loss: 0.004867638511092794. Accuracy: 71.46385447702681
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 29. Loss: 0.005039647887525877. Accuracy: 71.27175787988082
+--------------------------------
+
+Epoch 31 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAINING: Fold: 4. Iteration: 30. Loss: 0.004930011436205328. Accuracy: 70.82483926611259
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 30. Loss: 0.005067158552926219. Accuracy: 72.8398933667869
+--------------------------------
+
+Epoch 32 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAINING: Fold: 4. Iteration: 31. Loss: 0.004985117271568253. Accuracy: 70.62882233024933
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 31. Loss: 0.005019503615951957. Accuracy: 71.97741884898855
+--------------------------------
+
+Epoch 33 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAINING: Fold: 4. Iteration: 32. Loss: 0.0049334742001498665. Accuracy: 70.97381213736867
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 32. Loss: 0.005206554160702092. Accuracy: 70.84836129841618
+--------------------------------
+
+Epoch 34 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAINING: Fold: 4. Iteration: 33. Loss: 0.004820623668604404. Accuracy: 71.73827818723538
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 33. Loss: 0.004994306694064859. Accuracy: 70.69154774972559
+--------------------------------
+
+Epoch 35 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAINING: Fold: 4. Iteration: 34. Loss: 0.004811696245534977. Accuracy: 72.21263917202447
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 34. Loss: 0.005106801735825798. Accuracy: 73.43578485181119
+--------------------------------
+
+Epoch 36 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAINING: Fold: 4. Iteration: 35. Loss: 0.004803645554962101. Accuracy: 71.4207307511369
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 35. Loss: 0.005136468333100308. Accuracy: 68.85682923004548
+--------------------------------
+
+Epoch 37 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAINING: Fold: 4. Iteration: 36. Loss: 0.0047801805793612805. Accuracy: 71.9264544456641
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 36. Loss: 0.005077311167134486. Accuracy: 74.50211698290732
+--------------------------------
+
+Epoch 38 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAINING: Fold: 4. Iteration: 37. Loss: 0.004720102020644349. Accuracy: 72.44785949506037
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 37. Loss: 0.005151717270618886. Accuracy: 69.0920495530814
+--------------------------------
+
+Epoch 39 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAINING: Fold: 4. Iteration: 38. Loss: 0.004687124451714959. Accuracy: 72.72228320526894
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 38. Loss: 0.004992443013755771. Accuracy: 71.13062568605928
+--------------------------------
+
+Epoch 40 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAINING: Fold: 4. Iteration: 39. Loss: 0.004683669528580579. Accuracy: 72.66347812450996
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 39. Loss: 0.005052862925198229. Accuracy: 73.46714756154931
+--------------------------------
+
+Epoch 41 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAINING: Fold: 4. Iteration: 40. Loss: 0.00471040472605581. Accuracy: 72.11071036537558
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 40. Loss: 0.004978338107805519. Accuracy: 71.47561549317861
+--------------------------------
+
+Epoch 42 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAINING: Fold: 4. Iteration: 41. Loss: 0.004659912317771606. Accuracy: 72.87909675395954
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 41. Loss: 0.00507841154907272. Accuracy: 68.79410381056923
+--------------------------------
+
+Epoch 43 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAINING: Fold: 4. Iteration: 42. Loss: 0.004641165362455749. Accuracy: 72.87909675395954
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 42. Loss: 0.005166805419537534. Accuracy: 69.29590716637918
+--------------------------------
+
+Epoch 44 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAINING: Fold: 4. Iteration: 43. Loss: 0.005081866265408799. Accuracy: 70.65626470127019
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 43. Loss: 0.005251279300855996. Accuracy: 71.50697820291673
+--------------------------------
+
+Epoch 45 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAINING: Fold: 4. Iteration: 44. Loss: 0.0049830257217301195. Accuracy: 72.25184255919712
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 44. Loss: 0.005260398689998024. Accuracy: 70.31519523286812
+--------------------------------
+
+Epoch 46 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAINING: Fold: 4. Iteration: 45. Loss: 0.004942939707725161. Accuracy: 72.39689509173593
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 45. Loss: 0.005116584786281552. Accuracy: 70.53473420103496
+--------------------------------
+
+Epoch 47 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAINING: Fold: 4. Iteration: 46. Loss: 0.004907677432334365. Accuracy: 72.63995609220638
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 46. Loss: 0.005246651290407819. Accuracy: 72.22832052689353
+--------------------------------
+
+Epoch 48 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAINING: Fold: 4. Iteration: 47. Loss: 0.004864430153455894. Accuracy: 73.04767131880195
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 47. Loss: 0.00521035637062172. Accuracy: 69.92316136114161
+--------------------------------
+
+Epoch 49 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAINING: Fold: 4. Iteration: 48. Loss: 0.00487825932950646. Accuracy: 72.52626626940568
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 48. Loss: 0.00516491136675029. Accuracy: 71.27175787988082
+--------------------------------
+
+Epoch 50 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAINING: Fold: 4. Iteration: 49. Loss: 0.004873883151486505. Accuracy: 72.69876117296535
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 49. Loss: 0.00514980762266937. Accuracy: 72.65171710835816
+--------------------------------
+
+Epoch 51 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAINING: Fold: 4. Iteration: 50. Loss: 0.004834598897999687. Accuracy: 73.16920181903717
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 50. Loss: 0.005206366056032795. Accuracy: 72.44785949506037
+--------------------------------
+
+Epoch 52 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAINING: Fold: 4. Iteration: 51. Loss: 0.004857942764570632. Accuracy: 72.97710522189116
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 51. Loss: 0.005212244333958427. Accuracy: 71.25607652501176
+--------------------------------
+
+Epoch 53 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAINING: Fold: 4. Iteration: 52. Loss: 0.004837565457015197. Accuracy: 73.03198996393289
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 52. Loss: 0.005120235783414106. Accuracy: 70.45632742668967
+--------------------------------
+
+Epoch 54 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAINING: Fold: 4. Iteration: 53. Loss: 0.004769470952176666. Accuracy: 73.80037635251686
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 53. Loss: 0.005118878962235782. Accuracy: 72.16559510741727
+--------------------------------
+
+Epoch 55 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAINING: Fold: 4. Iteration: 54. Loss: 0.004784745332896382. Accuracy: 73.32601536772778
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 54. Loss: 0.005168052532464635. Accuracy: 71.22471381527365
+--------------------------------
+
+Epoch 56 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAINING: Fold: 4. Iteration: 55. Loss: 0.004759607745764752. Accuracy: 73.6043594166536
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 55. Loss: 0.0051039877367071995. Accuracy: 72.32240865610788
+--------------------------------
+
+Epoch 57 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAINING: Fold: 4. Iteration: 56. Loss: 0.004736465882578296. Accuracy: 73.6474831425435
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 56. Loss: 0.005221790489366067. Accuracy: 71.80492394542888
+--------------------------------
+
+Epoch 58 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAINING: Fold: 4. Iteration: 57. Loss: 0.004704201192958276. Accuracy: 74.02775599811824
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 57. Loss: 0.005178029697592288. Accuracy: 71.42857142857143
+--------------------------------
+
+Epoch 59 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAINING: Fold: 4. Iteration: 58. Loss: 0.004682923211037449. Accuracy: 73.95718990120747
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 58. Loss: 0.005164968924442391. Accuracy: 70.73859181433276
+--------------------------------
+
+Epoch 60 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAINING: Fold: 4. Iteration: 59. Loss: 0.004701147508767026. Accuracy: 73.57691704563274
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 59. Loss: 0.00515650446668807. Accuracy: 72.57331033401286
+--------------------------------
+
+Epoch 61 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAINING: Fold: 4. Iteration: 60. Loss: 0.0047074331571469955. Accuracy: 73.93758820762115
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 60. Loss: 0.005163015164195398. Accuracy: 73.31033401285872
+--------------------------------
+
+Epoch 62 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  61
+>> training : 
+TRAINING: Fold: 4. Iteration: 61. Loss: 0.004685233867764754. Accuracy: 74.18064920809158
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 61. Loss: 0.0051759993915967625. Accuracy: 70.89540536302337
+--------------------------------
+
+Epoch 63 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  62
+>> training : 
+TRAINING: Fold: 4. Iteration: 62. Loss: 0.0046560171455897305. Accuracy: 74.13360514348439
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 62. Loss: 0.005214034305277599. Accuracy: 70.06429355496316
+--------------------------------
+
+Epoch 64 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  63
+>> training : 
+TRAINING: Fold: 4. Iteration: 63. Loss: 0.004698090488930864. Accuracy: 73.88662380429669
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 63. Loss: 0.0051313257570716865. Accuracy: 72.7144425278344
+--------------------------------
+
+Epoch 65 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  64
+>> training : 
+TRAINING: Fold: 4. Iteration: 64. Loss: 0.0046360620430537635. Accuracy: 74.16496785322252
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 64. Loss: 0.0052276275665273635. Accuracy: 73.8278187235377
+--------------------------------
+
+Epoch 66 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  65
+>> training : 
+TRAINING: Fold: 4. Iteration: 65. Loss: 0.0045868598458646175. Accuracy: 74.53347969264544
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 65. Loss: 0.005135487440856101. Accuracy: 72.5576289791438
+--------------------------------
+
+Epoch 67 / 500 
+Fold number 5 / 5
+>>>>>>>>>>>> ON EPOCH:  66
+>> training : 
+TRAINING: Fold: 4. Iteration: 66. Loss: 0.004614405377224843. Accuracy: 74.2472949662851
+>> eval : 
+VALIDATION: Fold: 4. Iteration: 66. Loss: 0.005160171951603811. Accuracy: 72.24400188176259
+--------------------------------
+Early stopping IN EPOCH: ! 66  - Best weigths saved in TMP-deep_emotion....
+===================================Training Finished===================================
+>>> Loading TOP nw for test eval:  /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/FER2013_logs_cd/20210607_141413/trained_models/TMP-deep_emotion-500-128-0.001-4-48-36-landmarks.pt
+K-FOLD CROSS VALIDATION RESULTS FOR 5 FOLDS
+--------------------------------
+Fold 0: 74.8314254351576 %
+Fold 1: 72.35377136584601 %
+Fold 2: 74.50211698290732 %
+Fold 3: 74.80006272541948 %
+Fold 4: 74.50211698290732 %
+Average: 74.19789869844753 %
+Average convergence epochs: 42.0 
+TRAINING LAST MODEL ...
+------------------ START TRAINING of fold ---------------------
+
+Epoch 1 / 500 - FINAL MODEL
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3891: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+/home/cristinalunaj/.virtualenvs/Guided-Emo-ST/lib/python3.6/site-packages/torch/nn/functional.py:3829: UserWarning: Default grid_sample and affine_grid behavior has changed to align_corners=False since 1.3.0. Please specify align_corners=True if the old behavior is desired. See the documentation of grid_sample for details.
+  "Default grid_sample and affine_grid behavior has changed "
+>>>>>>>>>>>> ON EPOCH:  0
+>> training : 
+TRAIN LOSS:  0.0077004636868762055
+Train Accuracy:  tensor(48.3456, device='cuda:0', dtype=torch.float64)
+
+Epoch 2 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  1
+>> training : 
+TRAIN LOSS:  0.00683507150255514
+Train Accuracy:  tensor(55.2611, device='cuda:0', dtype=torch.float64)
+
+Epoch 3 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  2
+>> training : 
+TRAIN LOSS:  0.006490165680315085
+Train Accuracy:  tensor(58.1026, device='cuda:0', dtype=torch.float64)
+
+Epoch 4 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  3
+>> training : 
+TRAIN LOSS:  0.006246111945184735
+Train Accuracy:  tensor(59.7679, device='cuda:0', dtype=torch.float64)
+
+Epoch 5 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  4
+>> training : 
+TRAIN LOSS:  0.006091779886377032
+Train Accuracy:  tensor(61.4176, device='cuda:0', dtype=torch.float64)
+
+Epoch 6 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  5
+>> training : 
+TRAIN LOSS:  0.0059370830288235435
+Train Accuracy:  tensor(62.7317, device='cuda:0', dtype=torch.float64)
+
+Epoch 7 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  6
+>> training : 
+TRAIN LOSS:  0.005812719495613896
+Train Accuracy:  tensor(63.8137, device='cuda:0', dtype=torch.float64)
+
+Epoch 8 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  7
+>> training : 
+TRAIN LOSS:  0.005702794474906377
+Train Accuracy:  tensor(65.1027, device='cuda:0', dtype=torch.float64)
+
+Epoch 9 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  8
+>> training : 
+TRAIN LOSS:  0.005628981712901221
+Train Accuracy:  tensor(65.0525, device='cuda:0', dtype=torch.float64)
+
+Epoch 10 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  9
+>> training : 
+TRAIN LOSS:  0.005521290267132583
+Train Accuracy:  tensor(66.4137, device='cuda:0', dtype=torch.float64)
+
+Epoch 11 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  10
+>> training : 
+TRAIN LOSS:  0.005457424947380627
+Train Accuracy:  tensor(66.9374, device='cuda:0', dtype=torch.float64)
+
+Epoch 12 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  11
+>> training : 
+TRAIN LOSS:  0.005401792761037132
+Train Accuracy:  tensor(67.3828, device='cuda:0', dtype=torch.float64)
+
+Epoch 13 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  12
+>> training : 
+TRAIN LOSS:  0.005366179949440552
+Train Accuracy:  tensor(67.4863, device='cuda:0', dtype=torch.float64)
+
+Epoch 14 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  13
+>> training : 
+TRAIN LOSS:  0.005253147441465615
+Train Accuracy:  tensor(68.7188, device='cuda:0', dtype=torch.float64)
+
+Epoch 15 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  14
+>> training : 
+TRAIN LOSS:  0.005186188794872277
+Train Accuracy:  tensor(68.7847, device='cuda:0', dtype=torch.float64)
+
+Epoch 16 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  15
+>> training : 
+TRAIN LOSS:  0.005170685942688574
+Train Accuracy:  tensor(69.0889, device='cuda:0', dtype=torch.float64)
+
+Epoch 17 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  16
+>> training : 
+TRAIN LOSS:  0.005151887466788983
+Train Accuracy:  tensor(69.3618, device='cuda:0', dtype=torch.float64)
+
+Epoch 18 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  17
+>> training : 
+TRAIN LOSS:  0.00506337557781896
+Train Accuracy:  tensor(69.6440, device='cuda:0', dtype=torch.float64)
+
+Epoch 19 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  18
+>> training : 
+TRAIN LOSS:  0.0049944603435668295
+Train Accuracy:  tensor(70.2180, device='cuda:0', dtype=torch.float64)
+
+Epoch 20 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  19
+>> training : 
+TRAIN LOSS:  0.004957286889451751
+Train Accuracy:  tensor(70.4626, device='cuda:0', dtype=torch.float64)
+
+Epoch 21 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  20
+>> training : 
+TRAIN LOSS:  0.004931119528799309
+Train Accuracy:  tensor(71.0961, device='cuda:0', dtype=torch.float64)
+
+Epoch 22 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  21
+>> training : 
+TRAIN LOSS:  0.004877392561883973
+Train Accuracy:  tensor(71.3094, device='cuda:0', dtype=torch.float64)
+
+Epoch 23 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  22
+>> training : 
+TRAIN LOSS:  0.004880484476421476
+Train Accuracy:  tensor(71.0742, device='cuda:0', dtype=torch.float64)
+
+Epoch 24 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  23
+>> training : 
+TRAIN LOSS:  0.004832538474927749
+Train Accuracy:  tensor(71.4160, device='cuda:0', dtype=torch.float64)
+
+Epoch 25 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  24
+>> training : 
+TRAIN LOSS:  0.004760110199741198
+Train Accuracy:  tensor(71.9366, device='cuda:0', dtype=torch.float64)
+
+Epoch 26 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  25
+>> training : 
+TRAIN LOSS:  0.004793987316043657
+Train Accuracy:  tensor(71.6952, device='cuda:0', dtype=torch.float64)
+
+Epoch 27 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  26
+>> training : 
+TRAIN LOSS:  0.004752651778100444
+Train Accuracy:  tensor(71.9774, device='cuda:0', dtype=torch.float64)
+
+Epoch 28 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  27
+>> training : 
+TRAIN LOSS:  0.004699771002727148
+Train Accuracy:  tensor(71.9366, device='cuda:0', dtype=torch.float64)
+
+Epoch 29 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  28
+>> training : 
+TRAIN LOSS:  0.004649780517052908
+Train Accuracy:  tensor(72.4698, device='cuda:0', dtype=torch.float64)
+
+Epoch 30 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  29
+>> training : 
+TRAIN LOSS:  0.0046571236036592875
+Train Accuracy:  tensor(72.5890, device='cuda:0', dtype=torch.float64)
+
+Epoch 31 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  30
+>> training : 
+TRAIN LOSS:  0.004649188832764119
+Train Accuracy:  tensor(72.6737, device='cuda:0', dtype=torch.float64)
+
+Epoch 32 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  31
+>> training : 
+TRAIN LOSS:  0.0046328804617076155
+Train Accuracy:  tensor(72.7301, device='cuda:0', dtype=torch.float64)
+
+Epoch 33 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  32
+>> training : 
+TRAIN LOSS:  0.004581329181161779
+Train Accuracy:  tensor(73.3731, device='cuda:0', dtype=torch.float64)
+
+Epoch 34 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  33
+>> training : 
+TRAIN LOSS:  0.004562708946236701
+Train Accuracy:  tensor(73.1002, device='cuda:0', dtype=torch.float64)
+
+Epoch 35 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  34
+>> training : 
+TRAIN LOSS:  0.004512697049811359
+Train Accuracy:  tensor(73.3668, device='cuda:0', dtype=torch.float64)
+
+Epoch 36 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  35
+>> training : 
+TRAIN LOSS:  0.004536437419994845
+Train Accuracy:  tensor(73.2100, device='cuda:0', dtype=torch.float64)
+
+Epoch 37 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  36
+>> training : 
+TRAIN LOSS:  0.0044758564030954
+Train Accuracy:  tensor(73.5926, device='cuda:0', dtype=torch.float64)
+
+Epoch 38 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  37
+>> training : 
+TRAIN LOSS:  0.0044495197145920555
+Train Accuracy:  tensor(73.7369, device='cuda:0', dtype=torch.float64)
+
+Epoch 39 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  38
+>> training : 
+TRAIN LOSS:  0.004409747782107972
+Train Accuracy:  tensor(74.2199, device='cuda:0', dtype=torch.float64)
+
+Epoch 40 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  39
+>> training : 
+TRAIN LOSS:  0.004459500325890718
+Train Accuracy:  tensor(73.8278, device='cuda:0', dtype=torch.float64)
+
+Epoch 41 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  40
+>> training : 
+TRAIN LOSS:  0.00443247150006443
+Train Accuracy:  tensor(74.0066, device='cuda:0', dtype=torch.float64)
+
+Epoch 42 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  41
+>> training : 
+TRAIN LOSS:  0.004388991138003025
+Train Accuracy:  tensor(74.3139, device='cuda:0', dtype=torch.float64)
+
+Epoch 43 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  42
+>> training : 
+TRAIN LOSS:  0.004354500102271513
+Train Accuracy:  tensor(74.3202, device='cuda:0', dtype=torch.float64)
+
+Epoch 44 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  43
+>> training : 
+TRAIN LOSS:  0.0043440674583945914
+Train Accuracy:  tensor(74.3422, device='cuda:0', dtype=torch.float64)
+
+Epoch 45 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  44
+>> training : 
+TRAIN LOSS:  0.004339093621367475
+Train Accuracy:  tensor(74.3923, device='cuda:0', dtype=torch.float64)
+
+Epoch 46 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  45
+>> training : 
+TRAIN LOSS:  0.004295026539111186
+Train Accuracy:  tensor(74.6683, device='cuda:0', dtype=torch.float64)
+
+Epoch 47 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  46
+>> training : 
+TRAIN LOSS:  0.0042738362363986095
+Train Accuracy:  tensor(74.9788, device='cuda:0', dtype=torch.float64)
+
+Epoch 48 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  47
+>> training : 
+TRAIN LOSS:  0.004265921228410907
+Train Accuracy:  tensor(74.7593, device='cuda:0', dtype=torch.float64)
+
+Epoch 49 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  48
+>> training : 
+TRAIN LOSS:  0.00427453541280858
+Train Accuracy:  tensor(74.9820, device='cuda:0', dtype=torch.float64)
+
+Epoch 50 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  49
+>> training : 
+TRAIN LOSS:  0.00427511909715767
+Train Accuracy:  tensor(74.9882, device='cuda:0', dtype=torch.float64)
+
+Epoch 51 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  50
+>> training : 
+TRAIN LOSS:  0.004192637659753025
+Train Accuracy:  tensor(75.1921, device='cuda:0', dtype=torch.float64)
+
+Epoch 52 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  51
+>> training : 
+TRAIN LOSS:  0.004214271058553211
+Train Accuracy:  tensor(75.3897, device='cuda:0', dtype=torch.float64)
+
+Epoch 53 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  52
+>> training : 
+TRAIN LOSS:  0.004244471426310725
+Train Accuracy:  tensor(75.1137, device='cuda:0', dtype=torch.float64)
+
+Epoch 54 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  53
+>> training : 
+TRAIN LOSS:  0.004184247001652735
+Train Accuracy:  tensor(75.6186, device='cuda:0', dtype=torch.float64)
+
+Epoch 55 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  54
+>> training : 
+TRAIN LOSS:  0.004208545354311044
+Train Accuracy:  tensor(75.2705, device='cuda:0', dtype=torch.float64)
+
+Epoch 56 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  55
+>> training : 
+TRAIN LOSS:  0.004167086202858644
+Train Accuracy:  tensor(75.6374, device='cuda:0', dtype=torch.float64)
+
+Epoch 57 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  56
+>> training : 
+TRAIN LOSS:  0.004158373275894122
+Train Accuracy:  tensor(75.6594, device='cuda:0', dtype=torch.float64)
+
+Epoch 58 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  57
+>> training : 
+TRAIN LOSS:  0.004170654960162441
+Train Accuracy:  tensor(75.4838, device='cuda:0', dtype=torch.float64)
+
+Epoch 59 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  58
+>> training : 
+TRAIN LOSS:  0.0041043121051653735
+Train Accuracy:  tensor(75.9636, device='cuda:0', dtype=torch.float64)
+
+Epoch 60 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  59
+>> training : 
+TRAIN LOSS:  0.004149898324469629
+Train Accuracy:  tensor(75.8037, device='cuda:0', dtype=torch.float64)
+
+Epoch 61 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  60
+>> training : 
+TRAIN LOSS:  0.004152141927607254
+Train Accuracy:  tensor(75.8758, device='cuda:0', dtype=torch.float64)
+
+Epoch 62 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  61
+>> training : 
+TRAIN LOSS:  0.0040978708778669675
+Train Accuracy:  tensor(75.9636, device='cuda:0', dtype=torch.float64)
+
+Epoch 63 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  62
+>> training : 
+TRAIN LOSS:  0.0040869198324763704
+Train Accuracy:  tensor(76.2365, device='cuda:0', dtype=torch.float64)
+
+Epoch 64 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  63
+>> training : 
+TRAIN LOSS:  0.004065935265331858
+Train Accuracy:  tensor(76.3964, device='cuda:0', dtype=torch.float64)
+
+Epoch 65 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  64
+>> training : 
+TRAIN LOSS:  0.004034045927947417
+Train Accuracy:  tensor(76.2584, device='cuda:0', dtype=torch.float64)
+
+Epoch 66 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  65
+>> training : 
+TRAIN LOSS:  0.004049849497107329
+Train Accuracy:  tensor(76.3996, device='cuda:0', dtype=torch.float64)
+
+Epoch 67 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  66
+>> training : 
+TRAIN LOSS:  0.004070481409823912
+Train Accuracy:  tensor(76.3149, device='cuda:0', dtype=torch.float64)
+
+Epoch 68 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  67
+>> training : 
+TRAIN LOSS:  0.004035407735184664
+Train Accuracy:  tensor(76.2772, device='cuda:0', dtype=torch.float64)
+
+Epoch 69 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  68
+>> training : 
+TRAIN LOSS:  0.0040122482672705255
+Train Accuracy:  tensor(76.6756, device='cuda:0', dtype=torch.float64)
+
+Epoch 70 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  69
+>> training : 
+TRAIN LOSS:  0.003999359508246412
+Train Accuracy:  tensor(76.5721, device='cuda:0', dtype=torch.float64)
+
+Epoch 71 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  70
+>> training : 
+TRAIN LOSS:  0.004010644081675634
+Train Accuracy:  tensor(76.5752, device='cuda:0', dtype=torch.float64)
+
+Epoch 72 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  71
+>> training : 
+TRAIN LOSS:  0.003994491788423864
+Train Accuracy:  tensor(76.9923, device='cuda:0', dtype=torch.float64)
+
+Epoch 73 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  72
+>> training : 
+TRAIN LOSS:  0.0039548079398651565
+Train Accuracy:  tensor(76.6160, device='cuda:0', dtype=torch.float64)
+
+Epoch 74 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  73
+>> training : 
+TRAIN LOSS:  0.003958709383526809
+Train Accuracy:  tensor(76.7853, device='cuda:0', dtype=torch.float64)
+
+Epoch 75 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  74
+>> training : 
+TRAIN LOSS:  0.003966648181030252
+Train Accuracy:  tensor(76.8135, device='cuda:0', dtype=torch.float64)
+
+Epoch 76 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  75
+>> training : 
+TRAIN LOSS:  0.004014719985057442
+Train Accuracy:  tensor(76.5564, device='cuda:0', dtype=torch.float64)
+
+Epoch 77 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  76
+>> training : 
+TRAIN LOSS:  0.003986732760099328
+Train Accuracy:  tensor(77.1366, device='cuda:0', dtype=torch.float64)
+
+Epoch 78 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  77
+>> training : 
+TRAIN LOSS:  0.003927069836992333
+Train Accuracy:  tensor(77.2150, device='cuda:0', dtype=torch.float64)
+
+Epoch 79 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  78
+>> training : 
+TRAIN LOSS:  0.003958150442068678
+Train Accuracy:  tensor(76.9484, device='cuda:0', dtype=torch.float64)
+
+Epoch 80 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  79
+>> training : 
+TRAIN LOSS:  0.0039455016905823636
+Train Accuracy:  tensor(76.9610, device='cuda:0', dtype=torch.float64)
+
+Epoch 81 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  80
+>> training : 
+TRAIN LOSS:  0.003951203235174882
+Train Accuracy:  tensor(76.9578, device='cuda:0', dtype=torch.float64)
+
+Epoch 82 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  81
+>> training : 
+TRAIN LOSS:  0.003899108126972169
+Train Accuracy:  tensor(76.9735, device='cuda:0', dtype=torch.float64)
+
+Epoch 83 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  82
+>> training : 
+TRAIN LOSS:  0.0038996434228555227
+Train Accuracy:  tensor(77.2244, device='cuda:0', dtype=torch.float64)
+
+Epoch 84 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  83
+>> training : 
+TRAIN LOSS:  0.003905300271909252
+Train Accuracy:  tensor(77.1021, device='cuda:0', dtype=torch.float64)
+
+Epoch 85 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  84
+>> training : 
+TRAIN LOSS:  0.0038886027863654893
+Train Accuracy:  tensor(77.2024, device='cuda:0', dtype=torch.float64)
+
+Epoch 86 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  85
+>> training : 
+TRAIN LOSS:  0.003856041886803871
+Train Accuracy:  tensor(77.5286, device='cuda:0', dtype=torch.float64)
+
+Epoch 87 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  86
+>> training : 
+TRAIN LOSS:  0.00392440986685643
+Train Accuracy:  tensor(77.1084, device='cuda:0', dtype=torch.float64)
+
+Epoch 88 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  87
+>> training : 
+TRAIN LOSS:  0.003884810424251057
+Train Accuracy:  tensor(77.2871, device='cuda:0', dtype=torch.float64)
+
+Epoch 89 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  88
+>> training : 
+TRAIN LOSS:  0.0038605742933459654
+Train Accuracy:  tensor(77.1429, device='cuda:0', dtype=torch.float64)
+
+Epoch 90 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  89
+>> training : 
+TRAIN LOSS:  0.0038783684127548
+Train Accuracy:  tensor(77.2903, device='cuda:0', dtype=torch.float64)
+
+Epoch 91 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  90
+>> training : 
+TRAIN LOSS:  0.0039016854619090043
+Train Accuracy:  tensor(77.5474, device='cuda:0', dtype=torch.float64)
+
+Epoch 92 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  91
+>> training : 
+TRAIN LOSS:  0.0038205090559106534
+Train Accuracy:  tensor(77.6227, device='cuda:0', dtype=torch.float64)
+
+Epoch 93 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  92
+>> training : 
+TRAIN LOSS:  0.0038134021736226974
+Train Accuracy:  tensor(77.6635, device='cuda:0', dtype=torch.float64)
+
+Epoch 94 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  93
+>> training : 
+TRAIN LOSS:  0.0038255568197084963
+Train Accuracy:  tensor(77.9834, device='cuda:0', dtype=torch.float64)
+
+Epoch 95 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  94
+>> training : 
+TRAIN LOSS:  0.0038123292189809394
+Train Accuracy:  tensor(77.6196, device='cuda:0', dtype=torch.float64)
+
+Epoch 96 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  95
+>> training : 
+TRAIN LOSS:  0.0038544541202930704
+Train Accuracy:  tensor(77.3844, device='cuda:0', dtype=torch.float64)
+
+Epoch 97 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  96
+>> training : 
+TRAIN LOSS:  0.0038440716935864098
+Train Accuracy:  tensor(77.5694, device='cuda:0', dtype=torch.float64)
+
+Epoch 98 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  97
+>> training : 
+TRAIN LOSS:  0.0038393563147116104
+Train Accuracy:  tensor(77.6008, device='cuda:0', dtype=torch.float64)
+
+Epoch 99 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  98
+>> training : 
+TRAIN LOSS:  0.003832625765140217
+Train Accuracy:  tensor(77.7356, device='cuda:0', dtype=torch.float64)
+
+Epoch 100 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  99
+>> training : 
+TRAIN LOSS:  0.00383856023986156
+Train Accuracy:  tensor(77.5286, device='cuda:0', dtype=torch.float64)
+
+Epoch 101 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  100
+>> training : 
+TRAIN LOSS:  0.0037799794714671797
+Train Accuracy:  tensor(78.0931, device='cuda:0', dtype=torch.float64)
+
+Epoch 102 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  101
+>> training : 
+TRAIN LOSS:  0.003770972837872017
+Train Accuracy:  tensor(78.0147, device='cuda:0', dtype=torch.float64)
+
+Epoch 103 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  102
+>> training : 
+TRAIN LOSS:  0.0037536163324096163
+Train Accuracy:  tensor(78.2845, device='cuda:0', dtype=torch.float64)
+
+Epoch 104 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  103
+>> training : 
+TRAIN LOSS:  0.0037340435447860364
+Train Accuracy:  tensor(78.4946, device='cuda:0', dtype=torch.float64)
+
+Epoch 105 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  104
+>> training : 
+TRAIN LOSS:  0.0038578827823799234
+Train Accuracy:  tensor(77.2307, device='cuda:0', dtype=torch.float64)
+
+Epoch 106 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  105
+>> training : 
+TRAIN LOSS:  0.0038233040108919254
+Train Accuracy:  tensor(77.8485, device='cuda:0', dtype=torch.float64)
+
+Epoch 107 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  106
+>> training : 
+TRAIN LOSS:  0.003811609858122107
+Train Accuracy:  tensor(77.8830, device='cuda:0', dtype=torch.float64)
+
+Epoch 108 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  107
+>> training : 
+TRAIN LOSS:  0.003762796470246682
+Train Accuracy:  tensor(78.1433, device='cuda:0', dtype=torch.float64)
+
+Epoch 109 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  108
+>> training : 
+TRAIN LOSS:  0.003767526331077984
+Train Accuracy:  tensor(77.9959, device='cuda:0', dtype=torch.float64)
+
+Epoch 110 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  109
+>> training : 
+TRAIN LOSS:  0.003762424108057499
+Train Accuracy:  tensor(78.2531, device='cuda:0', dtype=torch.float64)
+
+Epoch 111 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  110
+>> training : 
+TRAIN LOSS:  0.0037334221665979235
+Train Accuracy:  tensor(78.2437, device='cuda:0', dtype=torch.float64)
+
+Epoch 112 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  111
+>> training : 
+TRAIN LOSS:  0.0037133202005819746
+Train Accuracy:  tensor(78.4601, device='cuda:0', dtype=torch.float64)
+
+Epoch 113 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  112
+>> training : 
+TRAIN LOSS:  0.0037770180926906924
+Train Accuracy:  tensor(78.2311, device='cuda:0', dtype=torch.float64)
+
+Epoch 114 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  113
+>> training : 
+TRAIN LOSS:  0.0036949087006181726
+Train Accuracy:  tensor(78.5887, device='cuda:0', dtype=torch.float64)
+
+Epoch 115 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  114
+>> training : 
+TRAIN LOSS:  0.00377321943269173
+Train Accuracy:  tensor(78.1088, device='cuda:0', dtype=torch.float64)
+
+Epoch 116 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  115
+>> training : 
+TRAIN LOSS:  0.0036985727374935404
+Train Accuracy:  tensor(78.4287, device='cuda:0', dtype=torch.float64)
+
+Epoch 117 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  116
+>> training : 
+TRAIN LOSS:  0.0037302376596984096
+Train Accuracy:  tensor(78.4883, device='cuda:0', dtype=torch.float64)
+
+Epoch 118 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  117
+>> training : 
+TRAIN LOSS:  0.003694772496013333
+Train Accuracy:  tensor(78.6389, device='cuda:0', dtype=torch.float64)
+
+Epoch 119 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  118
+>> training : 
+TRAIN LOSS:  0.003644152135895359
+Train Accuracy:  tensor(78.5291, device='cuda:0', dtype=torch.float64)
+
+Epoch 120 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  119
+>> training : 
+TRAIN LOSS:  0.0037074181350099642
+Train Accuracy:  tensor(78.5573, device='cuda:0', dtype=torch.float64)
+
+Epoch 121 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  120
+>> training : 
+TRAIN LOSS:  0.003846522365148041
+Train Accuracy:  tensor(77.8862, device='cuda:0', dtype=torch.float64)
+
+Epoch 122 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  121
+>> training : 
+TRAIN LOSS:  0.0037649332056304253
+Train Accuracy:  tensor(77.9457, device='cuda:0', dtype=torch.float64)
+
+Epoch 123 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  122
+>> training : 
+TRAIN LOSS:  0.003698174660344548
+Train Accuracy:  tensor(78.3566, device='cuda:0', dtype=torch.float64)
+
+Epoch 124 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  123
+>> training : 
+TRAIN LOSS:  0.003693709275145618
+Train Accuracy:  tensor(78.5761, device='cuda:0', dtype=torch.float64)
+
+Epoch 125 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  124
+>> training : 
+TRAIN LOSS:  0.003718599870097624
+Train Accuracy:  tensor(78.4475, device='cuda:0', dtype=torch.float64)
+
+Epoch 126 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  125
+>> training : 
+TRAIN LOSS:  0.0036850201545211053
+Train Accuracy:  tensor(78.4946, device='cuda:0', dtype=torch.float64)
+
+Epoch 127 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  126
+>> training : 
+TRAIN LOSS:  0.0037205891987177127
+Train Accuracy:  tensor(78.2123, device='cuda:0', dtype=torch.float64)
+
+Epoch 128 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  127
+>> training : 
+TRAIN LOSS:  0.0036324321148779506
+Train Accuracy:  tensor(78.9243, device='cuda:0', dtype=torch.float64)
+
+Epoch 129 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  128
+>> training : 
+TRAIN LOSS:  0.003688679777830021
+Train Accuracy:  tensor(78.4256, device='cuda:0', dtype=torch.float64)
+
+Epoch 130 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  129
+>> training : 
+TRAIN LOSS:  0.003660124945980788
+Train Accuracy:  tensor(78.4287, device='cuda:0', dtype=torch.float64)
+
+Epoch 131 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  130
+>> training : 
+TRAIN LOSS:  0.0036572012788022744
+Train Accuracy:  tensor(78.7361, device='cuda:0', dtype=torch.float64)
+
+Epoch 132 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  131
+>> training : 
+TRAIN LOSS:  0.003666065023183561
+Train Accuracy:  tensor(78.6671, device='cuda:0', dtype=torch.float64)
+
+Epoch 133 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  132
+>> training : 
+TRAIN LOSS:  0.003680375833879243
+Train Accuracy:  tensor(78.5824, device='cuda:0', dtype=torch.float64)
+
+Epoch 134 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  133
+>> training : 
+TRAIN LOSS:  0.0036555928245165775
+Train Accuracy:  tensor(78.7173, device='cuda:0', dtype=torch.float64)
+
+Epoch 135 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  134
+>> training : 
+TRAIN LOSS:  0.003647994653023727
+Train Accuracy:  tensor(78.7925, device='cuda:0', dtype=torch.float64)
+
+Epoch 136 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  135
+>> training : 
+TRAIN LOSS:  0.003646496764092268
+Train Accuracy:  tensor(78.8866, device='cuda:0', dtype=torch.float64)
+
+Epoch 137 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  136
+>> training : 
+TRAIN LOSS:  0.0036568330371568657
+Train Accuracy:  tensor(78.6169, device='cuda:0', dtype=torch.float64)
+
+Epoch 138 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  137
+>> training : 
+TRAIN LOSS:  0.0036613860595033744
+Train Accuracy:  tensor(79.0246, device='cuda:0', dtype=torch.float64)
+
+Epoch 139 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  138
+>> training : 
+TRAIN LOSS:  0.003678594310212251
+Train Accuracy:  tensor(78.3911, device='cuda:0', dtype=torch.float64)
+
+Epoch 140 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  139
+>> training : 
+TRAIN LOSS:  0.003678013646754049
+Train Accuracy:  tensor(78.3127, device='cuda:0', dtype=torch.float64)
+
+Epoch 141 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  140
+>> training : 
+TRAIN LOSS:  0.0036269256701117235
+Train Accuracy:  tensor(78.8176, device='cuda:0', dtype=torch.float64)
+
+Epoch 142 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  141
+>> training : 
+TRAIN LOSS:  0.0036168857345727614
+Train Accuracy:  tensor(78.9838, device='cuda:0', dtype=torch.float64)
+
+Epoch 143 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  142
+>> training : 
+TRAIN LOSS:  0.003645288425496104
+Train Accuracy:  tensor(78.4852, device='cuda:0', dtype=torch.float64)
+
+Epoch 144 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  143
+>> training : 
+TRAIN LOSS:  0.0035962176272464207
+Train Accuracy:  tensor(79.3665, device='cuda:0', dtype=torch.float64)
+
+Epoch 145 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  144
+>> training : 
+TRAIN LOSS:  0.003545387544208734
+Train Accuracy:  tensor(79.5578, device='cuda:0', dtype=torch.float64)
+
+Epoch 146 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  145
+>> training : 
+TRAIN LOSS:  0.0036166447259909835
+Train Accuracy:  tensor(78.9243, device='cuda:0', dtype=torch.float64)
+
+Epoch 147 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  146
+>> training : 
+TRAIN LOSS:  0.003621800130991721
+Train Accuracy:  tensor(79.1407, device='cuda:0', dtype=torch.float64)
+
+Epoch 148 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  147
+>> training : 
+TRAIN LOSS:  0.0036350450392182163
+Train Accuracy:  tensor(78.8208, device='cuda:0', dtype=torch.float64)
+
+Epoch 149 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  148
+>> training : 
+TRAIN LOSS:  0.0035818932337579224
+Train Accuracy:  tensor(78.9211, device='cuda:0', dtype=torch.float64)
+
+Epoch 150 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  149
+>> training : 
+TRAIN LOSS:  0.003586368867273108
+Train Accuracy:  tensor(79.3194, device='cuda:0', dtype=torch.float64)
+
+Epoch 151 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  150
+>> training : 
+TRAIN LOSS:  0.0036137583684973606
+Train Accuracy:  tensor(78.8082, device='cuda:0', dtype=torch.float64)
+
+Epoch 152 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  151
+>> training : 
+TRAIN LOSS:  0.003633587332715505
+Train Accuracy:  tensor(78.9776, device='cuda:0', dtype=torch.float64)
+
+Epoch 153 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  152
+>> training : 
+TRAIN LOSS:  0.0035836892982663566
+Train Accuracy:  tensor(79.2787, device='cuda:0', dtype=torch.float64)
+
+Epoch 154 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  153
+>> training : 
+TRAIN LOSS:  0.003677416328204656
+Train Accuracy:  tensor(78.6106, device='cuda:0', dtype=torch.float64)
+
+Epoch 155 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  154
+>> training : 
+TRAIN LOSS:  0.0036259632621305723
+Train Accuracy:  tensor(78.8490, device='cuda:0', dtype=torch.float64)
+
+Epoch 156 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  155
+>> training : 
+TRAIN LOSS:  0.00362632152371334
+Train Accuracy:  tensor(79.1563, device='cuda:0', dtype=torch.float64)
+
+Epoch 157 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  156
+>> training : 
+TRAIN LOSS:  0.003603744828366403
+Train Accuracy:  tensor(78.9023, device='cuda:0', dtype=torch.float64)
+
+Epoch 158 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  157
+>> training : 
+TRAIN LOSS:  0.003636193911035139
+Train Accuracy:  tensor(78.7674, device='cuda:0', dtype=torch.float64)
+
+Epoch 159 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  158
+>> training : 
+TRAIN LOSS:  0.003582414528111109
+Train Accuracy:  tensor(79.0152, device='cuda:0', dtype=torch.float64)
+
+Epoch 160 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  159
+>> training : 
+TRAIN LOSS:  0.0036316843200705725
+Train Accuracy:  tensor(78.9149, device='cuda:0', dtype=torch.float64)
+
+Epoch 161 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  160
+>> training : 
+TRAIN LOSS:  0.003594897184810127
+Train Accuracy:  tensor(78.8709, device='cuda:0', dtype=torch.float64)
+
+Epoch 162 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  161
+>> training : 
+TRAIN LOSS:  0.0035355658904687726
+Train Accuracy:  tensor(79.3602, device='cuda:0', dtype=torch.float64)
+
+Epoch 163 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  162
+>> training : 
+TRAIN LOSS:  0.0035733360153989055
+Train Accuracy:  tensor(79.0183, device='cuda:0', dtype=torch.float64)
+
+Epoch 164 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  163
+>> training : 
+TRAIN LOSS:  0.0035042816837024256
+Train Accuracy:  tensor(79.4386, device='cuda:0', dtype=torch.float64)
+
+Epoch 165 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  164
+>> training : 
+TRAIN LOSS:  0.003594672090117042
+Train Accuracy:  tensor(79.0842, device='cuda:0', dtype=torch.float64)
+
+Epoch 166 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  165
+>> training : 
+TRAIN LOSS:  0.003518019952388211
+Train Accuracy:  tensor(79.4104, device='cuda:0', dtype=torch.float64)
+
+Epoch 167 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  166
+>> training : 
+TRAIN LOSS:  0.003484169913811315
+Train Accuracy:  tensor(79.8401, device='cuda:0', dtype=torch.float64)
+
+Epoch 168 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  167
+>> training : 
+TRAIN LOSS:  0.0035262150573416415
+Train Accuracy:  tensor(79.5986, device='cuda:0', dtype=torch.float64)
+
+Epoch 169 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  168
+>> training : 
+TRAIN LOSS:  0.0035587363675299794
+Train Accuracy:  tensor(79.3100, device='cuda:0', dtype=torch.float64)
+
+Epoch 170 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  169
+>> training : 
+TRAIN LOSS:  0.003631669699781196
+Train Accuracy:  tensor(78.6263, device='cuda:0', dtype=torch.float64)
+
+Epoch 171 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  170
+>> training : 
+TRAIN LOSS:  0.0035265552440518887
+Train Accuracy:  tensor(79.4731, device='cuda:0', dtype=torch.float64)
+
+Epoch 172 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  171
+>> training : 
+TRAIN LOSS:  0.0035635302867638163
+Train Accuracy:  tensor(79.2253, device='cuda:0', dtype=torch.float64)
+
+Epoch 173 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  172
+>> training : 
+TRAIN LOSS:  0.003562700935379921
+Train Accuracy:  tensor(79.3790, device='cuda:0', dtype=torch.float64)
+
+Epoch 174 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  173
+>> training : 
+TRAIN LOSS:  0.0034972604425495203
+Train Accuracy:  tensor(79.6362, device='cuda:0', dtype=torch.float64)
+
+Epoch 175 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  174
+>> training : 
+TRAIN LOSS:  0.003540983938658632
+Train Accuracy:  tensor(79.4229, device='cuda:0', dtype=torch.float64)
+
+Epoch 176 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  175
+>> training : 
+TRAIN LOSS:  0.0034751921513620095
+Train Accuracy:  tensor(79.7460, device='cuda:0', dtype=torch.float64)
+
+Epoch 177 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  176
+>> training : 
+TRAIN LOSS:  0.0034955374794879714
+Train Accuracy:  tensor(79.5045, device='cuda:0', dtype=torch.float64)
+
+Epoch 178 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  177
+>> training : 
+TRAIN LOSS:  0.003497316788894285
+Train Accuracy:  tensor(79.6425, device='cuda:0', dtype=torch.float64)
+
+Epoch 179 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  178
+>> training : 
+TRAIN LOSS:  0.003520319155060013
+Train Accuracy:  tensor(79.4637, device='cuda:0', dtype=torch.float64)
+
+Epoch 180 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  179
+>> training : 
+TRAIN LOSS:  0.0035068304571066787
+Train Accuracy:  tensor(79.6958, device='cuda:0', dtype=torch.float64)
+
+Epoch 181 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  180
+>> training : 
+TRAIN LOSS:  0.0035379017578951706
+Train Accuracy:  tensor(79.4010, device='cuda:0', dtype=torch.float64)
+
+Epoch 182 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  181
+>> training : 
+TRAIN LOSS:  0.003509509087693117
+Train Accuracy:  tensor(79.7146, device='cuda:0', dtype=torch.float64)
+
+Epoch 183 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  182
+>> training : 
+TRAIN LOSS:  0.003473854576679575
+Train Accuracy:  tensor(79.7899, device='cuda:0', dtype=torch.float64)
+
+Epoch 184 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  183
+>> training : 
+TRAIN LOSS:  0.0034900042822653735
+Train Accuracy:  tensor(79.6519, device='cuda:0', dtype=torch.float64)
+
+Epoch 185 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  184
+>> training : 
+TRAIN LOSS:  0.0035224059419944513
+Train Accuracy:  tensor(79.6519, device='cuda:0', dtype=torch.float64)
+
+Epoch 186 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  185
+>> training : 
+TRAIN LOSS:  0.0035380949621872035
+Train Accuracy:  tensor(79.6393, device='cuda:0', dtype=torch.float64)
+
+Epoch 187 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  186
+>> training : 
+TRAIN LOSS:  0.0034624582849663776
+Train Accuracy:  tensor(80.1537, device='cuda:0', dtype=torch.float64)
+
+Epoch 188 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  187
+>> training : 
+TRAIN LOSS:  0.0035388641172728794
+Train Accuracy:  tensor(79.5891, device='cuda:0', dtype=torch.float64)
+
+Epoch 189 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  188
+>> training : 
+TRAIN LOSS:  0.0035061915718651087
+Train Accuracy:  tensor(79.4951, device='cuda:0', dtype=torch.float64)
+
+Epoch 190 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  189
+>> training : 
+TRAIN LOSS:  0.0035222261372976436
+Train Accuracy:  tensor(79.5452, device='cuda:0', dtype=torch.float64)
+
+Epoch 191 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  190
+>> training : 
+TRAIN LOSS:  0.0034764049138061226
+Train Accuracy:  tensor(79.9498, device='cuda:0', dtype=torch.float64)
+
+Epoch 192 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  191
+>> training : 
+TRAIN LOSS:  0.003539792284128788
+Train Accuracy:  tensor(79.4198, device='cuda:0', dtype=torch.float64)
+
+Epoch 193 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  192
+>> training : 
+TRAIN LOSS:  0.0034751798687112805
+Train Accuracy:  tensor(79.8745, device='cuda:0', dtype=torch.float64)
+
+Epoch 194 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  193
+>> training : 
+TRAIN LOSS:  0.0034915305228933975
+Train Accuracy:  tensor(79.8934, device='cuda:0', dtype=torch.float64)
+
+Epoch 195 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  194
+>> training : 
+TRAIN LOSS:  0.0034136908656660623
+Train Accuracy:  tensor(80.1976, device='cuda:0', dtype=torch.float64)
+
+Epoch 196 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  195
+>> training : 
+TRAIN LOSS:  0.0034435008874933266
+Train Accuracy:  tensor(80.1443, device='cuda:0', dtype=torch.float64)
+
+Epoch 197 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  196
+>> training : 
+TRAIN LOSS:  0.0034449939062663787
+Train Accuracy:  tensor(80.1098, device='cuda:0', dtype=torch.float64)
+
+Epoch 198 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  197
+>> training : 
+TRAIN LOSS:  0.003456361659814034
+Train Accuracy:  tensor(79.8212, device='cuda:0', dtype=torch.float64)
+
+Epoch 199 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  198
+>> training : 
+TRAIN LOSS:  0.003476121719305617
+Train Accuracy:  tensor(80.1380, device='cuda:0', dtype=torch.float64)
+
+Epoch 200 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  199
+>> training : 
+TRAIN LOSS:  0.003488609923339851
+Train Accuracy:  tensor(79.5860, device='cuda:0', dtype=torch.float64)
+
+Epoch 201 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  200
+>> training : 
+TRAIN LOSS:  0.003490040212360243
+Train Accuracy:  tensor(79.9530, device='cuda:0', dtype=torch.float64)
+
+Epoch 202 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  201
+>> training : 
+TRAIN LOSS:  0.0035223470121897816
+Train Accuracy:  tensor(79.7052, device='cuda:0', dtype=torch.float64)
+
+Epoch 203 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  202
+>> training : 
+TRAIN LOSS:  0.003450239693574515
+Train Accuracy:  tensor(79.8401, device='cuda:0', dtype=torch.float64)
+
+Epoch 204 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  203
+>> training : 
+TRAIN LOSS:  0.003558661106033947
+Train Accuracy:  tensor(79.4700, device='cuda:0', dtype=torch.float64)
+
+Epoch 205 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  204
+>> training : 
+TRAIN LOSS:  0.0034362230225007174
+Train Accuracy:  tensor(79.8526, device='cuda:0', dtype=torch.float64)
+
+Epoch 206 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  205
+>> training : 
+TRAIN LOSS:  0.0035018809334843326
+Train Accuracy:  tensor(79.9310, device='cuda:0', dtype=torch.float64)
+
+Epoch 207 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  206
+>> training : 
+TRAIN LOSS:  0.003480752076739257
+Train Accuracy:  tensor(79.8871, device='cuda:0', dtype=torch.float64)
+
+Epoch 208 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  207
+>> training : 
+TRAIN LOSS:  0.0034517306060426116
+Train Accuracy:  tensor(80.0753, device='cuda:0', dtype=torch.float64)
+
+Epoch 209 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  208
+>> training : 
+TRAIN LOSS:  0.003475901848547919
+Train Accuracy:  tensor(79.7773, device='cuda:0', dtype=torch.float64)
+
+Epoch 210 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  209
+>> training : 
+TRAIN LOSS:  0.0034735139819808154
+Train Accuracy:  tensor(79.8557, device='cuda:0', dtype=torch.float64)
+
+Epoch 211 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  210
+>> training : 
+TRAIN LOSS:  0.003460730098904123
+Train Accuracy:  tensor(80., device='cuda:0', dtype=torch.float64)
+
+Epoch 212 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  211
+>> training : 
+TRAIN LOSS:  0.00341968064409486
+Train Accuracy:  tensor(80.3356, device='cuda:0', dtype=torch.float64)
+
+Epoch 213 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  212
+>> training : 
+TRAIN LOSS:  0.0034305308125732047
+Train Accuracy:  tensor(80.0533, device='cuda:0', dtype=torch.float64)
+
+Epoch 214 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  213
+>> training : 
+TRAIN LOSS:  0.003503164216719471
+Train Accuracy:  tensor(79.7366, device='cuda:0', dtype=torch.float64)
+
+Epoch 215 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  214
+>> training : 
+TRAIN LOSS:  0.003480083853244707
+Train Accuracy:  tensor(79.8087, device='cuda:0', dtype=torch.float64)
+
+Epoch 216 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  215
+>> training : 
+TRAIN LOSS:  0.00350394536844331
+Train Accuracy:  tensor(79.7209, device='cuda:0', dtype=torch.float64)
+
+Epoch 217 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  216
+>> training : 
+TRAIN LOSS:  0.0034872803630846805
+Train Accuracy:  tensor(80.0878, device='cuda:0', dtype=torch.float64)
+
+Epoch 218 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  217
+>> training : 
+TRAIN LOSS:  0.0034657844120158433
+Train Accuracy:  tensor(80.0659, device='cuda:0', dtype=torch.float64)
+
+Epoch 219 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  218
+>> training : 
+TRAIN LOSS:  0.003465560999749614
+Train Accuracy:  tensor(79.9561, device='cuda:0', dtype=torch.float64)
+
+Epoch 220 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  219
+>> training : 
+TRAIN LOSS:  0.00349062906175978
+Train Accuracy:  tensor(79.8589, device='cuda:0', dtype=torch.float64)
+
+Epoch 221 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  220
+>> training : 
+TRAIN LOSS:  0.0034069900913112905
+Train Accuracy:  tensor(80.3136, device='cuda:0', dtype=torch.float64)
+
+Epoch 222 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  221
+>> training : 
+TRAIN LOSS:  0.003441226894585937
+Train Accuracy:  tensor(80.0753, device='cuda:0', dtype=torch.float64)
+
+Epoch 223 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  222
+>> training : 
+TRAIN LOSS:  0.0034715161898189605
+Train Accuracy:  tensor(79.9937, device='cuda:0', dtype=torch.float64)
+
+Epoch 224 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  223
+>> training : 
+TRAIN LOSS:  0.0034510962890572957
+Train Accuracy:  tensor(79.9090, device='cuda:0', dtype=torch.float64)
+
+Epoch 225 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  224
+>> training : 
+TRAIN LOSS:  0.003419346873506364
+Train Accuracy:  tensor(80.0721, device='cuda:0', dtype=torch.float64)
+
+Epoch 226 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  225
+>> training : 
+TRAIN LOSS:  0.0033784104268416654
+Train Accuracy:  tensor(80.5833, device='cuda:0', dtype=torch.float64)
+
+Epoch 227 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  226
+>> training : 
+TRAIN LOSS:  0.0034231772028541834
+Train Accuracy:  tensor(79.8745, device='cuda:0', dtype=torch.float64)
+
+Epoch 228 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  227
+>> training : 
+TRAIN LOSS:  0.003464120235752682
+Train Accuracy:  tensor(79.8275, device='cuda:0', dtype=torch.float64)
+
+Epoch 229 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  228
+>> training : 
+TRAIN LOSS:  0.003478063246440005
+Train Accuracy:  tensor(79.8589, device='cuda:0', dtype=torch.float64)
+
+Epoch 230 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  229
+>> training : 
+TRAIN LOSS:  0.003411821845053729
+Train Accuracy:  tensor(80.2823, device='cuda:0', dtype=torch.float64)
+
+Epoch 231 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  230
+>> training : 
+TRAIN LOSS:  0.00339599564958931
+Train Accuracy:  tensor(80.4265, device='cuda:0', dtype=torch.float64)
+
+Epoch 232 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  231
+>> training : 
+TRAIN LOSS:  0.0034100572629578345
+Train Accuracy:  tensor(80.4422, device='cuda:0', dtype=torch.float64)
+
+Epoch 233 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  232
+>> training : 
+TRAIN LOSS:  0.0034233159044608813
+Train Accuracy:  tensor(80.0220, device='cuda:0', dtype=torch.float64)
+
+Epoch 234 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  233
+>> training : 
+TRAIN LOSS:  0.003479998144812582
+Train Accuracy:  tensor(79.9279, device='cuda:0', dtype=torch.float64)
+
+Epoch 235 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  234
+>> training : 
+TRAIN LOSS:  0.0034310953060399593
+Train Accuracy:  tensor(79.8745, device='cuda:0', dtype=torch.float64)
+
+Epoch 236 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  235
+>> training : 
+TRAIN LOSS:  0.003462303010987809
+Train Accuracy:  tensor(79.8181, device='cuda:0', dtype=torch.float64)
+
+Epoch 237 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  236
+>> training : 
+TRAIN LOSS:  0.0034294361789267286
+Train Accuracy:  tensor(80.1819, device='cuda:0', dtype=torch.float64)
+
+Epoch 238 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  237
+>> training : 
+TRAIN LOSS:  0.0034522170274258034
+Train Accuracy:  tensor(80.1255, device='cuda:0', dtype=torch.float64)
+
+Epoch 239 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  238
+>> training : 
+TRAIN LOSS:  0.00346044457891583
+Train Accuracy:  tensor(79.9247, device='cuda:0', dtype=torch.float64)
+
+Epoch 240 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  239
+>> training : 
+TRAIN LOSS:  0.0034035927247006597
+Train Accuracy:  tensor(80.1788, device='cuda:0', dtype=torch.float64)
+
+Epoch 241 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  240
+>> training : 
+TRAIN LOSS:  0.0033441881083275658
+Train Accuracy:  tensor(80.6523, device='cuda:0', dtype=torch.float64)
+
+Epoch 242 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  241
+>> training : 
+TRAIN LOSS:  0.003388402694554394
+Train Accuracy:  tensor(80.2321, device='cuda:0', dtype=torch.float64)
+
+Epoch 243 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  242
+>> training : 
+TRAIN LOSS:  0.0033996434781512854
+Train Accuracy:  tensor(80.4485, device='cuda:0', dtype=torch.float64)
+
+Epoch 244 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  243
+>> training : 
+TRAIN LOSS:  0.003425038591324021
+Train Accuracy:  tensor(80.2634, device='cuda:0', dtype=torch.float64)
+
+Epoch 245 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  244
+>> training : 
+TRAIN LOSS:  0.0033807026053813438
+Train Accuracy:  tensor(80.3920, device='cuda:0', dtype=torch.float64)
+
+Epoch 246 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  245
+>> training : 
+TRAIN LOSS:  0.003363977951447904
+Train Accuracy:  tensor(80.4798, device='cuda:0', dtype=torch.float64)
+
+Epoch 247 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  246
+>> training : 
+TRAIN LOSS:  0.003428564064925566
+Train Accuracy:  tensor(80.3920, device='cuda:0', dtype=torch.float64)
+
+Epoch 248 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  247
+>> training : 
+TRAIN LOSS:  0.0034540684568633365
+Train Accuracy:  tensor(80., device='cuda:0', dtype=torch.float64)
+
+Epoch 249 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  248
+>> training : 
+TRAIN LOSS:  0.003467189845048804
+Train Accuracy:  tensor(79.7554, device='cuda:0', dtype=torch.float64)
+
+Epoch 250 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  249
+>> training : 
+TRAIN LOSS:  0.0034054088867325684
+Train Accuracy:  tensor(80.1505, device='cuda:0', dtype=torch.float64)
+
+Epoch 251 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  250
+>> training : 
+TRAIN LOSS:  0.003405125329108266
+Train Accuracy:  tensor(80.3669, device='cuda:0', dtype=torch.float64)
+
+Epoch 252 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  251
+>> training : 
+TRAIN LOSS:  0.003378889019331888
+Train Accuracy:  tensor(80.3732, device='cuda:0', dtype=torch.float64)
+
+Epoch 253 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  252
+>> training : 
+TRAIN LOSS:  0.0033971786662592715
+Train Accuracy:  tensor(80.3513, device='cuda:0', dtype=torch.float64)
+
+Epoch 254 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  253
+>> training : 
+TRAIN LOSS:  0.0033844237503669696
+Train Accuracy:  tensor(80.1004, device='cuda:0', dtype=torch.float64)
+
+Epoch 255 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  254
+>> training : 
+TRAIN LOSS:  0.0033906465210809178
+Train Accuracy:  tensor(80.1255, device='cuda:0', dtype=torch.float64)
+
+Epoch 256 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  255
+>> training : 
+TRAIN LOSS:  0.003358087411434538
+Train Accuracy:  tensor(80.4328, device='cuda:0', dtype=torch.float64)
+
+Epoch 257 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  256
+>> training : 
+TRAIN LOSS:  0.0033530417572130355
+Train Accuracy:  tensor(80.5614, device='cuda:0', dtype=torch.float64)
+
+Epoch 258 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  257
+>> training : 
+TRAIN LOSS:  0.00333644992340241
+Train Accuracy:  tensor(80.6712, device='cuda:0', dtype=torch.float64)
+
+Epoch 259 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  258
+>> training : 
+TRAIN LOSS:  0.003375700493301552
+Train Accuracy:  tensor(80.4767, device='cuda:0', dtype=torch.float64)
+
+Epoch 260 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  259
+>> training : 
+TRAIN LOSS:  0.0033930480368032302
+Train Accuracy:  tensor(80.3199, device='cuda:0', dtype=torch.float64)
+
+Epoch 261 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  260
+>> training : 
+TRAIN LOSS:  0.00343488138709413
+Train Accuracy:  tensor(80.0125, device='cuda:0', dtype=torch.float64)
+
+Epoch 262 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  261
+>> training : 
+TRAIN LOSS:  0.0033960572011758304
+Train Accuracy:  tensor(80.5708, device='cuda:0', dtype=torch.float64)
+
+Epoch 263 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  262
+>> training : 
+TRAIN LOSS:  0.0033774460616372718
+Train Accuracy:  tensor(80.4454, device='cuda:0', dtype=torch.float64)
+
+Epoch 264 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  263
+>> training : 
+TRAIN LOSS:  0.003340257734868787
+Train Accuracy:  tensor(80.7558, device='cuda:0', dtype=torch.float64)
+
+Epoch 265 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  264
+>> training : 
+TRAIN LOSS:  0.003362883672045749
+Train Accuracy:  tensor(80.8248, device='cuda:0', dtype=torch.float64)
+
+Epoch 266 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  265
+>> training : 
+TRAIN LOSS:  0.003365015405013641
+Train Accuracy:  tensor(80.4673, device='cuda:0', dtype=torch.float64)
+
+Epoch 267 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  266
+>> training : 
+TRAIN LOSS:  0.0033518053875160906
+Train Accuracy:  tensor(80.7213, device='cuda:0', dtype=torch.float64)
+
+Epoch 268 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  267
+>> training : 
+TRAIN LOSS:  0.0033772569914418964
+Train Accuracy:  tensor(80.2289, device='cuda:0', dtype=torch.float64)
+
+Epoch 269 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  268
+>> training : 
+TRAIN LOSS:  0.0033493867708594706
+Train Accuracy:  tensor(80.5457, device='cuda:0', dtype=torch.float64)
+
+Epoch 270 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  269
+>> training : 
+TRAIN LOSS:  0.0034436287505323466
+Train Accuracy:  tensor(80.0596, device='cuda:0', dtype=torch.float64)
+
+Epoch 271 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  270
+>> training : 
+TRAIN LOSS:  0.0034043001805201243
+Train Accuracy:  tensor(80.3324, device='cuda:0', dtype=torch.float64)
+
+Epoch 272 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  271
+>> training : 
+TRAIN LOSS:  0.0034321875712032953
+Train Accuracy:  tensor(80.1913, device='cuda:0', dtype=torch.float64)
+
+Epoch 273 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  272
+>> training : 
+TRAIN LOSS:  0.00336905344678108
+Train Accuracy:  tensor(80.5551, device='cuda:0', dtype=torch.float64)
+
+Epoch 274 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  273
+>> training : 
+TRAIN LOSS:  0.0033488204743919356
+Train Accuracy:  tensor(80.5363, device='cuda:0', dtype=torch.float64)
+
+Epoch 275 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  274
+>> training : 
+TRAIN LOSS:  0.0034075184499879085
+Train Accuracy:  tensor(80.4297, device='cuda:0', dtype=torch.float64)
+
+Epoch 276 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  275
+>> training : 
+TRAIN LOSS:  0.00337689392372641
+Train Accuracy:  tensor(80.2384, device='cuda:0', dtype=torch.float64)
+
+Epoch 277 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  276
+>> training : 
+TRAIN LOSS:  0.0034569455441849834
+Train Accuracy:  tensor(80.1756, device='cuda:0', dtype=torch.float64)
+
+Epoch 278 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  277
+>> training : 
+TRAIN LOSS:  0.0034033563577476407
+Train Accuracy:  tensor(80.3575, device='cuda:0', dtype=torch.float64)
+
+Epoch 279 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  278
+>> training : 
+TRAIN LOSS:  0.0034024810938695317
+Train Accuracy:  tensor(80.4704, device='cuda:0', dtype=torch.float64)
+
+Epoch 280 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  279
+>> training : 
+TRAIN LOSS:  0.003381379379343048
+Train Accuracy:  tensor(80.3575, device='cuda:0', dtype=torch.float64)
+
+Epoch 281 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  280
+>> training : 
+TRAIN LOSS:  0.003338946772907826
+Train Accuracy:  tensor(80.8342, device='cuda:0', dtype=torch.float64)
+
+Epoch 282 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  281
+>> training : 
+TRAIN LOSS:  0.0033834035248522364
+Train Accuracy:  tensor(80.3513, device='cuda:0', dtype=torch.float64)
+
+Epoch 283 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  282
+>> training : 
+TRAIN LOSS:  0.003376973953033215
+Train Accuracy:  tensor(80.4673, device='cuda:0', dtype=torch.float64)
+
+Epoch 284 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  283
+>> training : 
+TRAIN LOSS:  0.0033754959186080183
+Train Accuracy:  tensor(80.5488, device='cuda:0', dtype=torch.float64)
+
+Epoch 285 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  284
+>> training : 
+TRAIN LOSS:  0.003418750693399143
+Train Accuracy:  tensor(80.6398, device='cuda:0', dtype=torch.float64)
+
+Epoch 286 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  285
+>> training : 
+TRAIN LOSS:  0.003348126514439899
+Train Accuracy:  tensor(80.8092, device='cuda:0', dtype=torch.float64)
+
+Epoch 287 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  286
+>> training : 
+TRAIN LOSS:  0.0033972517849977664
+Train Accuracy:  tensor(80.4359, device='cuda:0', dtype=torch.float64)
+
+Epoch 288 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  287
+>> training : 
+TRAIN LOSS:  0.00333618755781372
+Train Accuracy:  tensor(80.8186, device='cuda:0', dtype=torch.float64)
+
+Epoch 289 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  288
+>> training : 
+TRAIN LOSS:  0.003378448144047728
+Train Accuracy:  tensor(80.4673, device='cuda:0', dtype=torch.float64)
+
+Epoch 290 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  289
+>> training : 
+TRAIN LOSS:  0.003331446541557683
+Train Accuracy:  tensor(80.5238, device='cuda:0', dtype=torch.float64)
+
+Epoch 291 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  290
+>> training : 
+TRAIN LOSS:  0.0033500818122381027
+Train Accuracy:  tensor(80.8719, device='cuda:0', dtype=torch.float64)
+
+Epoch 292 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  291
+>> training : 
+TRAIN LOSS:  0.003341305876518466
+Train Accuracy:  tensor(80.7370, device='cuda:0', dtype=torch.float64)
+
+Epoch 293 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  292
+>> training : 
+TRAIN LOSS:  0.0033731946344003234
+Train Accuracy:  tensor(80.4830, device='cuda:0', dtype=torch.float64)
+
+Epoch 294 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  293
+>> training : 
+TRAIN LOSS:  0.003275182910972728
+Train Accuracy:  tensor(81.2231, device='cuda:0', dtype=torch.float64)
+
+Epoch 295 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  294
+>> training : 
+TRAIN LOSS:  0.003317627262616767
+Train Accuracy:  tensor(80.7558, device='cuda:0', dtype=torch.float64)
+
+Epoch 296 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  295
+>> training : 
+TRAIN LOSS:  0.0033759021938492067
+Train Accuracy:  tensor(80.5018, device='cuda:0', dtype=torch.float64)
+
+Epoch 297 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  296
+>> training : 
+TRAIN LOSS:  0.003340500011813478
+Train Accuracy:  tensor(80.7370, device='cuda:0', dtype=torch.float64)
+
+Epoch 298 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  297
+>> training : 
+TRAIN LOSS:  0.0033665053538250215
+Train Accuracy:  tensor(80.4328, device='cuda:0', dtype=torch.float64)
+
+Epoch 299 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  298
+>> training : 
+TRAIN LOSS:  0.003403660127393912
+Train Accuracy:  tensor(80.1129, device='cuda:0', dtype=torch.float64)
+
+Epoch 300 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  299
+>> training : 
+TRAIN LOSS:  0.003365640560250045
+Train Accuracy:  tensor(80.7590, device='cuda:0', dtype=torch.float64)
+
+Epoch 301 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  300
+>> training : 
+TRAIN LOSS:  0.003390125881004842
+Train Accuracy:  tensor(80.4077, device='cuda:0', dtype=torch.float64)
+
+Epoch 302 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  301
+>> training : 
+TRAIN LOSS:  0.0034735188292395235
+Train Accuracy:  tensor(80.1129, device='cuda:0', dtype=torch.float64)
+
+Epoch 303 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  302
+>> training : 
+TRAIN LOSS:  0.0034582649724917555
+Train Accuracy:  tensor(80.0815, device='cuda:0', dtype=torch.float64)
+
+Epoch 304 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  303
+>> training : 
+TRAIN LOSS:  0.0032912584360217496
+Train Accuracy:  tensor(80.7872, device='cuda:0', dtype=torch.float64)
+
+Epoch 305 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  304
+>> training : 
+TRAIN LOSS:  0.0033173229125332306
+Train Accuracy:  tensor(80.8844, device='cuda:0', dtype=torch.float64)
+
+Epoch 306 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  305
+>> training : 
+TRAIN LOSS:  0.003328540280487015
+Train Accuracy:  tensor(80.7276, device='cuda:0', dtype=torch.float64)
+
+Epoch 307 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  306
+>> training : 
+TRAIN LOSS:  0.0033346862502843587
+Train Accuracy:  tensor(80.5865, device='cuda:0', dtype=torch.float64)
+
+Epoch 308 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  307
+>> training : 
+TRAIN LOSS:  0.00334649074128079
+Train Accuracy:  tensor(80.6994, device='cuda:0', dtype=torch.float64)
+
+Epoch 309 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  308
+>> training : 
+TRAIN LOSS:  0.003341289987866176
+Train Accuracy:  tensor(80.5394, device='cuda:0', dtype=torch.float64)
+
+Epoch 310 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  309
+>> training : 
+TRAIN LOSS:  0.0033014931975252973
+Train Accuracy:  tensor(80.9660, device='cuda:0', dtype=torch.float64)
+
+Epoch 311 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  310
+>> training : 
+TRAIN LOSS:  0.003283253571485041
+Train Accuracy:  tensor(81.0726, device='cuda:0', dtype=torch.float64)
+
+Epoch 312 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  311
+>> training : 
+TRAIN LOSS:  0.003339438902858808
+Train Accuracy:  tensor(80.7841, device='cuda:0', dtype=torch.float64)
+
+Epoch 313 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  312
+>> training : 
+TRAIN LOSS:  0.0033261917069991294
+Train Accuracy:  tensor(80.8280, device='cuda:0', dtype=torch.float64)
+
+Epoch 314 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  313
+>> training : 
+TRAIN LOSS:  0.0033729296633867104
+Train Accuracy:  tensor(80.8437, device='cuda:0', dtype=torch.float64)
+
+Epoch 315 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  314
+>> training : 
+TRAIN LOSS:  0.003377208407627708
+Train Accuracy:  tensor(80.3858, device='cuda:0', dtype=torch.float64)
+
+Epoch 316 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  315
+>> training : 
+TRAIN LOSS:  0.0032898141370590567
+Train Accuracy:  tensor(80.9660, device='cuda:0', dtype=torch.float64)
+
+Epoch 317 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  316
+>> training : 
+TRAIN LOSS:  0.0032503833867211095
+Train Accuracy:  tensor(80.8719, device='cuda:0', dtype=torch.float64)
+
+Epoch 318 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  317
+>> training : 
+TRAIN LOSS:  0.0032429331089610194
+Train Accuracy:  tensor(81.2639, device='cuda:0', dtype=torch.float64)
+
+Epoch 319 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  318
+>> training : 
+TRAIN LOSS:  0.0032911837830034304
+Train Accuracy:  tensor(81.0036, device='cuda:0', dtype=torch.float64)
+
+Epoch 320 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  319
+>> training : 
+TRAIN LOSS:  0.003253114751575321
+Train Accuracy:  tensor(81.2921, device='cuda:0', dtype=torch.float64)
+
+Epoch 321 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  320
+>> training : 
+TRAIN LOSS:  0.0033606061334237607
+Train Accuracy:  tensor(80.7997, device='cuda:0', dtype=torch.float64)
+
+Epoch 322 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  321
+>> training : 
+TRAIN LOSS:  0.0033238498842490024
+Train Accuracy:  tensor(80.8499, device='cuda:0', dtype=torch.float64)
+
+Epoch 323 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  322
+>> training : 
+TRAIN LOSS:  0.003299831233653451
+Train Accuracy:  tensor(81.2043, device='cuda:0', dtype=torch.float64)
+
+Epoch 324 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  323
+>> training : 
+TRAIN LOSS:  0.003348396809399829
+Train Accuracy:  tensor(80.9064, device='cuda:0', dtype=torch.float64)
+
+Epoch 325 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  324
+>> training : 
+TRAIN LOSS:  0.003339291569467658
+Train Accuracy:  tensor(80.9377, device='cuda:0', dtype=torch.float64)
+
+Epoch 326 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  325
+>> training : 
+TRAIN LOSS:  0.0033457274073920356
+Train Accuracy:  tensor(80.6492, device='cuda:0', dtype=torch.float64)
+
+Epoch 327 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  326
+>> training : 
+TRAIN LOSS:  0.0033971597908319714
+Train Accuracy:  tensor(80.5708, device='cuda:0', dtype=torch.float64)
+
+Epoch 328 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  327
+>> training : 
+TRAIN LOSS:  0.0033793599184579718
+Train Accuracy:  tensor(80.5488, device='cuda:0', dtype=torch.float64)
+
+Epoch 329 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  328
+>> training : 
+TRAIN LOSS:  0.0033242604314523824
+Train Accuracy:  tensor(81.2169, device='cuda:0', dtype=torch.float64)
+
+Epoch 330 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  329
+>> training : 
+TRAIN LOSS:  0.003315397023556467
+Train Accuracy:  tensor(81.0224, device='cuda:0', dtype=torch.float64)
+
+Epoch 331 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  330
+>> training : 
+TRAIN LOSS:  0.003286693222623307
+Train Accuracy:  tensor(80.9722, device='cuda:0', dtype=torch.float64)
+
+Epoch 332 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  331
+>> training : 
+TRAIN LOSS:  0.003362311689910123
+Train Accuracy:  tensor(80.6022, device='cuda:0', dtype=torch.float64)
+
+Epoch 333 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  332
+>> training : 
+TRAIN LOSS:  0.003327432297718119
+Train Accuracy:  tensor(80.8468, device='cuda:0', dtype=torch.float64)
+
+Epoch 334 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  333
+>> training : 
+TRAIN LOSS:  0.003364052847483436
+Train Accuracy:  tensor(80.5488, device='cuda:0', dtype=torch.float64)
+
+Epoch 335 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  334
+>> training : 
+TRAIN LOSS:  0.0033186625047258696
+Train Accuracy:  tensor(80.8374, device='cuda:0', dtype=torch.float64)
+
+Epoch 336 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  335
+>> training : 
+TRAIN LOSS:  0.0033962062249386295
+Train Accuracy:  tensor(80.4140, device='cuda:0', dtype=torch.float64)
+
+Epoch 337 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  336
+>> training : 
+TRAIN LOSS:  0.003339938221445872
+Train Accuracy:  tensor(80.6837, device='cuda:0', dtype=torch.float64)
+
+Epoch 338 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  337
+>> training : 
+TRAIN LOSS:  0.0033486536851362204
+Train Accuracy:  tensor(80.6398, device='cuda:0', dtype=torch.float64)
+
+Epoch 339 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  338
+>> training : 
+TRAIN LOSS:  0.003288637486972722
+Train Accuracy:  tensor(80.8970, device='cuda:0', dtype=torch.float64)
+
+Epoch 340 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  339
+>> training : 
+TRAIN LOSS:  0.00334943998602092
+Train Accuracy:  tensor(80.7308, device='cuda:0', dtype=torch.float64)
+
+Epoch 341 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  340
+>> training : 
+TRAIN LOSS:  0.0033238750697116935
+Train Accuracy:  tensor(80.6618, device='cuda:0', dtype=torch.float64)
+
+Epoch 342 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  341
+>> training : 
+TRAIN LOSS:  0.0033563667561018265
+Train Accuracy:  tensor(80.4987, device='cuda:0', dtype=torch.float64)
+
+Epoch 343 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  342
+>> training : 
+TRAIN LOSS:  0.0032914491830358912
+Train Accuracy:  tensor(81.0162, device='cuda:0', dtype=torch.float64)
+
+Epoch 344 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  343
+>> training : 
+TRAIN LOSS:  0.0034329098389218626
+Train Accuracy:  tensor(80.3324, device='cuda:0', dtype=torch.float64)
+
+Epoch 345 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  344
+>> training : 
+TRAIN LOSS:  0.0034132821532426366
+Train Accuracy:  tensor(80.2415, device='cuda:0', dtype=torch.float64)
+
+Epoch 346 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  345
+>> training : 
+TRAIN LOSS:  0.0033806716351743138
+Train Accuracy:  tensor(80.6492, device='cuda:0', dtype=torch.float64)
+
+Epoch 347 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  346
+>> training : 
+TRAIN LOSS:  0.0033576164197749773
+Train Accuracy:  tensor(80.7025, device='cuda:0', dtype=torch.float64)
+
+Epoch 348 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  347
+>> training : 
+TRAIN LOSS:  0.0033201549229660023
+Train Accuracy:  tensor(80.8154, device='cuda:0', dtype=torch.float64)
+
+Epoch 349 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  348
+>> training : 
+TRAIN LOSS:  0.003306422614744694
+Train Accuracy:  tensor(80.8938, device='cuda:0', dtype=torch.float64)
+
+Epoch 350 / 500 - FINAL MODEL
+>>>>>>>>>>>> ON EPOCH:  349
+>> training : 
+TRAIN LOSS:  0.0033360676694779968
+Train Accuracy:  tensor(80.7119, device='cuda:0', dtype=torch.float64)
+Early stopping IN EPOCH: ! 349  - Best weigths saved in TMP-deep_emotion....
+EPOCHS TO CONVERGE:  319 , ACC:  tensor(81.2921, device='cuda:0', dtype=torch.float64)
+===================================Training Finished===================================
+
+Process finished with exit code 0
