@@ -8,7 +8,7 @@ class Deep_Emotion_Original(nn.Module):
         Deep_Emotion class contains the network architecture.
         '''
         super(Deep_Emotion_Original,self).__init__()
-        self.training = training
+        self.trainingState = training
         self.conv1 = nn.Conv2d(1,10,3)
         self.conv2 = nn.Conv2d(10,10,3)
         self.pool2 = nn.MaxPool2d(2,2)
@@ -60,7 +60,7 @@ class Deep_Emotion_Original(nn.Module):
         out = self.norm(self.conv4(out))
         out = F.relu(self.pool4(out))
 
-        out = F.dropout(out, self.training)
+        out = F.dropout(out, training=self.trainingState)
         out = out.view(-1, 810)
         out = F.relu(self.fc1(out))
         out = self.fc2(out)

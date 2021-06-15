@@ -128,9 +128,13 @@ def save_imgs(df_error, out_dir, root_path_imgs, error_type="PositiveLabelNegati
             in_dir_img = os.path.join(root_path_imgs, row["path"])
         im = cv2.imread(in_dir_img)
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(im, 'V:'+str(np.round(row["valence"], 2))+"A:"+str(np.round(row["arousal"],2)), (10, 50), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
-        cv2.putText(im, "Em:" + str(row["expression"]), (10, 70), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
-        cv2.imwrite(out_dir_img, im)
+        if im is not None:
+            # try:
+            #     cv2.putText(im, 'V:'+str(np.round(row["valence"], 2))+"A:"+str(np.round(row["arousal"],2)), (10, 50), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
+            #     cv2.putText(im, "Em:" + str(row["expression"]), (10, 70), font, 0.8, (0, 0, 255), 1, cv2.LINE_AA)
+            # except KeyError:
+            #     pass
+            cv2.imwrite(out_dir_img, im)
 
 
 if __name__ == '__main__':

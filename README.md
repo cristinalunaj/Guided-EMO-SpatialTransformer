@@ -138,7 +138,17 @@ AffectNet:
 
     python3 src/DSpreparation/prepare_AffectNet_imgs.py -r <AffectNet-dir>/SALIENCY -o <AffectNet-dir>/SALIENCY_48x48_grayscale -imgSize 48
 
+### Extract patches:
 
+AffectNet:
+
+    python3 src/ImageProcessing/prepare_L2_dilation_collage.py -r <AffectNet-dir>/Manually_Annotated_Images_48x48_grayscale 
+    -l <AffectNet-dir>/landmarks_48x48_grayscale -o <AffectNet-dir>/patches_48x48_grayscale -imgSize 48 -m collage -ds AffectNet
+
+### Extract weighted:
+    
+    python3 src/ImageProcessing/prepare_L2_dilation_collage.py -r <AffectNet-dir>/Manually_Annotated_Images_48x48_grayscale 
+    -l <AffectNet-dir>/Soft_L2_48x48_grayscale -o <AffectNet-dir>/weighted_48x48_grayscale -imgSize 48 -m collage -ds AffectNet
 
 
 ## Train models (without Transfer Learning):
@@ -288,7 +298,7 @@ If you have any question or you find a bug in the code, please contact us at:
 
 
 ### Eval errors:
-    python3 evaluate.py -d /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv 
-    -r /mnt/RESOURCES/AFFECTNET/Manually_Annotated_Images_48x48_grayscale -l /mnt/RESOURCES/AFFECTNET/Dilation_2iter -bs 128 
-    -logs /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET/5dilation_2x2_2iterat_noJaw 
-    -m landmarks -tl /home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/models_logs/AFFECTNET_LOGS/5dilation_2x2_2iterat_noJaw/trained_models
+    python3 evaluate.py -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv 
+    -r <AffectNet-dir>/Manually_Annotated_Images_48x48_grayscale -l <AffectNet-dir>/Dilation_2iter -bs 128 
+    -logs ../Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET/5dilation_2x2_2iterat_noJaw 
+    -m landmarks -tl ../Guided-EMO-SpatialTransformer/data/models_logs/AFFECTNET_LOGS/5dilation_2x2_2iterat_noJaw/trained_models
