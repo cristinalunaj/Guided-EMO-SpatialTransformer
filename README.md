@@ -271,7 +271,12 @@ To train the ST-Saliency models with a 5-folds cross-validation, run:
     --tl ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS/6saliency_20210511_104116/trained_models/TMP-deep_emotion-500-128-0.001-COMPLETE-48-148-saliency.pt
 
 ## Results:
-...
+
+Results for valence recognition on AffectNet and FER-2013.
+![OriginalImg](data/resources/imgs/affectnet.png)
+
+![OriginalImg](data/resources/imgs/fer2013.png)
+
 
 ### Problems with images:
 
