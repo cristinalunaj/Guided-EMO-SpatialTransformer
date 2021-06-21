@@ -1,4 +1,8 @@
-import os
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 import pandas as pd
 import src.EvalErrors.processPredictions as processPred
 import numpy as np
@@ -34,7 +38,7 @@ def analyse_metrics_fer2013(df_erros):
 
 if __name__ == '__main__':
     fold = 0
-    n_models = 6
+    n_models = 5
     ##AFFECTNET####
     logs_path = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/FER2013_TL_cd"
     complete_df_path = "/mnt/ESITUR2/DATASETS/FER2013/fer2013/labels_FER2013.csv"
@@ -43,7 +47,7 @@ if __name__ == '__main__':
 
 
 
-    avoid_models = ["dilatation2iter"]
+    avoid_models = ["dilatation2iter", "baseline"]
     dict_positive_label_negative_pred = {}
     dict_negative_label_positive_pred = {}
 

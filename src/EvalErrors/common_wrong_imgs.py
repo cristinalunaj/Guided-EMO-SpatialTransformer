@@ -1,4 +1,8 @@
-import os
+import os, sys
+sys.path.append('.')
+sys.path.append('..')
+sys.path.append('../../')
+sys.path.append('../../../')
 import pandas as pd
 import src.EvalErrors.processPredictions as processPred
 
@@ -17,7 +21,7 @@ def fill_df(df_in_out, df_in):
 
 if __name__ == '__main__':
     fold = 0
-    n_models = 6
+    n_models = 5
     ##AFFECTNET####
     logs_path = "/home/cristinalunaj/PycharmProjects/Guided-EMO-SpatialTransformer/data/error_analysis/AFFECTNET_cd"
     complete_df_path = "/mnt/RESOURCES/AFFECTNET/Manually_Annotated_file_lists_ORIGINAL/complete_trainAndVal_NOEXT.csv"
@@ -26,7 +30,7 @@ if __name__ == '__main__':
 
 
 
-    avoid_models = ["dilatation2iter"]
+    avoid_models = ["dilatation2iter", "baseline"]
     dict_positive_label_negative_pred = {}
     dict_negative_label_positive_pred = {}
 
