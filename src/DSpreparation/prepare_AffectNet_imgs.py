@@ -11,17 +11,21 @@ from src.utils import image_utils
 
 def convert_imgs_parallel(list_folders, in_path_imgs, out_path_imgs, newSize=(48,48)):
     """
-    Extract frames in a parallel way using ffmpeg or opencv funcions
+    Convert images to grayscale and resize (parallel)
+    :param list_folders: List of the folders that contain the images to convert
+    :param in_path_imgs: Root path where the folders of images are
+    :param out_path_imgs: Output path to save generated images
+    :param newSize: New size of the images (default 48x48)
     """
     start_time = time.time()
     pool = multiprocessing.Pool()  # processes = 7
 
-    landmarks_extractor = partial(image_utils.convert2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
+    imgs_conversor = partial(image_utils.convert2grayAndResize,  # get_npy_with_previous_clip_AVEC2019
                             in_path_imgs=in_path_imgs
                             ,out_path_imgs=out_path_imgs,
                               newSize = newSize)
 
-    pool.map(landmarks_extractor, list_folders)
+    pool.map(imgs_conversor, list_folders)
 
     pool.close()
     pool.join()
@@ -32,6 +36,13 @@ def convert_imgs_parallel(list_folders, in_path_imgs, out_path_imgs, newSize=(48
 
 
 def refactor_images_AffectNet(list_imgs, input_path, extensions2change=["bmp", "BMP","tif", "TIF", "tiff", "TIFF"]):
+    """
+    Change the extension of some images of AffectNet to .jpg (and save them in the same folder,
+    removing the previous images with the 'wrong' extension)
+        :param list_imgs: Name of images to check
+        :param input_path: Root path where the images are
+        :param extensions2change: Extensions to modify by .jpg
+    """
     for img in list_imgs:
         path_img = os.path.join(input_path, img)
         extension = img.split(".")[-1]
@@ -60,16 +71,16 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     folders_orImages = os.listdir(args.data_root)
-    #Change extensions of weird formats not recognized by saliency model: ("bmp", "BMP","tif", "TIF", "tiff", "TIFF")
+    #Change extensions of formats not recognized by saliency model: ("bmp", "BMP","tif", "TIF", "tiff", "TIFF")
     print("Checking images ...")
     if (args.dataset_name == "AffectNet"):
         for folder in folders_orImages:
             in_folder_path = os.path.join(args.data_root, folder)
             refactor_images_AffectNet(os.listdir(in_folder_path), in_folder_path)
-            # Extract grayscale images and resize to 48x48
-            print("Start image conversion to 48x48 & grayscale ...")
-            os.makedirs(args.out_dir, exist_ok=True)
-            convert_imgs_parallel(folders_orImages, args.data_root, args.out_dir, newSize=(args.img_size, args.img_size))
+        # Extract grayscale images and resize to 48x48
+        print("Start image conversion to 48x48 & grayscale ...")
+        os.makedirs(args.out_dir, exist_ok=True)
+        convert_imgs_parallel(folders_orImages, args.data_root, args.out_dir, newSize=(args.img_size, args.img_size))
     else:
         refactor_images_AffectNet(folders_orImages, args.data_root)
         print("Start image conversion to 48x48 & grayscale ...")

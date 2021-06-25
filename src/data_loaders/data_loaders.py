@@ -10,13 +10,11 @@ class Plain_Dataset(Dataset):
     def __init__(self, csv_path, dataroot, transform, sep=";"):
         '''
         Pytorch Dataset class
-        params:-
-                 csv_path : the path of the csv file    (train, validation, test)
-                 img_dir  : the directory of the images (train, validation, test)
-                 datatype : string for searching along the image_dir (train, val, test)
-                 transform: pytorch transformation over the data
-        return :-
                  image, labels
+                 :param csv_path: the path of the csv file    (train, validation, test)
+                 :param dataroot: the directory of the images (train, validation, test)
+                 :param transform: pytorch transformation over the data
+                 :param sep: Column separator of the dataframe.
         '''
         self.df_file = pd.read_csv(csv_path, sep=sep, header=0)
         self.labels = self.df_file['emotion']

@@ -1,3 +1,30 @@
+"""
+	File that make a training of one of the implemented architectures in the paper:
+	    -Simple-CNN
+	    -Original-ST
+	    -ST with dilatations (landmarks modality)
+	    -ST with landmarks masks (landmarks modality)
+	    -ST with soft-landmarks masks (landmarks modality)
+	    -ST with saliency maps
+	author: Cristina Luna
+	date: 06/2021
+	Usage:
+		(e.g. src/main_CV_Pytorch.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013/labels_FER2013_31885KFOLDimgs.csv
+        -r <FER2013-dir>/IMAGES -imgSize 48 -e 500 -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/TL_FER2013_logs -m original
+        -tl ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS/2original_20210510_160434/trained_models/TMP-deep_emotion-500-128-0.001-COMPLETE-48-241-original.pt
+		)
+	Options:
+		-kf : Integer. Number of folds (default in our experiments: 5)
+		-d : Str. Path to the file that contain the dataframe with the data of the routes of images and labels.
+		-r : Str. Root path to the input images file
+		-imgSize: Integer. Size of the input images to the model [currently only size of 48 is available]
+		-e:  Integer. Number of epochs to train the model
+		-lr: Float. Learning rate of the model
+		-bs:  Integer. (batch_size)Number of samples per batch
+		-s: Random seed to replicate experiments
+		-logs: Str. Path to save logs and models
+		-tl: Str. Path to pre-trained weights if we want to apply transfer-learning, if not: None
+"""
 from __future__ import print_function
 import argparse
 
@@ -34,6 +61,10 @@ from datetime import datetime
 
 
 def seed_torch(seed=2020):
+    """
+    Fix random seeds to allow replications
+        :param seed: Seed to introduce for genereting the random numbers
+    """
     random.seed(seed)
     np.random.seed(0)
     os.environ["PYTHONHASHSEED"] = str(seed)
@@ -53,6 +84,21 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
 
     '''
     Training Loop
+        :param epochs: Integer. Number of epochs to train the model
+        :param k_folds: Integer. Number of folds (default in our experiments: 5)
+        :param train_dataset: Plain_Dataset class. DataLoader (check data_loaders.py) lo load images of the training set
+        :param test_dataset: Plain_Dataset class.DataLoader (check data_loaders.py) lo load images of the test set
+        :param device: Str. Device to use (cpu or gpu). It was detected previously
+        :param img_size: Integer. Size of the input images to the model [currently only size of 48 is available]
+        :param modality: Str. Model to use for training: [Options: saliency/landmarks/original/baseline]
+        :param class_weigths: Boolean. If True, calculate the weigths associated to the training file to balance the training.
+        :param batch_size: Integer. Number of samples per batch
+        :param lr: Float. Learning rate of the model
+        :param num_workers: Integer. Number of workers to load images in parallel during training.
+        :param num_epochs_stop: Integer. Early Stopping parameter. Number of patience epochs to stop training.
+        :param preTrainedWeigths: Str. Path to pre-trained weights if we want to apply transfer-learning, if not: None
+        :param train_complete_model_flag: Boolean. True if we want to train the final model with all the data of the dataset.
+        :param save_path: Str. Path to save logs and models
     '''
 
     print("SAVING DATA IN: ", (save_path))
@@ -227,6 +273,17 @@ def Train(epochs,k_folds,train_dataset,test_dataset,device,img_size, modality,cl
 
 
 def train_model_original(net, train_loader, optmizer, criterion, device):
+    """
+    Train one epoch of the original or baseline modalities . Original modality is the Baseline-ST and baseline modality is the Simple-CNN.
+        :param net: Network to train
+        :param train_loader: Training loader
+        :param optmizer: optimizer
+        :param criterion: Loss function (defined before)
+        :param device: cpu or gpu
+        :return:
+            train_loss: Loss of the network for that epoch
+            train_correct: Number of correct samples in that epoch
+    """
     train_loss = 0
     train_correct = 0
     for data, labels, _ in train_loader:
@@ -250,6 +307,17 @@ def train_model_original(net, train_loader, optmizer, criterion, device):
     return train_loss, train_correct
 
 def train_model_saliency(net, train_loader, optmizer, criterion, device):
+    """
+        Train one epoch of the saliency-based or landmarks-based modalities.
+            :param net: Network to train
+            :param train_loader: Training loader
+            :param optmizer: optimizer
+            :param criterion: Loss function (defined before)
+            :param device: cpu or gpu
+            :return:
+                train_loss: Loss of the network for that epoch
+                train_correct: Number of correct samples in that epoch
+        """
     train_loss = 0
     train_correct = 0
     for data, labels, saliency, _ in train_loader:
@@ -273,6 +341,16 @@ def train_model_saliency(net, train_loader, optmizer, criterion, device):
     return train_loss, train_correct
 
 def eval_model_saliencyORlandmarks(net, testloader, criterion, device):
+    """
+        Eval the samples of the validation/test set for saliency-based or landmarks-based modalities.
+            :param net: Network to train
+            :param testloader: Test/validation loader
+            :param criterion: Loss function (defined before)
+            :param device: cpu or gpu
+            :return:
+                validation_loss: Loss of the network for the samples
+                val_correct: Number of correct samples
+        """
     val_correct, validation_loss = 0, 0
     with torch.no_grad():
         for data, labels, land,_ in testloader:
@@ -285,6 +363,16 @@ def eval_model_saliencyORlandmarks(net, testloader, criterion, device):
     return validation_loss, val_correct
 
 def eval_model_original(net, testloader, criterion, device):
+    """
+        Eval the samples of the validation/test set for original or baseline modalities . Original modality is the Baseline-ST and baseline modality is the Simple-CNN.
+            :param net: Network to train
+            :param testloader: Test/validation loader
+            :param criterion: Loss function (defined before)
+            :param device: cpu or gpu
+            :return:
+                validation_loss: Loss of the network for the samples
+                val_correct: Number of correct samples
+        """
     val_correct, validation_loss = 0, 0
     with torch.no_grad():
         for data, labels, _ in testloader:
@@ -299,7 +387,21 @@ def eval_model_original(net, testloader, criterion, device):
 
 def train_complete_model(epochs,train_dataset,device, writer,img_size, class_weigths, batch_size, lr,
           save_path, modality, num_workers, num_epochs_stop):
-
+    """
+    Train the complete model with all the samples of the dataset
+        :param epochs: Integer. Number of epochs to train the model
+        :param train_dataset: Plain_Dataset class. DataLoader (check data_loaders.py) lo load images of the training set
+        :param device: Str. Device to use (cpu or gpu). It was detected previously
+        :param writer: SummaryWriter class. To dave training information and models.
+        :param img_size: Integer. Size of the input images to the model [currently only size of 48 is available]
+        :param modality: Str. Model to use for training: [Options: saliency/landmarks/original/baseline]
+        :param class_weigths: Dict. Weights used to multiply the loss function depending on th enumber of samples of each class
+        :param batch_size: Integer. Number of samples per batch
+        :param lr: Float. Learning rate of the model
+        :param num_workers: Integer. Number of workers to load images in parallel during training.
+        :param num_epochs_stop: Integer. Early Stopping parameter. Number of patience epochs to stop training.
+        :param save_path: Str. Path to save logs and models
+    """
     train_loader= DataLoader(train_dataset,batch_size=batch_size,shuffle = True,num_workers=num_workers, pin_memory=True)
 
     if img_size == 48 and (modality == "saliency" or modality == "landmarks"):
@@ -377,6 +479,11 @@ def train_complete_model(epochs,train_dataset,device, writer,img_size, class_wei
 
 
 def check_balance_in_data(df_data):
+    """
+    Extract the weights associated to the classes in unbalanced tasks.
+        :param df_data: Dataset with all the data to extract the weigths. (Normally training data)
+        :return: Dict with the weights of each class
+    """
     #df_data = pd.read_csv(traincsv_file, header=0)
     #PLOT LABELS TO SEE DISTRIBUTION OF DATA
     labels_complete = df_data["emotion"]
