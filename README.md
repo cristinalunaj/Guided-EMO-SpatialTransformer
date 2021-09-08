@@ -287,20 +287,15 @@ Results for valence recognition on AffectNet and FER-2013.
 ### How do I cite this work?
 If you use the code of this work or the generated models, please cite the following paper:
 
-{...}
+    
+    C. Luna-Jiménez, J. Cristóbal-Martín, R. Kleinlein, M. Gil-Martín, J. M. Moya, and F. Fernández-Martínez, “Guided Spatial Transformers for Facial Expression         Recognition,” Appl. Sci. (Basel), vol. 11, no. 16, p. 7217, 2021. DOI: https://doi.org/10.3390/app11167217
+    
+Other citation formats in: https://www.mdpi.com/2076-3417/11/16/7217
 
 
 ### LICENSE:
 ...
     
-    
-### CITATION:
-Please, if you use this code in your work, cite the following paper: 
-    
-    C. Luna-Jiménez, J. Cristóbal-Martín, R. Kleinlein, M. Gil-Martín, J. M. Moya, and F. Fernández-Martínez, “Guided Spatial Transformers for Facial Expression         Recognition,” Appl. Sci. (Basel), vol. 11, no. 16, p. 7217, 2021. DOI: https://doi.org/10.3390/app11167217
-    
-Other citation formats in: https://www.mdpi.com/2076-3417/11/16/7217
-   
 
 ### CONTACT:
 If you have any question or you find a bug in the code, please contact us at: 
