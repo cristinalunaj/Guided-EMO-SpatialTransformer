@@ -296,20 +296,11 @@ If you use the code of this work or the generated models, please cite the follow
     
 ### CITATION:
 Please, if you use this code in your work, cite the following paper: 
-@Article{GuidedST4FER,
-AUTHOR = {Luna-Jiménez, Cristina and Cristóbal-Martín, Jorge and Kleinlein, Ricardo and Gil-Martín, Manuel and Moya, José M. and Fernández-Martínez, Fernando},
-TITLE = {Guided Spatial Transformers for Facial Expression Recognition},
-JOURNAL = {Applied Sciences},
-VOLUME = {11},
-YEAR = {2021},
-NUMBER = {16},
-ARTICLE-NUMBER = {7217},
-URL = {https://www.mdpi.com/2076-3417/11/16/7217},
-ISSN = {2076-3417},
-ABSTRACT = {Spatial Transformer Networks are considered a powerful algorithm to learn the main areas of an image, but still, they could be more efficient by receiving images with embedded expert knowledge. This paper aims to improve the performance of conventional Spatial Transformers when applied to Facial Expression Recognition. Based on the Spatial Transformers’ capacity of spatial manipulation within networks, we propose different extensions to these models where effective attentional regions are captured employing facial landmarks or facial visual saliency maps. This specific attentional information is then hardcoded to guide the Spatial Transformers to learn the spatial transformations that best fit the proposed regions for better recognition results. For this study, we use two datasets: AffectNet and FER-2013. For AffectNet, we achieve a 0.35% point absolute improvement relative to the traditional Spatial Transformer, whereas for FER-2013, our solution gets an increase of 1.49% when models are fine-tuned with the Affectnet pre-trained weights.},
-DOI = {10.3390/app11167217}
-}
-
+    
+    C. Luna-Jiménez, J. Cristóbal-Martín, R. Kleinlein, M. Gil-Martín, J. M. Moya, and F. Fernández-Martínez, “Guided Spatial Transformers for Facial Expression         Recognition,” Appl. Sci. (Basel), vol. 11, no. 16, p. 7217, 2021. DOI: https://doi.org/10.3390/app11167217
+    
+Other citation formats in: https://www.mdpi.com/2076-3417/11/16/7217
+   
 
 ### CONTACT:
 If you have any question or you find a bug in the code, please contact us at: 
