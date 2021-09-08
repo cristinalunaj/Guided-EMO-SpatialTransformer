@@ -273,9 +273,9 @@ To train the ST-Saliency models with a 5-folds cross-validation, run:
 ## Results:
 
 Results for valence recognition on AffectNet and FER-2013.
-![OriginalImg](data/resources/imgs/affectnet.png)
+![OriginalImg](data/resources/imgs/RESULTS1.png)
 
-![OriginalImg](data/resources/imgs/fer2013.png)
+![OriginalImg](data/resources/imgs/RESULTS2.png)
 
 
 ### Problems with images:
@@ -294,7 +294,7 @@ Other citation formats in: https://www.mdpi.com/2076-3417/11/16/7217
 
 
 ### LICENSE:
-...
+MIT License
     
 
 ### CONTACT:
