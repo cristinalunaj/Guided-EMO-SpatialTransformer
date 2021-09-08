@@ -278,9 +278,6 @@ Results for valence recognition on AffectNet and FER-2013.
 ![OriginalImg](data/resources/imgs/RESULTS2.png)
 
 
-### Problems with images:
-
-
 
 ## FAQ
 
