@@ -1,10 +1,8 @@
 # Guided Spatial Transformers for Facial Expression Recognition
-Repository to IMDB publication
 
+Main repository with the code and experiments of the publication: Guided Spatial Transformers for Facial Expression Recognition (https://www.mdpi.com/2076-3417/11/16/7217) 
 
-In this repository, we implement the experiments performed in the paper: Guided Spatial Transformers for Facial Expression Recognition (https://www.mdpi.com/2076-3417/11/16/7217) 
-
-
+Respository to create and train Spatial Transformers for valence recognition using AffectNet and FER-2013 databases. The valence is divided into positive, neutral and negative. 
 
 
 
