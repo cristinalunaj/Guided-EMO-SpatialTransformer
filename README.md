@@ -1,10 +1,8 @@
 # Guided Spatial Transformers for Facial Expression Recognition
-Repository to IMDB publication
 
+Main repository with the code and experiments of the publication: Guided Spatial Transformers for Facial Expression Recognition (https://www.mdpi.com/2076-3417/11/16/7217) 
 
-In this repository, we implement the experiments performed in the paper: Guided Spatial Transformers for Facial Expression Recognition
-
-
+Respository to create and train Spatial Transformers for valence recognition using AffectNet and FER-2013 databases. The valence is divided into positive, neutral and negative. 
 
 
 
@@ -287,12 +285,9 @@ To train the ST-Saliency models with a 5-folds cross-validation, run:
 ## Results:
 
 Results for valence recognition on AffectNet and FER-2013.
-![OriginalImg](data/resources/imgs/affectnet.png)
+![OriginalImg](data/resources/imgs/RESULTS1.png)
 
-![OriginalImg](data/resources/imgs/fer2013.png)
-
-
-### Problems with images:
+![OriginalImg](data/resources/imgs/RESULTS2.png)
 
 
 
@@ -301,11 +296,15 @@ Results for valence recognition on AffectNet and FER-2013.
 ### How do I cite this work?
 If you use the code of this work or the generated models, please cite the following paper:
 
-{...}
+    
+    C. Luna-Jiménez, J. Cristóbal-Martín, R. Kleinlein, M. Gil-Martín, J. M. Moya, and F. Fernández-Martínez, “Guided Spatial Transformers for Facial Expression         Recognition,” Appl. Sci. (Basel), vol. 11, no. 16, p. 7217, 2021. DOI: https://doi.org/10.3390/app11167217
+    
+Other citation formats in: https://www.mdpi.com/2076-3417/11/16/7217
 
 
 ### LICENSE:
-...
+MIT License
+    
 
 ### CONTACT:
 If you have any question or you find a bug in the code, please contact us at: 
