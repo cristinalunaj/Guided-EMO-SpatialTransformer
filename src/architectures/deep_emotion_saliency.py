@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class Deep_Emotion_Saliency(nn.Module):
-    def __init__(self, training=True):
+    def __init__(self, training=True, n_classes = 8):
         '''
         Deep_Emotion class contains the network architecture.
         '''
@@ -20,7 +20,7 @@ class Deep_Emotion_Saliency(nn.Module):
         self.norm = nn.BatchNorm2d(10)
 
         self.fc1 = nn.Linear(810,50)
-        self.fc2 = nn.Linear(50,3)
+        self.fc2 = nn.Linear(50,n_classes) #capa salida
 
         self.localization = nn.Sequential(
             nn.Conv2d(1, 8, kernel_size=7),

@@ -488,12 +488,12 @@ def check_balance_in_data(df_data):
     #PLOT LABELS TO SEE DISTRIBUTION OF DATA
     labels_complete = df_data["emotion"]
     classes = labels_complete.unique()
-    import matplotlib.pyplot as plt
-    plt.hist(labels_complete)
-    plt.xlabel("Classes")
-    plt.ylabel("Number of samples per class")
-    plt.xticks(classes)
-    plt.show()
+    #import matplotlib.pyplot as plt
+    #plt.hist(labels_complete)
+    #plt.xlabel("Classes")
+    #plt.ylabel("Number of samples per class")
+    #plt.xticks(classes)
+    #plt.show()
     #EXTRACT WEIGHTS TO COMPENSATE UNBALANDED DATASETS
     dict_classes_weigths = {}
     for cls in classes:

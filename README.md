@@ -191,6 +191,20 @@ To train the ST-Landmarks models with a 5-folds cross-validation, run:
     -r <FER2013-dir>/IMAGES -l <FER2013-dir>/LANDMARKS_dlib_MTCNN -imgSize 48 -e 500 
     -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/FER2013_logs -m landmarks --train
 
+
+### ST-Landmarks models (with white as saliency) : Original img and Landmarks (or saliency) image to Spatial Transformer Network
+To train the ST-Landmarks models with a 5-folds cross-validation, run:
+
+    python3 src/main_CV_Pytorch.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/AffectNet/polarity_complete_5folds.csv 
+    -r <AffectNet-dir>/Manually_Annotated_Images_48x48_grayscale -l <AffectNet-dir>/LANDMARKS_dlib_MTCNN_48x48_grayscale -imgSize 48 -e 500 
+    -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS -m landmarks --train
+    
+
+    python3 src/main_CV_Pytorch.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013/labels_FER2013_31885KFOLDimgs.csv 
+    -r <FER2013-dir>/IMAGES -l <FER2013-dir>/LANDMARKS_dlib_MTCNN -imgSize 48 -e 500 
+    -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/FER2013_logs -m landmarks --train
+
+
 ### ST-Soft Landmarks models (L2): Original img and Landmarks image to Spatial Transformer Network
 To train the ST-Landmarks models with a 5-folds cross-validation, run:
 
@@ -265,7 +279,7 @@ To train the ST-Landmarks models with a 5-folds cross-validation, run:
 ### ST-Saliency models: Original img and Saliency image to Spatial Transformer Network
 To train the ST-Saliency models with a 5-folds cross-validation, run:
 
-    python3 src/main_CV_Pytorch.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013/labels_FER2013_31885KFOLDimgs.csv 
+    python3 src/main_CV_Pytorch_correctDropOut.py -kf 5 -d ../Guided-EMO-SpatialTransformer/data/datasets_distribution/FER2013/labels_FER2013_31885KFOLDimgs.csv 
     -r <FER2013-dir>/IMAGES -l <FER2013-dir>/SALIENCY -imgSize 48 -e 500 
     -lr 0.001 -bs 128 -s 2020 -logs ../Guided-EMO-SpatialTransformer/data/FER2013_logs -m saliency
     --tl ../Guided-EMO-SpatialTransformer/data/AFFECTNET_LOGS/6saliency_20210511_104116/trained_models/TMP-deep_emotion-500-128-0.001-COMPLETE-48-148-saliency.pt

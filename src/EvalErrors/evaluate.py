@@ -57,7 +57,7 @@ def get_weigths(root_path_weights, fold=-1):
 
 
 
-def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
+def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path, n_classes = 3):
     avg_acc = 0
     for fold in range(0, k_folds):
         #Select data to test
@@ -70,17 +70,14 @@ def eval_5CV(k_folds, batch_size, root_path_weights, modality, logs_path):
         #Eval model:
         fold_logs_path = os.path.join(logs_path, "fold"+str(fold))
         os.makedirs(fold_logs_path, exist_ok=True)
-        accuracy = eval_nw(modality, os.path.join(root_path_weights,weigths_path), testloader, test_dataset, fold_logs_path)
+        accuracy = eval_nw(modality, os.path.join(root_path_weights,weigths_path), testloader, test_dataset, fold_logs_path,n_classes = n_classes)
         avg_acc+=accuracy
     print("FINAL ACCURACY:", avg_acc/5)
 
 
-    #EVAL COMPLETE MODEL
 
 
-
-
-def eval_nw(modality, weights, test_loader, test_dataset, logs_path):
+def eval_nw(modality, weights, test_loader, test_dataset, logs_path, n_classes = 3):
     #Load model:
     if (modality == "saliency" or modality == "landmarks"):
         net = Deep_Emotion_saliency_48x48(training=False)
@@ -93,7 +90,10 @@ def eval_nw(modality, weights, test_loader, test_dataset, logs_path):
     net.to(device)
     net.eval()
     #Model Evaluation on test data
-    classes = ('Neutral', 'Positive','Negative')
+    if(n_classes==3):
+        classes = ('Neutral', 'Positive','Negative')
+    elif(n_classes==7):
+        classes = ('Neutral', 'Happy', 'Sad', 'Surprise', 'Fear', 'Disgust', 'Anger')
 
     #Extract predictions:
     if modality == "saliency" or modality == "landmarks":
@@ -192,6 +192,7 @@ if __name__ == '__main__':
     parser.add_argument('-m','--modality', type=str, help='Choose the architecture of the model (baseline, original, landmarks or saliency)', default="original")
     parser.add_argument('-tl', '--tl_preTrained_weights', type=str, required=True,
                         help='Path to the pre-trained weigths folder with.pt files')
+    parser.add_argument('-nc', '--number_classes', type=int, help='Number of classes', default=3)
 
     args = parser.parse_args()
 
@@ -206,7 +207,7 @@ if __name__ == '__main__':
     else:  # args.modality == "original" or args.modality == "baseline":
         test_dataset = Plain_Dataset(csv_path=args.data, dataroot=args.data_root, transform=transformation)
 
-    eval_5CV(5, args.batch_size, args.tl_preTrained_weights, args.modality, args.logs_folder)
+    eval_5CV(5, args.batch_size, args.tl_preTrained_weights, args.modality, args.logs_folder, args.number_classes)
 
 
 

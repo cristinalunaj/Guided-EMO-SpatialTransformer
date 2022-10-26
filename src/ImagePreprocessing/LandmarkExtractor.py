@@ -16,8 +16,8 @@ def extract_landmarks_img_MTCNN(image_path, in_dataroot, predictor, face_detecto
     else:
         out_path = os.path.join(output_dir, image_path.split("/")[0])
         out_path_landm = os.path.join(output_dir_npy_landm, image_path.split("/")[0])
-    if(os.path.exists(os.path.join(out_path_landm, image_path.split("/")[-1].split(".")[0]+".npy"))):
-        return
+    # if(os.path.exists(os.path.join(out_path_landm, image_path.split("/")[-1].split(".")[0]+".npy"))):
+    #     return
     # Load image and convert to gray scale
     image = cv2.imread(os.path.join(in_dataroot, image_path))
     #image = imutils.resize(image, width=width_img_out)
@@ -119,11 +119,13 @@ if __name__ == '__main__':
 
     # 1º Try to detect with dlib
     black_imgs_list = []
-    detector = dlib.get_frontal_face_detector()
+    #detector = dlib.get_frontal_face_detector()
+    detector = MTCNN()
+
     for index, row in dfTraining.iterrows():
         image_path = row["path"]
         try:
-            black_img_path = extract_landmarks_img_dlib(image_path, args.data, landmarks_predictor, detector, args.out_dir_imgs, args.out_dir_landm,DS=args.dataset_name)
+            black_img_path = extract_landmarks_img_MTCNN(image_path, args.data, landmarks_predictor, detector, args.out_dir_imgs, args.out_dir_landm,DS=args.dataset_name)
         except:
             black_img_path = image_path
         if(black_img_path!=""):
@@ -131,18 +133,18 @@ if __name__ == '__main__':
 
     # 2º Try to detect with MTCNN previous black imgs
     print("Start MTCNN ... - Lost by dlib: ", str(len(black_imgs_list)))
-    detector = MTCNN()
+    detector = dlib.get_frontal_face_detector()
     total_rescued_imgs = 0
     final_imgs_black = []
     for black_img_path in black_imgs_list:
         try:
-            result=extract_landmarks_img_MTCNN(black_img_path, args.data, landmarks_predictor, detector, args.out_dir_imgs, args.out_dir_landm,DS=args.dataset_name)
+            result=extract_landmarks_img_dlib(black_img_path, args.data, landmarks_predictor, detector, args.out_dir_imgs, args.out_dir_landm,DS=args.dataset_name)
         except:
             result=0
         total_rescued_imgs+=result
         if(result==0):
             final_imgs_black.append(black_img_path)
-    print("Total MTCNN rescued imgs: ", str(total_rescued_imgs), " of Lost imgs by dlib", str(len(black_imgs_list)))
+    print("Total dlib rescued imgs: ", str(total_rescued_imgs), " of Lost imgs by dlib", str(len(black_imgs_list)))
     #Save images in a file
     pd.DataFrame(final_imgs_black, columns=["path"]).to_csv(list_black_imgs_out_path, index=False, sep=";", header=True)
 
